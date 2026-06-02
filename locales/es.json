@@ -15,5 +15,59 @@
     "structures": "Estructuras",
     "contact": "Contacto",
     "language": "Cambiar idioma"
+  },
+  "solutions": {
+    "title": "Nuestras Soluciones",
+    "description": "Descubre nuestra gama de productos de alta ingeniería. Diseñados para durar, fabricados para proteger y automatizados para facilitarte la vida."
+  },
+  "trust": {
+    "title": "Confianza y Precisión",
+    "description": "No solo fabricamos estructuras metálicas, creamos soluciones perdurables avaladas por nuestra trayectoria y compromiso tecnológico.",
+    "items": [
+      {
+        "metric": "+30",
+        "title": "Años de Experiencia",
+        "description": "Tres décadas perfeccionando el arte de la cerrajería y la ingeniería metálica de precisión."
+      },
+      {
+        "metric": "+2000",
+        "title": "Proyectos Realizados",
+        "description": "Desde puertas residenciales hasta estructuras industriales complejas, garantizando un funcionamiento impecable."
+      },
+      {
+        "metric": "100%",
+        "title": "Garantía de Calidad",
+        "description": "Utilizamos materiales nobles y automatismes de alta gama para ofrecer cierres inquebrantables y seguros."
+      }
+    ]
+  },
+  "contact": {
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "message": "¿Cómo podemos ayudarte?",
+      "submit": "Enviar petición",
+      "successTitle": "¡Mensaje enviado correctamente!",
+      "successDescription": "Nuestro equipo técnico se pondrá en contacto contigo lo antes posible para analizar tu proyecto."
+    },
+    "info": {
+      "subtitle": "Hablemos de tu proyecto",
+      "title": "Estamos preparados para dar forma a tu idea.",
+      "description": "Desde una simple consulta hasta diseños complejos de ingeniería estructural. Nuestro equipo te asesorará sin compromiso.",
+      "callUs": "Llámanos directamente",
+      "visitUs": "Visítanos en"
+    }
+  },
+  "footer": {
+    "description": "Artesanía de alta tecnología en estructuras metálicas y puertas industriales o residenciales. Garantizamos seguridad, diseño y precisión en cada cierre.",
+    "explore": "Explora",
+    "catalog": "Catálogo de Puertas",
+    "structures": "Estructuras Metálicas",
+    "requestQuote": "Solicitar Presupuesto",
+    "contact": "Contacto",
+    "legal": "Aviso Legal",
+    "privacy": "Política de Privacidad",
+    "copyright": "Todos los derechos reservados."
   }
 }

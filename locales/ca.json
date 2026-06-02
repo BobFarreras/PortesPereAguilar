@@ -15,5 +15,59 @@
     "structures": "Estructures",
     "contact": "Contacte",
     "language": "Canviar idioma"
+  },
+  "solutions": {
+    "title": "Les Nostres Solucions",
+    "description": "Descobreix la nostra gamma de productes d'alta enginyeria. Dissenyats per durar, fabricats per protegir i automatitzats per facilitar-te la vida."
+  },
+  "trust": {
+    "title": "Confiança i Precisió",
+    "description": "No només fabriquem estructures metàl·liques, creem solucions perdurables avalades per la nostra trajectòria i compromís tecnològic.",
+    "items": [
+      {
+        "metric": "+30",
+        "title": "Anys d'Experiència",
+        "description": "Tres dècades perfeccionant l'art de la serralleria i l'enginyeria metàl·lica de precisió."
+      },
+      {
+        "metric": "+2000",
+        "title": "Projectes Realitzats",
+        "description": "Des de portes residencials fins a estructures industrials complexes, garantint un funcionament impecable."
+      },
+      {
+        "metric": "100%",
+        "title": "Garantia de Qualitat",
+        "description": "Utilitzem materials nobles i automatismes d'alta gamma per oferir tancaments infranquejables i segurs."
+      }
+    ]
+  },
+  "contact": {
+    "form": {
+      "name": "Nom complet",
+      "email": "Correu electrònic",
+      "phone": "Telèfon",
+      "message": "Com et podem ajudar?",
+      "submit": "Enviar petició",
+      "successTitle": "Missatge enviat correctament!",
+      "successDescription": "El nostre equip tècnic es posarà en contacte amb tu el més aviat possible per analitzar el teu projecte."
+    },
+    "info": {
+      "subtitle": "Parlem del teu projecte",
+      "title": "Estem preparats per donar forma a la teva idea.",
+      "description": "Des d'una simple consulta fins a dissenys complexos d'enginyeria estructural. El nostre equip t'assessorarà sense compromís.",
+      "callUs": "Truca'ns directament",
+      "visitUs": "Visita'ns a"
+    }
+  },
+  "footer": {
+    "description": "Artesania d'alta tecnologia en estructures metàl·liques i portes industrials o residencials. Garantim seguretat, disseny i precisió en cada tancament.",
+    "explore": "Explora",
+    "catalog": "Catàleg de Portes",
+    "structures": "Estructures Metàl·liques",
+    "requestQuote": "Demanar Pressupost",
+    "contact": "Contacte",
+    "legal": "Avís Legal",
+    "privacy": "Política de Privacitat",
+    "copyright": "Tots els drets reservats."
   }
 }

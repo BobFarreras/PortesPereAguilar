@@ -15,5 +15,59 @@
     "structures": "Structures",
     "contact": "Contact",
     "language": "Change language"
+  },
+  "solutions": {
+    "title": "Our Solutions",
+    "description": "Discover our range of high-engineering products. Designed to last, built to protect and automated to make your life easier."
+  },
+  "trust": {
+    "title": "Trust and Precision",
+    "description": "We don't just manufacture metal structures, we create enduring solutions backed by our track record and technological commitment.",
+    "items": [
+      {
+        "metric": "+30",
+        "title": "Years of Experience",
+        "description": "Three decades perfecting the art of locksmithing and precision metal engineering."
+      },
+      {
+        "metric": "+2000",
+        "title": "Projects Completed",
+        "description": "From residential doors to complex industrial structures, guaranteeing flawless operation."
+      },
+      {
+        "metric": "100%",
+        "title": "Quality Guarantee",
+        "description": "We use premium materials and high-end automation to offer unbreakable and secure closures."
+      }
+    ]
+  },
+  "contact": {
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone number",
+      "message": "How can we help you?",
+      "submit": "Send request",
+      "successTitle": "Message sent successfully!",
+      "successDescription": "Our technical team will get in touch with you as soon as possible to analyze your project."
+    },
+    "info": {
+      "subtitle": "Let's talk about your project",
+      "title": "We are ready to shape your idea.",
+      "description": "From a simple consultation to complex structural engineering designs. Our team will advise you without obligation.",
+      "callUs": "Call us directly",
+      "visitUs": "Visit us at"
+    }
+  },
+  "footer": {
+    "description": "High-tech craftsmanship in metal structures and industrial or residential doors. We guarantee security, design and precision in every closure.",
+    "explore": "Explore",
+    "catalog": "Door Catalog",
+    "structures": "Metal Structures",
+    "requestQuote": "Request a Quote",
+    "contact": "Contact",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "copyright": "All rights reserved."
   }
 }

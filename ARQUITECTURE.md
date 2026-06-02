@@ -30,4 +30,4 @@ L'aplicació utilitza una arquitectura basada en components i separació de resp
 - **Domain-Driven Design (DDD) Lleuger:** La carpeta `components` separa la UI genèrica (`/ui`) de la UI de negoci (`/doors`, `/marketing`).
 - **Server Components vs Client Components:** Maximitzar l'ús de React Server Components (RSC) per a SEO i rendiment. Utilitzar `'use client'` només on hi hagi interactivitat o animacions de Framer Motion.
 - **Gestió d'Estat:** Zustand (si és un estat global complex) o Context API pur de React. Evitar sobreenginyeria. Estat del servidor gestionat per Next.js Fetch Caching.
-- **i18n:** Utilitzar `next-intl` per a la internacionalització. Requereix configuració de `routing` i provider de missatges per funcionar correctament.
+- **i18n:** Utilitzar `next-intl` per a la internacionalització. Requereix configuració de `routing` i provider de missatges per funcionar correctament. Veure [`I18N.md`](./I18N.md) per al setup correcte amb next-intl v4 (postmortem inclòs).

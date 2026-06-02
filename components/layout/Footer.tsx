@@ -2,57 +2,58 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+  const t = useTranslations('footer');
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="w-full bg-gray-100 dark:bg-black border-t border-brand-dark/5 dark:border-white/5 pt-16 pb-8 px-6">
       <div className="max-w-7xl mx-auto">
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Columna 1: Marca i Descripció */}
           <div className="flex flex-col">
             <Link href="/" className="relative w-48 h-12 mb-6 outline-none focus-visible:ring-2 focus-visible:ring-brand-red rounded-md block">
-              <Image 
-                src="/logo.webp" 
-                alt="Logotip Portes Pere Aguilar" 
+              <Image
+                src="/logo.webp"
+                alt="Logotip Portes Pere Aguilar"
                 fill
                 className="object-contain object-left"
               />
             </Link>
-            <p className="text-brand-grey text-sm leading-relaxed max-w-sm">
-              Artesania d&apos;alta tecnologia en estructures metàl·liques i portes industrials o residencials. 
-              Garantim seguretat, disseny i precisió en cada tancament.
+            <p className="text-brand-dark/70 dark:text-brand-grey text-sm leading-relaxed max-w-sm">
+              {t('description')}
             </p>
           </div>
 
           {/* Columna 2: Enllaços Ràpids */}
           <div className="flex flex-col">
-            <h4 className="text-brand-dark dark:text-white font-bold mb-6 tracking-wide uppercase text-sm">Explora</h4>
+            <h4 className="text-brand-dark dark:text-white font-bold mb-6 tracking-wide uppercase text-sm">{t('explore')}</h4>
             <nav className="flex flex-col gap-4">
-              <Link href="/cataleg" className="text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
-                Catàleg de Portes
+              <Link href="/cataleg" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
+                {t('catalog')}
               </Link>
-              <Link href="/serveis" className="text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
-                Estructures Metàl·liques
+              <Link href="/serveis" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
+                {t('structures')}
               </Link>
-              <Link href="/contacte" className="text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
-                Demanar Pressupost
+              <Link href="/contacte" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
+                {t('requestQuote')}
               </Link>
             </nav>
           </div>
 
           {/* Columna 3: Contacte */}
           <div className="flex flex-col">
-            <h4 className="text-brand-dark dark:text-white font-bold mb-6 tracking-wide uppercase text-sm">Contacte</h4>
-            <address className="not-italic flex flex-col gap-4 text-sm text-brand-grey">
+            <h4 className="text-brand-dark dark:text-white font-bold mb-6 tracking-wide uppercase text-sm">{t('contact')}</h4>
+            <address className="not-italic flex flex-col gap-4 text-sm text-brand-dark/70 dark:text-brand-grey">
               <div className="flex items-start gap-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-brand-red shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span>17100 La Bisbal de l’Empordà -Girona  ( Carrer Aigüeta, 204 )</span>
+                <span>17100 La Bisbal de l&apos;Empordà -Girona  ( Carrer Aigüeta, 204 )</span>
               </div>
               <a href="mailto:info@portespereaguilar.com" className="flex items-center gap-3 hover:text-brand-dark dark:hover:text-white transition-colors outline-none focus-visible:text-brand-red w-fit">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-brand-red shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -71,16 +72,16 @@ export default function Footer() {
         </div>
 
         {/* Separador i Copyright */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-brand-grey/60">
-            © {currentYear} Portes Pere Aguilar. Tots els drets reservats.
+        <div className="pt-8 border-t border-brand-dark/10 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-brand-dark/60 dark:text-brand-grey/60">
+            &copy; {currentYear} Portes Pere Aguilar. {t('copyright')}
           </p>
           <div className="flex gap-4">
-            <Link href="/avis-legal" className="text-xs text-brand-grey/60 hover:text-brand-grey transition-colors outline-none focus-visible:text-brand-red">
-              Avís Legal
+            <Link href="/avis-legal" className="text-xs text-brand-dark/60 dark:text-brand-grey/60 hover:text-brand-dark dark:hover:text-brand-grey transition-colors outline-none focus-visible:text-brand-red">
+              {t('legal')}
             </Link>
-            <Link href="/privacitat" className="text-xs text-brand-grey/60 hover:text-brand-grey transition-colors outline-none focus-visible:text-brand-red">
-              Política de Privacitat
+            <Link href="/privacitat" className="text-xs text-brand-dark/60 dark:text-brand-grey/60 hover:text-brand-dark dark:hover:text-brand-grey transition-colors outline-none focus-visible:text-brand-red">
+              {t('privacy')}
             </Link>
           </div>
         </div>

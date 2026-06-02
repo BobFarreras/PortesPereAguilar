@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "check": "pnpm test && pnpm lint && pnpm typecheck && pnpm build"
   },
   "dependencies": {
     "framer-motion": "^11.18.0",

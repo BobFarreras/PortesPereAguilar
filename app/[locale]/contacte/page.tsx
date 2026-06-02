@@ -1,6 +1,8 @@
-// app/contacte/page.tsx
+// app/[locale]/contacte/page.tsx
 import React from 'react';
 import { Metadata } from 'next';
+import { use } from 'react';
+import { setRequestLocale } from 'next-intl/server';
 import ContactForm from '@/components/marketing/ContactForm';
 
 export const metadata: Metadata = {
@@ -8,14 +10,17 @@ export const metadata: Metadata = {
   description: 'Demana pressupost per a la teva porta, automatisme o estructura metàl·lica a La Bisbal de l\'Empordà, Girona.',
 };
 
-export default function ContactPage() {
+export default function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = use(params);
+  setRequestLocale(locale);
+
   return (
     <main className="min-h-screen bg-white dark:bg-brand-dark pt-32 pb-24 px-6 relative overflow-hidden">
       {/* Elements de fons (Il·luminació High-Tech) */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-red/10 blur-[150px] rounded-full pointer-events-none" />
-      
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
-        
+
         {/* Informació a l'esquerra */}
         <div className="flex flex-col">
           <p className="text-brand-red text-sm font-bold tracking-widest uppercase mb-4">

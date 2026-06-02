@@ -13,7 +13,7 @@ jest.mock('@/components/doors/DoorCard', () => {
 describe('SolutionsGrid Component', () => {
   it('renderitza el títol de la secció', () => {
     render(<SolutionsGrid />);
-    expect(screen.getByRole('heading', { level: 2, name: /Les Nostres Solucions/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: /title/i })).toBeInTheDocument();
   });
 
   it('renderitza exactament 6 targetes de serveis', () => {

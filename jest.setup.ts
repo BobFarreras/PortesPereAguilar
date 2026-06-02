@@ -42,3 +42,15 @@ jest.mock('next/navigation', () => ({
   usePathname: () => '/',
   useSearchParams: () => new URLSearchParams(),
 }));
+
+// Mock global de fetch per evitar errors a jsdom
+Object.defineProperty(global, 'fetch', {
+  writable: true,
+  configurable: true,
+  value: jest.fn(() =>
+    Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({ success: true }),
+    } as Response)
+  ),
+});

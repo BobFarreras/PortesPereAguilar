@@ -1,20 +1,25 @@
-// app/cataleg/[slug]/page.tsx
+// app/[locale]/cataleg/[slug]/page.tsx
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 import { SERVICES_DATA } from '@/lib/constants';
 import ProductDetailView from '@/components/marketing/ProductDetailView';
 
 // 1. Tipem els params com una Promesa (Estàndard Next.js 15+)
 interface ProductPageProps {
   params: Promise<{
+    locale: string;
     slug: string;
   }>;
 }
 
 export function generateStaticParams() {
-  return SERVICES_DATA.map((service) => ({
-    slug: service.slug,
-  }));
+  return SERVICES_DATA.flatMap((service) =>
+    ['ca', 'es', 'en', 'fr'].map((locale) => ({
+      locale,
+      slug: service.slug,
+    }))
+  );
 }
 
 // 2. Afegim 'async' per resoldre la promesa dels params abans d'injectar el SEO
@@ -36,7 +41,9 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
 // 3. El Server Component passa a ser asíncron per poder accedir a 'slug'
 export default async function ProductDetailPage({ params }: ProductPageProps) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+
   const service = SERVICES_DATA.find((s) => s.slug === slug);
 
   if (!service) {

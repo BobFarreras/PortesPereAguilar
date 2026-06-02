@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
+
+const DEFAULT_LOCALE = 'ca';
 
 export default function LanguageSwitcher() {
   const t = useTranslations('navbar');
   const pathname = usePathname();
-  const router = useRouter();
   const currentLocale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -22,24 +23,28 @@ export default function LanguageSwitcher() {
     setIsOpen(false);
 
     const pathSegments = pathname.split('/').filter(Boolean);
-    const hasLocalePrefix = locales.map(l => l.code).includes(pathSegments[0]);
+    // Detecta si el primer segment és un locale
+    const currentLocalePrefix = locales.find(l => l.code === pathSegments[0]);
+    const pathWithoutLocale = currentLocalePrefix
+      ? pathSegments.slice(1).join('/')
+      : pathSegments.join('/');
 
-    let newPath = pathname;
-    if (hasLocalePrefix) {
-      newPath = `/${locale}/${pathSegments.slice(1).join('/')}`;
+    let newPath: string;
+    if (locale === DEFAULT_LOCALE) {
+      // El locale per defecte (ca) NO porta prefix
+      newPath = '/' + pathWithoutLocale;
     } else {
-      newPath = `/${locale}${pathname}`;
+      newPath = '/' + locale + '/' + pathWithoutLocale;
     }
 
     if (newPath.endsWith('/')) {
       newPath = newPath.slice(0, -1);
     }
     if (newPath === '') {
-      newPath = `/${locale}`;
+      newPath = '/';
     }
 
-    // eslint-disable-next-line react-hooks/immutability
-    window.location.href = newPath;
+    window.location.assign(newPath);
   };
 
   return (

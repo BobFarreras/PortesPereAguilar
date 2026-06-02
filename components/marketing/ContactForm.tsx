@@ -3,9 +3,11 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import MagicButton from '@/components/ui/MagicButton';
 
 export default function ContactForm() {
+  const t = useTranslations('contact.form');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -14,12 +16,24 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // Aquí aniria la crida real a l'API (ex: fetch('/api/contact'))
-      // Simulem un temps de xarxa per veure l'animació
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setIsSuccess(true);
+      const formData = new FormData(e.currentTarget);
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        message: formData.get('message'),
+      };
+
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setIsSuccess(true);
+      }
     } catch (error) {
-      // Integració futura amb Sentry
       console.error("Error enviant el formulari:", error);
     } finally {
       setIsSubmitting(false);
@@ -44,16 +58,17 @@ export default function ContactForm() {
             <div className="relative">
               <input
                 type="text"
+                name="name"
                 id="name"
                 required
                 className="peer w-full bg-transparent border-b border-white/20 px-0 py-3 text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors"
-                placeholder="Nom complet"
+                placeholder={t('name')}
               />
               <label
                 htmlFor="name"
                 className="absolute left-0 top-3 text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
               >
-                Nom complet
+                {t('name')}
               </label>
             </div>
 
@@ -61,16 +76,17 @@ export default function ContactForm() {
             <div className="relative mt-2">
               <input
                 type="email"
+                name="email"
                 id="email"
                 required
                 className="peer w-full bg-transparent border-b border-white/20 px-0 py-3 text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors"
-                placeholder="Correu electrònic"
+                placeholder={t('email')}
               />
               <label
                 htmlFor="email"
                 className="absolute left-0 top-3 text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
               >
-                Correu electrònic
+                {t('email')}
               </label>
             </div>
 
@@ -78,39 +94,41 @@ export default function ContactForm() {
             <div className="relative mt-2">
               <input
                 type="tel"
+                name="phone"
                 id="phone"
                 className="peer w-full bg-transparent border-b border-white/20 px-0 py-3 text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors"
-                placeholder="Telèfon"
+                placeholder={t('phone')}
               />
               <label
                 htmlFor="phone"
                 className="absolute left-0 top-3 text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
               >
-                Telèfon
+                {t('phone')}
               </label>
             </div>
 
             {/* Textarea: Missatge */}
             <div className="relative mt-2">
               <textarea
+                name="message"
                 id="message"
                 required
                 rows={4}
                 className="peer w-full bg-transparent border-b border-white/20 px-0 py-3 text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors resize-none"
-                placeholder="Com et podem ajudar?"
+                placeholder={t('message')}
               />
               <label
                 htmlFor="message"
                 className="absolute left-0 top-3 text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
               >
-                Com et podem ajudar?
+                {t('message')}
               </label>
             </div>
 
             {/* Botó Submit */}
             <div className="mt-4">
-              <MagicButton 
-                type="submit" 
+              <MagicButton
+                type="submit"
                 disabled={isSubmitting}
                 className="w-full flex justify-center items-center py-4 text-base"
               >
@@ -121,7 +139,7 @@ export default function ContactForm() {
                     className="w-6 h-6 border-2 border-white border-t-transparent rounded-full"
                   />
                 ) : (
-                  "Enviar petició"
+                  t('submit')
                 )}
               </MagicButton>
             </div>
@@ -139,8 +157,8 @@ export default function ContactForm() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Missatge enviat correctament!</h3>
-            <p className="text-brand-grey">El nostre equip tècnic es posarà en contacte amb tu el més aviat possible per analitzar el teu projecte.</p>
+            <h3 className="text-2xl font-bold text-white mb-2">{t('successTitle')}</h3>
+            <p className="text-brand-grey">{t('successDescription')}</p>
           </motion.div>
         )}
       </AnimatePresence>

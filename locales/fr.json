@@ -15,5 +15,59 @@
     "structures": "Structures",
     "contact": "Contact",
     "language": "Changer de langue"
+  },
+  "solutions": {
+    "title": "Nos Solutions",
+    "description": "Découvrez notre gamme de produits de haute ingénierie. Conçus pour durer, fabriqués pour protéger et automatisés pour vous faciliter la vie."
+  },
+  "trust": {
+    "title": "Confiance et Précision",
+    "description": "Nous ne fabriquons pas seulement des structures métalliques, nous créons des solutions durables appuyées par notre expérience et notre engagement technologique.",
+    "items": [
+      {
+        "metric": "+30",
+        "title": "Années d'Expérience",
+        "description": "Trois décennies à perfectionner l'art de la serrurerie et de l'ingénierie métallique de précision."
+      },
+      {
+        "metric": "+2000",
+        "title": "Projets Réalisés",
+        "description": "Des portes résidentielles aux structures industrielles complexes, en garantissant un fonctionnement impeccable."
+      },
+      {
+        "metric": "100%",
+        "title": "Garantie de Qualité",
+        "description": "Nous utilisons des matériaux nobles et des automatismes haut de gamme pour offrir des fermetures inébranlables et sécurisées."
+      }
+    ]
+  },
+  "contact": {
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "message": "Comment pouvons-nous vous aider?",
+      "submit": "Envoyer la demande",
+      "successTitle": "Message envoyé avec succès!",
+      "successDescription": "Notre équipe technique vous contactera dès que possible pour analyser votre projet."
+    },
+    "info": {
+      "subtitle": "Parlons de votre projet",
+      "title": "Nous sommes prêts à donner forme à votre idée.",
+      "description": "D'une simple consultation à des conceptions complexes d'ingénierie structurelle. Notre équipe vous conseillera sans engagement.",
+      "callUs": "Appelez-nous directement",
+      "visitUs": "Rendez-nous visite à"
+    }
+  },
+  "footer": {
+    "description": "Artisanat de haute technologie en structures métalliques et portes industrielles ou résidentielles. Nous garantissons sécurité, design et précision dans chaque fermeture.",
+    "explore": "Explorer",
+    "catalog": "Catalogue de Portes",
+    "structures": "Structures Métalliques",
+    "requestQuote": "Demander un Devis",
+    "contact": "Contact",
+    "legal": "Mentions Légales",
+    "privacy": "Politique de Confidentialité",
+    "copyright": "Tous droits réservés."
   }
 }
