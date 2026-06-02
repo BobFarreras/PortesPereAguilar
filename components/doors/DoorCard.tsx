@@ -32,6 +32,8 @@ export default function DoorCard({ service, title, description }: DoorCardProps)
             src={service.imageUrl}
             alt={title}
             fill
+            priority
+            loading="eager"
             className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />

@@ -15,8 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased flex flex-col min-h-screen`}>
+    <html data-scroll-behavior="smooth" suppressHydrationWarning>
+      <body
+        className={`${inter.className} antialiased flex flex-col min-h-screen`}
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>
