@@ -10,6 +10,7 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next|_vercel|static|assets|favicon.ico|robots.txt).*)',
+    // Exclou API, _next, fitxers estàtics i assets
+    '/((?!api|_next|_vercel|static|assets|favicon.ico|robots.txt|.*\\.(?:webp|png|jpg|jpeg|gif|svg|ico|css|js|woff|woff2|ttf|eot|pdf|zip)).*)',
   ],
 };
