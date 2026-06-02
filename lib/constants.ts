@@ -9,12 +9,38 @@ export const SERVICES_DATA: ServiceCategory[] = [
     imageUrl: '/images/Correderes/imgi_2_Porta-corredissa-amb-tanca-de-corten-1.webp',
     slug: 'portes-corredisses',
   },
+  // Dins de lib/constants.ts, actualitza l'objecte de Portes Seccionals:
   {
     id: '2',
     title: 'Portes Seccionals',
     description: 'Aïllament tèrmic superior i obertura vertical silenciosa que maximitza l\'espai del teu garatge.',
-    imageUrl: '/images/Seccionals/imgi_33_Porta-seccional-folrada-de-xapa-corten-3-2048x1536.webp', // <-- Corregit el ..webp
+    imageUrl: '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitiaió-fusta.webp',
     slug: 'portes-seccionals',
+    gallery: [
+      '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitiaió-fusta..webp',
+      '/images/Seccionals/imgi_39_seccional-llisa-gris-4-2048x1536.webp', // Exemple de foto secundària
+      '/images/Seccionals/imgi_33_Porta-seccional-folrada-de-xapa-corten-3-2048x1536.webp',
+      '/images/Seccionals/imgi_45_Porta-seccional-folrada-de-tauler-marí.-1-2048x1536.webp',
+      '/images/Seccionals/imgi_47_seccional-llisa-gris-4-scaled.webp'
+    ],
+    features: [
+      {
+        title: "Panells Sandvitx de 40mm",
+        description: "Doble xapa d'acer galvanitzat amb nucli d'escuma de poliuretà injectat per a un aïllament tèrmic i acústic extrem (coeficient U)."
+      },
+      {
+        title: "Sistema Antipinsament",
+        description: "Disseny exclusiu de les juntes entre panells que impedeix qualsevol risc d'atrapament de dits durant l'obertura o tancament."
+      },
+      {
+        title: "Motorització Silenciosa",
+        description: "Automatismes de corretja dentada d'alta resistència amb obertura suau, aturada d'emergència i control remot encriptat."
+      },
+      {
+        title: "Estanqueïtat Total",
+        description: "Juntes de cautxú EPDM a tot el perímetre inferior, superior i lateral que bloquegen el vent, la pluja i la pols."
+      }
+    ]
   },
   {
     id: '3',
