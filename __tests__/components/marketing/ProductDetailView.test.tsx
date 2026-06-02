@@ -4,7 +4,6 @@ import ProductDetailView from '@/components/marketing/ProductDetailView';
 import { ServiceCategory } from '@/types';
 import { ImageProps } from 'next/image';
 
-// Mock de Next/Image
 jest.mock('next/image', () => ({
   __esModule: true,
   default: (props: ImageProps) => {
@@ -17,27 +16,28 @@ jest.mock('next/image', () => ({
 describe('ProductDetailView Component', () => {
   const mockService: ServiceCategory = {
     id: '1',
-    title: 'Porta de Prova',
-    description: 'Descripció detallada de la porta de prova per assegurar la qualitat.',
+    translationKey: 'portesSeccionals',
     imageUrl: '/images/test.webp',
     slug: 'porta-de-prova',
+    seoFallback: { title: '', description: '' },
   };
 
-  it('renderitza el títol i la descripció del producte', () => {
+  it('renderitza el títol i la descripció del producte (claus de traducció)', () => {
+    // El mock de next-intl retorna la clau tal qual: t(`servicesList.${key}.title`) -> "servicesList.portesSeccionals.title"
     render(<ProductDetailView service={mockService} />);
-    expect(screen.getByRole('heading', { level: 1, name: /Porta de Prova/i })).toBeInTheDocument();
-    expect(screen.getByText(/Descripció detallada de la porta/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: /title/i })).toBeInTheDocument();
+    expect(screen.getByText('servicesList.portesSeccionals.description')).toBeInTheDocument();
   });
 
   it('renderitza la imatge amb l\'atribut alt correcte', () => {
     render(<ProductDetailView service={mockService} />);
-    const image = screen.getByAltText(/Porta de Prova - Imatge 1/i);
+    const image = screen.getByAltText(/title - Imatge 1/i);
     expect(image).toHaveAttribute('src', '/images/test.webp');
   });
 
-  it('renderitza els botons d\'acció (Tornar i Contactar)', () => {
+  it('renderitza els botons d\'acció (Tornar i Contactar) amb claus de traducció', () => {
     render(<ProductDetailView service={mockService} />);
-    expect(screen.getByRole('link', { name: /Tornar al catàleg/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /Demanar pressupost/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /backToCatalog/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /requestQuote/i })).toBeInTheDocument();
   });
 });

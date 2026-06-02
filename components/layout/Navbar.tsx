@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
-import MagicButton from '@/components/ui/MagicButton';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 import { useTranslations } from 'next-intl';
@@ -50,22 +49,16 @@ export default function Navbar() {
             <Link href="/cataleg" className="text-sm font-medium text-brand-dark/70 dark:text-brand-grey hover:text-brand-dark dark:hover:text-white transition-colors outline-none focus-visible:text-brand-red">
               {t('catalog')}
             </Link>
-            <Link href="/serveis" className="text-sm font-medium text-brand-dark/70 dark:text-brand-grey hover:text-brand-dark dark:hover:text-white transition-colors outline-none focus-visible:text-brand-red">
-              {t('structures')}
+            <Link href="/contacte" className="text-sm font-medium text-brand-dark/70 dark:text-brand-grey hover:text-brand-dark dark:hover:text-white transition-colors outline-none focus-visible:text-brand-red">
+              {t('contact')}
             </Link>
           </nav>
 
-          {/* Accions: Idioma + Tema + CTA */}
+          {/* Accions: Idioma + Tema */}
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
             <ThemeToggle />
-            
-            <Link href="/contacte" tabIndex={-1}>
-              <MagicButton variant="primary" className="hidden md:block py-2 px-4 text-sm bg-brand-red/90 hover:bg-brand-red">
-                {t('contact')}
-              </MagicButton>
-            </Link>
-            
+
             {/* Menú Mòbil */}
             <button className="md:hidden text-brand-dark dark:text-white p-2 focus:outline-none" aria-label="Obrir menú">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

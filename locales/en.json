@@ -5,39 +5,97 @@
       "part1": "Engineering in",
       "part2": "every closure."
     },
-    "description": "Locksmithing and metal structures designed with millimeter precision. Protect and elevate your space with first-quality materials.",
-    "cta": "Request a Quote",
+    "description": "Metalwork and metal structures designed with millimetric precision. Protect and elevate your space with top-quality materials.",
+    "cta": "Request your Quote",
     "discover": "Discover"
   },
   "navbar": {
     "home": "Home",
     "catalog": "Catalog",
-    "structures": "Structures",
     "contact": "Contact",
     "language": "Change language"
   },
   "solutions": {
     "title": "Our Solutions",
-    "description": "Discover our range of high-engineering products. Designed to last, built to protect and automated to make your life easier."
+    "description": "Discover our range of high-engineering products. Designed to last, built to protect, and automated to make your life easier.",
+    "servicesList": {
+      "portesCorredisses": {
+        "title": "Sliding Doors",
+        "description": "Smooth automation and robust design for residential and industrial high-traffic entrances."
+      },
+      "portesSeccionals": {
+        "title": "Sectional Doors",
+        "description": "Superior thermal insulation and silent vertical opening that maximises your garage space.",
+        "features": {
+          "panellsSandvitx": {
+            "title": "40mm Sandwich Panels",
+            "description": "Double galvanised steel sheet with injected polyurethane foam core for extreme thermal and acoustic insulation."
+          },
+          "antipinsament": {
+            "title": "Anti-Pinch System",
+            "description": "Exclusive design of the joints between panels that prevents any risk of finger entrapment during opening or closing."
+          },
+          "motoritzacio": {
+            "title": "Silent Motorisation",
+            "description": "High-resistance toothed belt automation with smooth opening, emergency stop and encrypted remote control."
+          },
+          "estanqueitat": {
+            "title": "Total Watertightness",
+            "description": "EPDM rubber seals on the entire lower, upper and lateral perimeter that block wind, rain and dust."
+          }
+        }
+      },
+      "estructuresMetaliques": {
+        "title": "Metal Structures",
+        "description": "Bespoke structural engineering. Pergolas, roofing and mezzanines designed with millimetric precision."
+      },
+      "serralleriaDisseny": {
+        "title": "Design Metalwork",
+        "description": "Grilles, railings and perimeter enclosures where unbreakable security meets aesthetics."
+      },
+      "portesBasculants": {
+        "title": "Up-and-Over Doors",
+        "description": "Classic and efficient opening for garages, combining precise counterweight mechanisms with customised aesthetics."
+      },
+      "portesPracticables": {
+        "title": "Side-Hinged Doors",
+        "description": "Elegance and functionality in swing doors, ideal for residential and pedestrian entrances with high-end automation."
+      }
+    }
+  },
+  "catalog": {
+    "title": "Solutions Catalog",
+    "description": "Explore our complete range of doors, automation and metal structures custom-designed for your project.",
+    "empty": "No products available at the moment."
+  },
+  "productDetail": {
+    "backToCatalog": "Back to catalog",
+    "requestQuote": "Request a quote",
+    "fallback": {
+      "premiumTitle": "Premium Materials",
+      "premiumDescription": "Designed for maximum durability and resistance.",
+      "customTitle": "Exact Bespoke",
+      "customDescription": "We adapt to the dimensions and needs of your space."
+    }
   },
   "trust": {
     "title": "Trust and Precision",
-    "description": "We don't just manufacture metal structures, we create enduring solutions backed by our track record and technological commitment.",
+    "description": "We don't just manufacture metal structures, we create lasting solutions backed by our track record and technological commitment.",
     "items": [
       {
         "metric": "+30",
         "title": "Years of Experience",
-        "description": "Three decades perfecting the art of locksmithing and precision metal engineering."
+        "description": "Three decades perfecting the art of metalwork and precision metal engineering."
       },
       {
         "metric": "+2000",
-        "title": "Projects Completed",
+        "title": "Completed Projects",
         "description": "From residential doors to complex industrial structures, guaranteeing flawless operation."
       },
       {
         "metric": "100%",
         "title": "Quality Guarantee",
-        "description": "We use premium materials and high-end automation to offer unbreakable and secure closures."
+        "description": "We use noble materials and high-end automation to offer unbreakable and secure closures."
       }
     ]
   },
@@ -45,16 +103,16 @@
     "form": {
       "name": "Full name",
       "email": "Email address",
-      "phone": "Phone number",
+      "phone": "Phone",
       "message": "How can we help you?",
       "submit": "Send request",
       "successTitle": "Message sent successfully!",
-      "successDescription": "Our technical team will get in touch with you as soon as possible to analyze your project."
+      "successDescription": "Our technical team will contact you as soon as possible to analyse your project."
     },
     "info": {
       "subtitle": "Let's talk about your project",
       "title": "We are ready to shape your idea.",
-      "description": "From a simple consultation to complex structural engineering designs. Our team will advise you without obligation.",
+      "description": "From a simple query to complex structural engineering designs. Our team will advise you with no obligation.",
       "callUs": "Call us directly",
       "visitUs": "Visit us at"
     }
@@ -62,7 +120,7 @@
   "footer": {
     "description": "High-tech craftsmanship in metal structures and industrial or residential doors. We guarantee security, design and precision in every closure.",
     "explore": "Explore",
-    "catalog": "Door Catalog",
+    "catalog": "Doors Catalog",
     "structures": "Metal Structures",
     "requestQuote": "Request a Quote",
     "contact": "Contact",

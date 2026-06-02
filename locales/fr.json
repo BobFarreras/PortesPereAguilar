@@ -2,27 +2,85 @@
   "hero": {
     "subtitle": "Artisanat de Haute Technologie",
     "title": {
-      "part1": "Ingénierie dans",
+      "part1": "L'ingénierie dans",
       "part2": "chaque fermeture."
     },
-    "description": "Serrurerie et structures métalliques conçues avec une précision millimétrique. Protégez et élévez votre espace avec des matériaux de première qualité.",
-    "cta": "Demandez votre devis",
+    "description": "Serrurerie et structures métalliques conçues avec une précision millimétrique. Protégez et sublimer votre espace avec des matériaux de première qualité.",
+    "cta": "Demandez votre Devis",
     "discover": "Découvrez"
   },
   "navbar": {
     "home": "Accueil",
     "catalog": "Catalogue",
-    "structures": "Structures",
     "contact": "Contact",
     "language": "Changer de langue"
   },
   "solutions": {
     "title": "Nos Solutions",
-    "description": "Découvrez notre gamme de produits de haute ingénierie. Conçus pour durer, fabriqués pour protéger et automatisés pour vous faciliter la vie."
+    "description": "Découvrez notre gamme de produits de haute ingénierie. Conçus pour durer, fabriqués pour protéger et automatisés pour vous faciliter la vie.",
+    "servicesList": {
+      "portesCorredisses": {
+        "title": "Portes Coulissantes",
+        "description": "Automatismes fluides et design robuste pour les accès résidentiels et industriels à fort trafic."
+      },
+      "portesSeccionals": {
+        "title": "Portes Sectionnelles",
+        "description": "Isolation thermique supérieure et ouverture verticale silencieuse qui maximise l'espace de votre garage.",
+        "features": {
+          "panellsSandvitx": {
+            "title": "Panneaux Sandwich de 40mm",
+            "description": "Double tôle d'acier galvanisé avec noyau en mousse de polyuréthane injecté pour une isolation thermique et acoustique extrême."
+          },
+          "antipinsament": {
+            "title": "Système Anti-Pince",
+            "description": "Conception exclusive des joints entre panneaux qui empêche tout risque de coincement des doigts lors de l'ouverture ou de la fermeture."
+          },
+          "motoritzacio": {
+            "title": "Motorisation Silencieuse",
+            "description": "Automatismes à courroie dentée haute résistance avec ouverture douce, arrêt d'urgence et télécommande cryptée."
+          },
+          "estanqueitat": {
+            "title": "Étanchéité Totale",
+            "description": "Joints en caoutchouc EPDM sur tout le périmètre inférieur, supérieur et latéral qui bloquent le vent, la pluie et la poussière."
+          }
+        }
+      },
+      "estructuresMetaliques": {
+        "title": "Structures Métalliques",
+        "description": "Ingénierie structurelle sur mesure. Pergolas, couvertures et mezzanines conçues avec une précision millimétrique."
+      },
+      "serralleriaDisseny": {
+        "title": "Serrurerie de Design",
+        "description": "Grilles, garde-corps et clôtures périmétriques où la sécurité incassable rencontre l'esthétique."
+      },
+      "portesBasculants": {
+        "title": "Portes Basculantes",
+        "description": "Ouverture classique et efficace pour garages, combinant mécanismes de contrepoids précis et esthétique personnalisée."
+      },
+      "portesPracticables": {
+        "title": "Portes Battantes",
+        "description": "Élégance et fonctionnalité pour portes battantes, idéales pour les accès de résidences et piétons avec automatisation haut de gamme."
+      }
+    }
+  },
+  "catalog": {
+    "title": "Catalogue de Solutions",
+    "description": "Explorez notre gamme complète de portes, automatismes et structures métalliques conçus sur mesure pour votre projet.",
+    "empty": "Aucun produit disponible pour le moment."
+  },
+  "productDetail": {
+    "backToCatalog": "Retour au catalogue",
+    "requestQuote": "Demander un devis",
+    "fallback": {
+      "premiumTitle": "Matériaux Premium",
+      "premiumDescription": "Conçus pour une durabilité et une résistance maximales.",
+      "customTitle": "Sur Mesure Exacte",
+      "customDescription": "Nous nous adaptons aux dimensions et aux besoins de votre espace."
+    }
   },
   "trust": {
     "title": "Confiance et Précision",
-    "description": "Nous ne fabriquons pas seulement des structures métalliques, nous créons des solutions durables appuyées par notre expérience et notre engagement technologique.",
+    "description": "Nous ne fabriquons pas seulement des structures métalliques, nous créons des solutions durables soutenues par notre parcours et notre engagement technologique.",
     "items": [
       {
         "metric": "+30",
@@ -32,12 +90,12 @@
       {
         "metric": "+2000",
         "title": "Projets Réalisés",
-        "description": "Des portes résidentielles aux structures industrielles complexes, en garantissant un fonctionnement impeccable."
+        "description": "Des portes résidentielles aux structures industrielles complexes, garantissant un fonctionnement impeccable."
       },
       {
         "metric": "100%",
         "title": "Garantie de Qualité",
-        "description": "Nous utilisons des matériaux nobles et des automatismes haut de gamme pour offrir des fermetures inébranlables et sécurisées."
+        "description": "Nous utilisons des matériaux nobles et des automatismes haut de gamme pour offrir des fermetures infranchissables et sûres."
       }
     ]
   },
@@ -46,17 +104,17 @@
       "name": "Nom complet",
       "email": "Adresse e-mail",
       "phone": "Téléphone",
-      "message": "Comment pouvons-nous vous aider?",
+      "message": "Comment pouvons-nous vous aider ?",
       "submit": "Envoyer la demande",
-      "successTitle": "Message envoyé avec succès!",
+      "successTitle": "Message envoyé avec succès !",
       "successDescription": "Notre équipe technique vous contactera dès que possible pour analyser votre projet."
     },
     "info": {
       "subtitle": "Parlons de votre projet",
       "title": "Nous sommes prêts à donner forme à votre idée.",
-      "description": "D'une simple consultation à des conceptions complexes d'ingénierie structurelle. Notre équipe vous conseillera sans engagement.",
+      "description": "D'une simple consultation aux conceptions complexes d'ingénierie structurelle. Notre équipe vous conseillera sans engagement.",
       "callUs": "Appelez-nous directement",
-      "visitUs": "Rendez-nous visite à"
+      "visitUs": "Visitez-nous à"
     }
   },
   "footer": {

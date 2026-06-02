@@ -1,21 +1,20 @@
 // __tests__/components/marketing/CatalogView.test.tsx
 import { render, screen } from '@testing-library/react';
-
 import { SERVICES_DATA } from '@/lib/constants';
 import { ServiceCategory } from '@/types';
 import CatalogView from '@/components/marketing/CatalogoView';
 
-// Mockegem el component DoorCard per aïllar el test
 jest.mock('@/components/doors/DoorCard', () => {
-  return function DummyDoorCard({ service }: { service: ServiceCategory }) {
-    return <div data-testid="catalog-door-card-mock">{service.title}</div>;
+  return function DummyDoorCard({ service, title, description }: { service: ServiceCategory; title: string; description: string }) {
+    return <div data-testid="catalog-door-card-mock">{title} - {description}</div>;
   };
 });
 
 describe('CatalogView Component', () => {
-  it('renderitza el títol principal del catàleg', () => {
+  it('renderitza el títol principal del catàleg (clau de traducció)', () => {
     render(<CatalogView items={SERVICES_DATA} />);
-    expect(screen.getByRole('heading', { level: 1, name: /Catàleg de Solucions/i })).toBeInTheDocument();
+    // t('catalog.title') -> 'title'
+    expect(screen.getByRole('heading', { level: 1, name: /title/i })).toBeInTheDocument();
   });
 
   it('renderitza tantes targetes com elements rep per les props', () => {
@@ -24,8 +23,9 @@ describe('CatalogView Component', () => {
     expect(cards).toHaveLength(SERVICES_DATA.length);
   });
 
-  it('mostra un missatge si el catàleg està buit', () => {
+  it('mostra un missatge si el catàleg està buit (clau de traducció)', () => {
     render(<CatalogView items={[]} />);
-    expect(screen.getByText(/Actualment no hi ha productes disponibles/i)).toBeInTheDocument();
+    // t('catalog.empty') -> 'empty'
+    expect(screen.getByText(/empty/i)).toBeInTheDocument();
   });
 });

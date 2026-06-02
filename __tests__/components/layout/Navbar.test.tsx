@@ -12,16 +12,19 @@ describe('Navbar Component', () => {
 
   it('renderitza els enllaços de navegació principals (claus de traducció)', () => {
     render(<Navbar />);
-    // El mock de next-intl retorna la clé final (home, catalog, structures)
+    // El mock de next-intl retorna la clau final (home, catalog, contact)
     // Usem getAllByRole perquè el logo també és un link amb accessible name "home"
     const links = screen.getAllByRole('link', { name: /^home$/i });
     expect(links.length).toBeGreaterThanOrEqual(1);
     expect(screen.getByRole('link', { name: /^catalog$/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /^contact$/i })).toBeInTheDocument();
   });
 
-  it('renderitza el botó de contacte (clau de traducció)', () => {
+  it('renderitza l\'enllaç de contacte a la navegació (clau de traducció)', () => {
     render(<Navbar />);
-    expect(screen.getByRole('button', { name: /^contact$/i })).toBeInTheDocument();
+    // "contact" ja no és un botó CTA, és un enllaç dins el nav
+    const links = screen.getAllByRole('link', { name: /^contact$/i });
+    expect(links.length).toBeGreaterThanOrEqual(1);
   });
 
   it('renderitza el botó per canviar d\'idioma (clau de traducció)', () => {

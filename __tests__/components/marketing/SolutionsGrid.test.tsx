@@ -5,8 +5,8 @@ import { ServiceCategory } from '@/types'; // Importem l'interfície estricta
 
 // Mockegem el component fill eliminant l'ús de 'any'
 jest.mock('@/components/doors/DoorCard', () => {
-  return function DummyDoorCard({ service }: { service: ServiceCategory }) {
-    return <div data-testid="door-card-mock">{service.title}</div>;
+  return function DummyDoorCard({ service, title }: { service: ServiceCategory; title: string }) {
+    return <div data-testid="door-card-mock">{title}</div>;
   };
 });
 

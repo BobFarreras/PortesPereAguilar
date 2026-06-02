@@ -12,13 +12,71 @@
   "navbar": {
     "home": "Inicio",
     "catalog": "Catálogo",
-    "structures": "Estructuras",
     "contact": "Contacto",
     "language": "Cambiar idioma"
   },
   "solutions": {
     "title": "Nuestras Soluciones",
-    "description": "Descubre nuestra gama de productos de alta ingeniería. Diseñados para durar, fabricados para proteger y automatizados para facilitarte la vida."
+    "description": "Descubre nuestra gama de productos de alta ingeniería. Diseñados para durar, fabricados para proteger y automatizados para facilitarte la vida.",
+    "servicesList": {
+      "portesCorredisses": {
+        "title": "Puertas Correderas",
+        "description": "Automatismos fluidos y diseño robusto para accesos residenciales e industriales de máximo tránsito."
+      },
+      "portesSeccionals": {
+        "title": "Puertas Seccionales",
+        "description": "Aislamiento térmico superior y apertura vertical silenciosa que maximiza el espacio de tu garaje.",
+        "features": {
+          "panellsSandvitx": {
+            "title": "Paneles Sándwich de 40mm",
+            "description": "Doble chapa de acero galvanizado con núcleo de espuma de poliuretano inyectado para un aislamiento térmico y acústico extremo."
+          },
+          "antipinsament": {
+            "title": "Sistema Antipinzamiento",
+            "description": "Diseño exclusivo de las juntas entre paneles que impide cualquier riesgo de atrapamiento de dedos durante la apertura o cierre."
+          },
+          "motoritzacio": {
+            "title": "Motorización Silenciosa",
+            "description": "Automatismos de correa dentada de alta resistencia con apertura suave, parada de emergencia y control remoto encriptado."
+          },
+          "estanqueitat": {
+            "title": "Estanqueidad Total",
+            "description": "Juntas de caucho EPDM en todo el perímetro inferior, superior y lateral que bloquean el viento, la lluvia y el polvo."
+          }
+        }
+      },
+      "estructuresMetaliques": {
+        "title": "Estructuras Metálicas",
+        "description": "Ingeniería estructural a medida. Pérgolas, cubiertas y altillos diseñados con precisión milimétrica."
+      },
+      "serralleriaDisseny": {
+        "title": "Cerrajería de Diseño",
+        "description": "Rejas, barandillas y cerramientos perimetrales donde la seguridad inquebrantable se encuentra con la estética."
+      },
+      "portesBasculants": {
+        "title": "Puertas Basculantes",
+        "description": "Apertura clásica y eficiente para garajes, combinando mecanismos de contrapesos precisos con estética personalizada."
+      },
+      "portesPracticables": {
+        "title": "Puertas Practicables",
+        "description": "Elegancia y funcionalidad en puertas batientes, ideales para accesos de fincas y peatones con automatización de alta gama."
+      }
+    }
+  },
+  "catalog": {
+    "title": "Catálogo de Soluciones",
+    "description": "Explora nuestra gama completa de puertas, automatismos y estructuras metálicas diseñadas a medida para tu proyecto.",
+    "empty": "Actualmente no hay productos disponibles."
+  },
+  "productDetail": {
+    "backToCatalog": "Volver al catálogo",
+    "requestQuote": "Solicitar presupuesto",
+    "fallback": {
+      "premiumTitle": "Materiales Premium",
+      "premiumDescription": "Diseñados para la máxima durabilidad y resistencia.",
+      "customTitle": "A Medida Exacta",
+      "customDescription": "Nos adaptamos a las medidas y necesidades de tu espacio."
+    }
   },
   "trust": {
     "title": "Confianza y Precisión",
@@ -37,7 +95,7 @@
       {
         "metric": "100%",
         "title": "Garantía de Calidad",
-        "description": "Utilizamos materiales nobles y automatismes de alta gama para ofrecer cierres inquebrantables y seguros."
+        "description": "Utilizamos materiales nobles y automatismos de alta gama para ofrecer cerramientos infranqueables y seguros."
       }
     ]
   },

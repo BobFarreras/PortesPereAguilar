@@ -33,9 +33,10 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     };
   }
 
+  // TODO Fase 5: substituir seoFallback per getTranslations({ locale, namespace: `servicesList.${service.translationKey}` })
   return {
-    title: `${service.title} | Portes Pere Aguilar`,
-    description: service.description,
+    title: `${service.seoFallback.title} | Portes Pere Aguilar`,
+    description: service.seoFallback.description,
   };
 }
 

@@ -65,7 +65,11 @@ export default function SolutionsGrid() {
         >
           {SERVICES_DATA.map((service) => (
             <motion.div key={service.id} variants={itemVariants} className="h-full">
-              <DoorCard service={service} />
+              <DoorCard
+                service={service}
+                title={t(`servicesList.${service.translationKey}.title`)}
+                description={t(`servicesList.${service.translationKey}.description`)}
+              />
             </motion.div>
           ))}
         </motion.div>

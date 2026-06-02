@@ -12,13 +12,71 @@
   "navbar": {
     "home": "Inici",
     "catalog": "Catàleg",
-    "structures": "Estructures",
     "contact": "Contacte",
     "language": "Canviar idioma"
   },
   "solutions": {
     "title": "Les Nostres Solucions",
-    "description": "Descobreix la nostra gamma de productes d'alta enginyeria. Dissenyats per durar, fabricats per protegir i automatitzats per facilitar-te la vida."
+    "description": "Descobreix la nostra gamma de productes d'alta enginyeria. Dissenyats per durar, fabricats per protegir i automatitzats per facilitar-te la vida.",
+    "servicesList": {
+      "portesCorredisses": {
+        "title": "Portes Corredisses",
+        "description": "Automatismes fluids i disseny robust per a accessos residencials i industrials de màxim trànsit."
+      },
+      "portesSeccionals": {
+        "title": "Portes Seccionals",
+        "description": "Aïllament tèrmic superior i obertura vertical silenciosa que maximitza l'espai del teu garatge.",
+        "features": {
+          "panellsSandvitx": {
+            "title": "Panells Sandvitx de 40mm",
+            "description": "Doble xapa d'acer galvanitzat amb nucli d'escuma de poliuretà injectat per a un aïllament tèrmic i acústic extrem."
+          },
+          "antipinsament": {
+            "title": "Sistema Antipinsament",
+            "description": "Disseny exclusiu de les juntes entre panells que impedeix qualsevol risc d'atrapament de dits durant l'obertura o tancament."
+          },
+          "motoritzacio": {
+            "title": "Motorització Silenciosa",
+            "description": "Automatismes de corretja dentada d'alta resistència amb obertura suau, aturada d'emergència i control remot encriptat."
+          },
+          "estanqueitat": {
+            "title": "Estanqueïtat Total",
+            "description": "Juntes de cautxú EPDM a tot el perímetre inferior, superior i lateral que bloquegen el vent, la pluja i la pols."
+          }
+        }
+      },
+      "estructuresMetaliques": {
+        "title": "Estructures Metàl·liques",
+        "description": "Enginyeria estructural a mida. Pèrgoles, cobertes i altells dissenyats amb precisió mil·limètrica."
+      },
+      "serralleriaDisseny": {
+        "title": "Serralleria de Disseny",
+        "description": "Reixes, baranes i tancaments perimetrals on la seguretat inquebrantable es troba amb l'estètica."
+      },
+      "portesBasculants": {
+        "title": "Portes Basculants",
+        "description": "Obertura clàssica i eficient per a garatges, combinant mecanismes de contrapesos precisos amb estètica personalitzada."
+      },
+      "portesPracticables": {
+        "title": "Portes Practicables",
+        "description": "Elegància i funcionalitat en portes batents, ideals per a accessos de finques i vianants amb automatització d'alta gamma."
+      }
+    }
+  },
+  "catalog": {
+    "title": "Catàleg de Solucions",
+    "description": "Explora la nostra gamma completa de portes, automatismes i estructures metàl·liques dissenyades a mesura per al teu projecte.",
+    "empty": "Actualment no hi ha productes disponibles."
+  },
+  "productDetail": {
+    "backToCatalog": "Tornar al catàleg",
+    "requestQuote": "Demanar pressupost",
+    "fallback": {
+      "premiumTitle": "Materials Premium",
+      "premiumDescription": "Dissenyats per a la màxima durabilitat i resistència.",
+      "customTitle": "A Mida Exacta",
+      "customDescription": "Ens adaptem a les mides i necessitats del teu espai."
+    }
   },
   "trust": {
     "title": "Confiança i Precisió",
