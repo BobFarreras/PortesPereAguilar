@@ -70,3 +70,4 @@ $RECYCLE.BIN/
 *.njsproj
 *.sln
 *.sw?
+tsconfig.tsbuildinfo
