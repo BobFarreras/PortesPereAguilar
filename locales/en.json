@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "subtitle": "High-Tech Craftsmanship",
+    "title": {
+      "part1": "Engineering in",
+      "part2": "every closure."
+    },
+    "description": "Locksmithing and metal structures designed with millimeter precision. Protect and elevate your space with first-quality materials.",
+    "cta": "Request a Quote",
+    "discover": "Discover"
+  },
+  "navbar": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "structures": "Structures",
+    "contact": "Contact",
+    "language": "Change language"
+  }
+}

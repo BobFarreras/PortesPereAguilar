@@ -3,8 +3,10 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import MagicButton from '@/components/ui/MagicButton';
+import { useTranslations } from 'next-intl';
 
 export default function HeroSection() {
+  const t = useTranslations('hero');
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -40,17 +42,17 @@ export default function HeroSection() {
           className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-brand-red"
           variants={itemVariants}
         >
-          Artesania d&apos;Alta Tecnologia
+          {t('subtitle')}
         </motion.p>
         
         <motion.h1 
           className="mb-8 text-5xl font-black tracking-tight text-white md:text-7xl lg:text-8xl"
           variants={itemVariants}
         >
-          Enginyeria en <br className="hidden md:block" />
+          {t('title.part1')} <br className="hidden md:block" />
           {/* Gradient ajustat al vermell corporatiu i blanc */}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-white">
-            cada tancament.
+            {t('title.part2')}
           </span>
         </motion.h1>
 
@@ -58,13 +60,12 @@ export default function HeroSection() {
           className="mb-10 max-w-2xl text-lg text-brand-grey md:text-xl"
           variants={itemVariants}
         >
-          Serralleria i estructures metàl·liques dissenyades amb precisió mil·limètrica. 
-          Protegeix i eleva el teu espai amb materials de primera qualitat.
+          {t('description')}
         </motion.p>
 
         <motion.div variants={itemVariants}>
           <MagicButton variant="primary" className="text-lg px-8 py-4">
-            Demana el teu Pressupost
+            {t('cta')}
           </MagicButton>
         </motion.div>
       </motion.div>
@@ -75,7 +76,7 @@ export default function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
       >
-        <span className="text-xs uppercase tracking-widest">Descobreix</span>
+        <span className="text-xs uppercase tracking-widest">{t('discover')}</span>
         <motion.div 
           animate={{ y: [0, 10, 0] }} 
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}

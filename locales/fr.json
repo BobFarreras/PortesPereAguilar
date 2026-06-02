@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "subtitle": "Artisanat de Haute Technologie",
+    "title": {
+      "part1": "Ingénierie dans",
+      "part2": "chaque fermeture."
+    },
+    "description": "Serrurerie et structures métalliques conçues avec une précision millimétrique. Protégez et élévez votre espace avec des matériaux de première qualité.",
+    "cta": "Demandez votre devis",
+    "discover": "Découvrez"
+  },
+  "navbar": {
+    "home": "Accueil",
+    "catalog": "Catalogue",
+    "structures": "Structures",
+    "contact": "Contact",
+    "language": "Changer de langue"
+  }
+}

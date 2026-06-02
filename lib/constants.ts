@@ -10,19 +10,19 @@ export const SERVICES_DATA: ServiceCategory[] = [
     slug: 'portes-corredisses',
   },
   // Dins de lib/constants.ts, actualitza l'objecte de Portes Seccionals:
-  {
-    id: '2',
-    title: 'Portes Seccionals',
-    description: 'Aïllament tèrmic superior i obertura vertical silenciosa que maximitza l\'espai del teu garatge.',
-    imageUrl: '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitiaió-fusta.webp',
-    slug: 'portes-seccionals',
-    gallery: [
-      '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitiaió-fusta..webp',
-      '/images/Seccionals/imgi_39_seccional-llisa-gris-4-2048x1536.webp', // Exemple de foto secundària
-      '/images/Seccionals/imgi_33_Porta-seccional-folrada-de-xapa-corten-3-2048x1536.webp',
-      '/images/Seccionals/imgi_45_Porta-seccional-folrada-de-tauler-marí.-1-2048x1536.webp',
-      '/images/Seccionals/imgi_47_seccional-llisa-gris-4-scaled.webp'
-    ],
+    {
+      id: '2',
+      title: 'Portes Seccionals',
+      description: 'Aïllament tèrmic superior i obertura vertical silenciosa que maximitza l\'espai del teu garatge.',
+      imageUrl: '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitiai�-fusta..webp',
+      slug: 'portes-seccionals',
+      gallery: [
+        '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitiai�-fusta..webp',
+        '/images/Seccionals/imgi_39_seccional-llisa-gris-4-2048x1536.webp', // Exemple de foto secundària
+        '/images/Seccionals/imgi_33_Porta-seccional-folrada-de-xapa-corten-3-2048x1536.webp',
+        '/images/Seccionals/imgi_45_Porta-seccional-folrada-de-tauler-mar�.-1-2048x1536.webp',
+        '/images/Seccionals/imgi_47_seccional-llisa-gris-4-scaled.webp'
+      ],
     features: [
       {
         title: "Panells Sandvitx de 40mm",
