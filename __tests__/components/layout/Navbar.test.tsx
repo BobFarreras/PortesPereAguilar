@@ -5,26 +5,30 @@ import Navbar from '@/components/layout/Navbar';
 describe('Navbar Component', () => {
   it('renderitza el logotip de l\'empresa', () => {
     render(<Navbar />);
-    const logo = screen.getByAltText(/Logotip Portes Pere Aguilar/i);
+    // El mock de next-intl retorna 'home' per a t('home') del alt del logo
+    const logo = screen.getByAltText(/home/i);
     expect(logo).toBeInTheDocument();
   });
 
-  it('renderitza els enllaços de navegació principals', () => {
+  it('renderitza els enllaços de navegació principals (claus de traducció)', () => {
     render(<Navbar />);
-    expect(screen.getByRole('link', { name: /Inici/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /Catàleg/i })).toBeInTheDocument();
+    // El mock de next-intl retorna la clé final (home, catalog, structures)
+    // Usem getAllByRole perquè el logo també és un link amb accessible name "home"
+    const links = screen.getAllByRole('link', { name: /^home$/i });
+    expect(links.length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByRole('link', { name: /^catalog$/i })).toBeInTheDocument();
   });
 
-  it('renderitza el botó de contacte', () => {
+  it('renderitza el botó de contacte (clau de traducció)', () => {
     render(<Navbar />);
-    expect(screen.getByRole('button', { name: /Contactar/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /^contact$/i })).toBeInTheDocument();
   });
-  
-  it('renderitza el botó per canviar d\'idioma', () => {
+
+  it('renderitza el botó per canviar d\'idioma (clau de traducció)', () => {
     render(<Navbar />);
     // Busquem l'element pel seu nom accessible (aria-label)
-    const langSwitcher = screen.getByRole('button', { name: /Canviar idioma/i });
+    const langSwitcher = screen.getByRole('button', { name: /^language$/i });
     expect(langSwitcher).toBeInTheDocument();
-    expect(langSwitcher).toHaveTextContent('CA');
+    expect(langSwitcher).toHaveTextContent('CA'); // El mock de useLocale retorna 'ca'
   });
 });

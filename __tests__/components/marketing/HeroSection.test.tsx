@@ -10,21 +10,22 @@ jest.mock('@/components/ui/MagicButton', () => {
 });
 
 describe('HeroSection Component', () => {
-  it('renderitza el titular principal', () => {
+  it('renderitza el titular principal (clau de traducció)', () => {
     render(<HeroSection />);
     const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toHaveTextContent(/Enginyeria en cada tancament/i);
+    // useTranslations('hero') -> t('title.part1') retorna 'title.part1' amb el mock global
+    expect(heading).toHaveTextContent(/title.part1/i);
   });
 
-  it('renderitza el subtítol explicatiu', () => {
+  it('renderitza el subtítol (clau de traducció)', () => {
     render(<HeroSection />);
-    const subtitle = screen.getByText(/Artesania d'Alta Tecnologia/i);
+    const subtitle = screen.getByText(/subtitle/i);
     expect(subtitle).toBeInTheDocument();
   });
 
   it('renderitza el botó de crida a l\'acció (MagicButton)', () => {
     render(<HeroSection />);
     const ctaButton = screen.getByTestId('magic-button-mock');
-    expect(ctaButton).toHaveTextContent(/Demana el teu Pressupost/i);
+    expect(ctaButton).toHaveTextContent(/cta/i);
   });
 });

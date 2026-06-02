@@ -8,5 +8,12 @@
     "description": "Serralleria i estructures metàl·liques dissenyades amb precisió mil·limètrica. Protegeix i eleva el teu espai amb materials de primera qualitat.",
     "cta": "Demana el teu Pressupost",
     "discover": "Descobreix"
+  },
+  "navbar": {
+    "home": "Inici",
+    "catalog": "Catàleg",
+    "structures": "Estructures",
+    "contact": "Contacte",
+    "language": "Canviar idioma"
   }
 }

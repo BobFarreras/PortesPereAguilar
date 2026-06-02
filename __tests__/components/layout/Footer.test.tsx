@@ -5,7 +5,7 @@ import Footer from '@/components/layout/Footer';
 describe('Footer Component', () => {
   it('renderitza la informació de contacte principal', () => {
     render(<Footer />);
-    expect(screen.getByText(/Girona, Catalunya/i)).toBeInTheDocument();
+    expect(screen.getByText(/La Bisbal de l’Empordà -Girona/i)).toBeInTheDocument();
     expect(screen.getByText(/info@portespereaguilar.com/i)).toBeInTheDocument();
   });
 

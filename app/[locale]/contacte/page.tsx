@@ -28,7 +28,7 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-lg text-brand-grey mb-10 max-w-md">
-            Des d'una simple consulta fins a dissenys complexos d'enginyeria estructural. El nostre equip t'assessorarà sense compromís.
+            Des d&apos;una simple consulta fins a dissenys complexos d&apos;enginyeria estructural. El nostre equip t&apos;assessorarà sense compromís.
           </p>
 
           <div className="flex flex-col gap-6">
@@ -39,7 +39,7 @@ export default function ContactPage() {
                 </svg>
               </div>
               <div>
-                <p className="text-sm text-brand-grey">Truca'ns directament</p>
+                <p className="text-sm text-brand-grey">Truca&apos;ns directament</p>
                 <a href="tel:972640817" className="text-lg font-bold text-white hover:text-brand-red transition-colors outline-none focus-visible:text-brand-red">
                   972 64 08 17
                 </a>
@@ -54,10 +54,10 @@ export default function ContactPage() {
                 </svg>
               </div>
               <div>
-                <p className="text-sm text-brand-grey">Visita'ns a</p>
+                <p className="text-sm text-brand-grey">Visita&apos;ns a</p>
                 <p className="text-lg font-bold text-white">
                   Carrer Aigüeta, 204 <br />
-                  <span className="text-sm font-normal text-brand-grey">La Bisbal de l'Empordà, Girona</span>
+                  <span className="text-sm font-normal text-brand-grey">La Bisbal de l&apos;Empordà, Girona</span>
                 </p>
               </div>
             </div>

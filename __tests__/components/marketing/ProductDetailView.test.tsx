@@ -31,7 +31,7 @@ describe('ProductDetailView Component', () => {
 
   it('renderitza la imatge amb l\'atribut alt correcte', () => {
     render(<ProductDetailView service={mockService} />);
-    const image = screen.getByAltText(/Imatge detallada de Porta de Prova/i);
+    const image = screen.getByAltText(/Porta de Prova - Imatge 1/i);
     expect(image).toHaveAttribute('src', '/images/test.webp');
   });
 

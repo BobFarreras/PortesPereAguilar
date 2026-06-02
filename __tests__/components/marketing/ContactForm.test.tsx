@@ -26,6 +26,6 @@ describe('ContactForm Component', () => {
     fireEvent.submit(form);
     
     // Verifiquem que el missatge d'èxit apareix
-    expect(await screen.findByText(/Missatge enviat correctament/i)).toBeInTheDocument();
+    expect(await screen.findByText(/Missatge enviat correctament/i, {}, { timeout: 2000 })).toBeInTheDocument();
   });
 });

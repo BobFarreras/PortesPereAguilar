@@ -14,10 +14,10 @@ export const SERVICES_DATA: ServiceCategory[] = [
       id: '2',
       title: 'Portes Seccionals',
       description: 'Aïllament tèrmic superior i obertura vertical silenciosa que maximitza l\'espai del teu garatge.',
-      imageUrl: '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitiai�-fusta..webp',
+      imageUrl: '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitiai�-fusta.webp',
       slug: 'portes-seccionals',
       gallery: [
-        '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitiai�-fusta..webp',
+        '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitiai�-fusta.webp',
         '/images/Seccionals/imgi_39_seccional-llisa-gris-4-2048x1536.webp', // Exemple de foto secundària
         '/images/Seccionals/imgi_33_Porta-seccional-folrada-de-xapa-corten-3-2048x1536.webp',
         '/images/Seccionals/imgi_45_Porta-seccional-folrada-de-tauler-mar�.-1-2048x1536.webp',
