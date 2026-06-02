@@ -1,12 +1,72 @@
-### Windows
-# Windows thumbnail cache files
+# =========================================
+# 1. Dependències (Node & pnpm)
+# =========================================
+node_modules/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================================
+# 2. Next.js & Compilació
+# =========================================
+/.next/
+/out/
+build/
+dist/
+.tsbuildinfo
+
+# =========================================
+# 3. Seguretat i Entorn (Variables)
+# =========================================
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+
+# =========================================
+# 4. Testing (Jest & Cypress)
+# =========================================
+/coverage/
+/cypress/videos/
+/cypress/screenshots/
+.nyc_output
+
+# =========================================
+# 5. Eines d'Entorn i Linter
+# =========================================
+.eslintcache
+.stylelintcache
+.prettiercache
+
+# =========================================
+# 6. Desplegament i Infraestructura (Vercel)
+# =========================================
+.vercel
+.serverless/
+
+# =========================================
+# 7. Sistemes Operatius i Editors (IDEs)
+# =========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
 Thumbs.db
-
-# Folder config file
 [Dd]esktop.ini
-
-# Recycle Bin used on file shares
 $RECYCLE.BIN/
-
-# Windows shortcuts
 *.lnk
+
+# IDEs (VSCode, IntelliJ, etc.)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
