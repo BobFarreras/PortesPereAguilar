@@ -23,6 +23,6 @@ describe('MagicButton Component', () => {
         render(<MagicButton>Primari</MagicButton>);
         const buttonElement = screen.getByRole('button', { name: /primari/i });
         // CORRECCIÓ: Afegim el /80 que és la classe real de Tailwind generada
-        expect(buttonElement).toHaveClass('bg-blue-600/80');
+        expect(buttonElement).toHaveClass('bg-brand-red/80');
     });
 });

@@ -4,7 +4,6 @@
 import React from 'react';
 import { motion, HTMLMotionProps } from 'framer-motion';
 
-// CORRECCIÓ: Estenem HTMLMotionProps en lloc de React.ButtonHTMLAttributes
 interface MagicButtonProps extends HTMLMotionProps<"button"> {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary';
@@ -19,7 +18,7 @@ export default function MagicButton({
   
   const baseStyles = "relative overflow-hidden rounded-xl px-6 py-3 font-semibold text-white transition-colors duration-300 backdrop-blur-md shadow-lg outline-none focus:ring-2 focus:ring-offset-2";
   const variants = {
-    primary: "bg-blue-600/80 hover:bg-blue-500/90 focus:ring-blue-500 border border-white/20",
+    primary: "bg-brand-red/80 hover:bg-brand-red focus:ring-brand-red border border-white/20",
     secondary: "bg-gray-800/80 hover:bg-gray-700/90 focus:ring-gray-400 border border-white/10"
   };
 

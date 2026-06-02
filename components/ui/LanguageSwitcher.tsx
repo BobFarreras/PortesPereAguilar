@@ -38,7 +38,8 @@ export default function LanguageSwitcher() {
       newPath = `/${locale}`;
     }
 
-    router.push(newPath);
+    // eslint-disable-next-line react-hooks/immutability
+    window.location.href = newPath;
   };
 
   return (
@@ -53,7 +54,7 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-brand-dark/80 backdrop-blur-md rounded-lg border border-white/10 p-2 z-50">
+        <div className="absolute right-0 mt-2 w-48 bg-white/90 dark:bg-brand-dark/80 backdrop-blur-md rounded-lg border border-brand-dark/10 dark:border-white/10 p-2 z-50">
           {locales.map(locale => (
             <button
               key={locale.code}

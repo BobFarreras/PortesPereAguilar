@@ -59,7 +59,7 @@ export default function TrustSection() {
   };
 
   return (
-    <section className="relative w-full border-t border-white/5 bg-gradient-to-b from-brand-dark to-black py-24 px-6 overflow-hidden">
+    <section className="relative w-full border-t border-brand-dark/5 dark:border-white/5 bg-gradient-to-b from-gray-100 to-white dark:from-brand-dark dark:to-black py-24 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Capçalera */}

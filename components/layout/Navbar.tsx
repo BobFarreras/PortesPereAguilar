@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        isScrolled ? 'bg-brand-dark/80 backdrop-blur-md border-b border-white/10 shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-white/80 dark:bg-brand-dark/80 backdrop-blur-md border-b border-brand-dark/10 dark:border-white/10 shadow-lg' : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -44,13 +44,13 @@ export default function Navbar() {
 
           {/* Enllaços de Navegació */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-sm font-medium text-brand-grey hover:text-white transition-colors outline-none focus-visible:text-brand-red">
+            <Link href="/" className="text-sm font-medium text-brand-dark/70 dark:text-brand-grey hover:text-brand-dark dark:hover:text-white transition-colors outline-none focus-visible:text-brand-red">
               {t('home')}
             </Link>
-            <Link href="/cataleg" className="text-sm font-medium text-brand-grey hover:text-white transition-colors outline-none focus-visible:text-brand-red">
+            <Link href="/cataleg" className="text-sm font-medium text-brand-dark/70 dark:text-brand-grey hover:text-brand-dark dark:hover:text-white transition-colors outline-none focus-visible:text-brand-red">
               {t('catalog')}
             </Link>
-            <Link href="/serveis" className="text-sm font-medium text-brand-grey hover:text-white transition-colors outline-none focus-visible:text-brand-red">
+            <Link href="/serveis" className="text-sm font-medium text-brand-dark/70 dark:text-brand-grey hover:text-brand-dark dark:hover:text-white transition-colors outline-none focus-visible:text-brand-red">
               {t('structures')}
             </Link>
           </nav>
@@ -67,7 +67,7 @@ export default function Navbar() {
             </Link>
             
             {/* Menú Mòbil */}
-            <button className="md:hidden text-white p-2 focus:outline-none" aria-label="Obrir menú">
+            <button className="md:hidden text-brand-dark dark:text-white p-2 focus:outline-none" aria-label="Obrir menú">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>

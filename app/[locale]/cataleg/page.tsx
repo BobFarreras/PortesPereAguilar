@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function CatalogPage() {
   return (
-    <main className="min-h-screen bg-brand-dark pt-32 pb-24 px-6 relative">
+    <main className="min-h-screen bg-white dark:bg-brand-dark pt-32 pb-24 px-6 relative">
       {/* Efecte de fons subtil */}
       <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-brand-red/5 to-transparent pointer-events-none -z-10" />
       

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:is(.dark *));
+
 @theme {
   /* Colors corporatius del logotip de Portes Pere Aguilar */
   --color-brand-red: #E34133;
@@ -8,6 +10,11 @@
 }
 
 body {
+  background-color: #ffffff;
+  color: #0A0A0B;
+}
+
+.dark body {
   background-color: var(--color-brand-dark);
-  color: white;
+  color: #ffffff;
 }

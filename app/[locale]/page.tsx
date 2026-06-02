@@ -5,7 +5,7 @@ import TrustSection from '@/components/marketing/TrustSection';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-brand-dark">
+    <main className="flex min-h-screen flex-col bg-white dark:bg-brand-dark">
       <HeroSection />
       <SolutionsGrid />
       <TrustSection />

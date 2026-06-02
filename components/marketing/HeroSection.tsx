@@ -28,7 +28,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-brand-dark">
+    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-white dark:bg-brand-dark">
       {/* Efecte de fons radiant adaptat al Vermell Corporatiu */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-red/15 blur-[120px] rounded-full pointer-events-none" />
 
@@ -45,19 +45,19 @@ export default function HeroSection() {
           {t('subtitle')}
         </motion.p>
         
-        <motion.h1 
-          className="mb-8 text-5xl font-black tracking-tight text-white md:text-7xl lg:text-8xl"
-          variants={itemVariants}
-        >
-          {t('title.part1')} <br className="hidden md:block" />
-          {/* Gradient ajustat al vermell corporatiu i blanc */}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-white">
-            {t('title.part2')}
-          </span>
-        </motion.h1>
+          <motion.h1
+            className="mb-8 text-5xl font-black tracking-tight text-brand-dark dark:text-white md:text-7xl lg:text-8xl"
+            variants={itemVariants}
+          >
+            {t('title.part1')} <br className="hidden md:block" />
+            {/* Gradient ajustat al vermell corporatiu i blanc */}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-dark dark:to-white">
+              {t('title.part2')}
+            </span>
+          </motion.h1>
 
-        <motion.p 
-          className="mb-10 max-w-2xl text-lg text-brand-grey md:text-xl"
+        <motion.p
+          className="mb-10 max-w-2xl text-lg text-brand-dark/70 dark:text-brand-grey md:text-xl"
           variants={itemVariants}
         >
           {t('description')}

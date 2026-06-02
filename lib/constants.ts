@@ -9,20 +9,19 @@ export const SERVICES_DATA: ServiceCategory[] = [
     imageUrl: '/images/Correderes/imgi_2_Porta-corredissa-amb-tanca-de-corten-1.webp',
     slug: 'portes-corredisses',
   },
-  // Dins de lib/constants.ts, actualitza l'objecte de Portes Seccionals:
-    {
-      id: '2',
-      title: 'Portes Seccionals',
-      description: 'Aïllament tèrmic superior i obertura vertical silenciosa que maximitza l\'espai del teu garatge.',
-      imageUrl: '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitiai�-fusta.webp',
-      slug: 'portes-seccionals',
-      gallery: [
-        '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitiai�-fusta.webp',
-        '/images/Seccionals/imgi_39_seccional-llisa-gris-4-2048x1536.webp', // Exemple de foto secundària
-        '/images/Seccionals/imgi_33_Porta-seccional-folrada-de-xapa-corten-3-2048x1536.webp',
-        '/images/Seccionals/imgi_45_Porta-seccional-folrada-de-tauler-mar�.-1-2048x1536.webp',
-        '/images/Seccionals/imgi_47_seccional-llisa-gris-4-scaled.webp'
-      ],
+  {
+    id: '2',
+    title: 'Portes Seccionals',
+    description: 'Aïllament tèrmic superior i obertura vertical silenciosa que maximitza l\'espai del teu garatge.',
+    imageUrl: '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitacio-fusta.webp',
+    slug: 'portes-seccionals',
+    gallery: [
+      '/images/Seccionals/imgi_13_Porta-seccional-llisa-imitacio-fusta.webp',
+      '/images/Seccionals/imgi_39_seccional-llisa-gris-4-2048x1536.webp',
+      '/images/Seccionals/imgi_33_Porta-seccional-folrada-de-xapa-corten-3-2048x1536.webp',
+      '/images/Seccionals/imgi_45_Porta-seccional-folrada-de-tauler-mari.-1-2048x1536.webp',
+      '/images/Seccionals/imgi_47_seccional-llisa-gris-4-scaled.webp'
+    ],
     features: [
       {
         title: "Panells Sandvitx de 40mm",
@@ -60,14 +59,14 @@ export const SERVICES_DATA: ServiceCategory[] = [
     id: '5',
     title: 'Portes Basculants',
     description: 'Obertura clàssica i eficient per a garatges, combinant mecanismes de contrapesos precisos amb estètica personalitzada.',
-    imageUrl: '/images/Basculants/imgi_33_Basculant-de-corten-amb-canal-ample-2048x1365.webp', // Substitueix per la teva imatge real
+    imageUrl: '/images/Basculants/imgi_33_Basculant-de-corten-amb-canal-ample-2048x1365.webp',
     slug: 'portes-basculants',
   },
   {
     id: '6',
     title: 'Portes Practicables',
     description: 'Elegància i funcionalitat en portes batents, ideals per a accessos de finques i vianants amb automatització d\'alta gamma.',
-    imageUrl: '/images/Practicables/imgi_55_Conjunt-de-porta-practicable-una-fulla-i-peatonal-dacer-corten-2048x1536.webp', // Substitueix per la teva imatge real
+    imageUrl: '/images/Practicables/imgi_55_Conjunt-de-porta-practicable-una-fulla-i-peatonal-dacer-corten-2048x1536.webp',
     slug: 'portes-practicables',
   },
 ];
