@@ -1,4 +1,3 @@
-// components/marketing/HeroSection.tsx
 'use client';
 
 import React from 'react';
@@ -6,8 +5,6 @@ import { motion, Variants } from 'framer-motion';
 import MagicButton from '@/components/ui/MagicButton';
 
 export default function HeroSection() {
-  // CORRECCIÓ: Afegim el tipus ": Variants" a les definicions perquè TypeScript
-  // llegeixi els strings com 'spring' amb el tipatge correcte que espera Framer Motion.
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -29,11 +26,10 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-[#0A0A0B]">
-      {/* Efecte de fons radiant (High-Tech Lighting) */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/20 blur-[120px] rounded-full pointer-events-none" />
+    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-brand-dark">
+      {/* Efecte de fons radiant adaptat al Vermell Corporatiu */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-red/15 blur-[120px] rounded-full pointer-events-none" />
 
-      {/* Contenidor Principal Animat */}
       <motion.div 
         className="relative z-10 flex max-w-5xl flex-col items-center px-6 text-center"
         variants={containerVariants}
@@ -41,10 +37,10 @@ export default function HeroSection() {
         animate="visible"
       >
         <motion.p 
-          className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-blue-400"
+          className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-brand-red"
           variants={itemVariants}
         >
-          Artesania dAlta Tecnologia
+          Artesania d&apos;Alta Tecnologia
         </motion.p>
         
         <motion.h1 
@@ -52,13 +48,14 @@ export default function HeroSection() {
           variants={itemVariants}
         >
           Enginyeria en <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">
+          {/* Gradient ajustat al vermell corporatiu i blanc */}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-white">
             cada tancament.
           </span>
         </motion.h1>
 
         <motion.p 
-          className="mb-10 max-w-2xl text-lg text-gray-400 md:text-xl"
+          className="mb-10 max-w-2xl text-lg text-brand-grey md:text-xl"
           variants={itemVariants}
         >
           Serralleria i estructures metàl·liques dissenyades amb precisió mil·limètrica. 
@@ -72,9 +69,8 @@ export default function HeroSection() {
         </motion.div>
       </motion.div>
 
-      {/* Indicador de Scroll Inferior */}
       <motion.div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-brand-grey"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
@@ -83,7 +79,7 @@ export default function HeroSection() {
         <motion.div 
           animate={{ y: [0, 10, 0] }} 
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="h-6 w-[1px] bg-gray-500"
+          className="h-6 w-[1px] bg-brand-grey"
         />
       </motion.div>
     </section>
