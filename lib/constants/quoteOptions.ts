@@ -52,7 +52,7 @@ export const DOOR_TYPES: DoorType[] = [
 export const STRUCTURE_TYPES: StructureType[] = [
   { id: 'tancaments', translationKey: 'tancaments', imageUrl: '/images/Tancaments/imgi_22_tanca-anguls-SI.2.webp' },
   { id: 'pergoles', translationKey: 'pergoles', imageUrl: '/images/Aplicacions/imgi_3_C60270E6-BBEE-4881-A091-FBB9D1B7DD75-A6ABBEBF-46DB-414F-A836-1728459E9F51.webp' },
-  { id: 'disseny', translationKey: 'disseny', imageUrl: '/images/Aplicacions/imgi_5_Porta-oberta-de-laltell-.2.webp' },
+  { id: 'disseny', translationKey: 'disseny', imageUrl: '/images/Aplicacions/imgi_3_C60270E6-BBEE-4881-A091-FBB9D1B7DD75-A6ABBEBF-46DB-414F-A836-1728459E9F51.webp' },
   { id: 'altres', translationKey: 'altres', imageUrl: '/images/Aplicacions/imgi_6_03961359-6615-4882-B77C-20DD0BD34885-E6185BA5-E759-461B-8FD0-623CD1F18652-1.webp' },
 ];
 
