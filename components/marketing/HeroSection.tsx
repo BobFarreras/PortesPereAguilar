@@ -112,8 +112,11 @@ export default function HeroSection() {
         src="/videos/hero-youtube.mp4"
       />
 
+      {/* Gradient inferior per fondre amb SolutionsGrid */}
+      <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-brand-dark to-transparent z-10 pointer-events-none" />
+
       {/* Contingut — alineat a l'esquerra, sense container fosc */}
-      <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24 max-w-7xl mx-auto">
+      <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24 max-w-7xl mx-auto" style={{ textShadow: '0 0 40px rgba(0,0,0,0.7), 0 0 80px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.5)' }}>
         <AnimatePresence mode="wait">
           {showText && (
             <motion.div

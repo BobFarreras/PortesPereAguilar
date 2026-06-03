@@ -13,10 +13,10 @@ export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
 
   const locales = [
-    { code: 'ca', nativeName: 'Català' },
-    { code: 'es', nativeName: 'Español' },
-    { code: 'en', nativeName: 'English' },
-    { code: 'fr', nativeName: 'Français' },
+    { code: 'ca', nativeName: 'Català', flag: '🏴' },
+    { code: 'es', nativeName: 'Español', flag: '🇪🇸' },
+    { code: 'en', nativeName: 'English', flag: '🇬🇧' },
+    { code: 'fr', nativeName: 'Français', flag: '🇫🇷' },
   ];
 
   const changeLanguage = (locale: string) => {
@@ -53,9 +53,10 @@ export default function LanguageSwitcher() {
         onClick={() => setIsOpen(!isOpen)}
         aria-label={t('language')}
         aria-expanded={isOpen}
-        className="flex items-center justify-center w-10 h-10 rounded-md text-xs font-bold text-brand-grey hover:text-brand-dark hover:bg-brand-dark/10 dark:hover:text-white dark:hover:bg-white/10 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
+        className="flex items-center gap-1.5 w-auto h-10 px-3 rounded-md text-sm font-bold text-brand-grey hover:text-brand-dark hover:bg-brand-dark/10 dark:hover:text-white dark:hover:bg-white/10 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
       >
-        {currentLocale.toUpperCase()}
+        <span className="text-base">{locales.find(l => l.code === currentLocale)?.flag}</span>
+        <span className="text-xs">{currentLocale.toUpperCase()}</span>
       </button>
 
       {isOpen && (
@@ -64,13 +65,14 @@ export default function LanguageSwitcher() {
             <button
               key={locale.code}
               onClick={() => changeLanguage(locale.code)}
-              className={`w-full text-left px-3 py-2 rounded-md text-sm font-medium ${
+              className={`w-full text-left px-3 py-2 rounded-md text-sm font-medium flex items-center gap-2 ${
                 locale.code === currentLocale
                   ? 'text-brand-red bg-brand-red/10'
                   : 'text-gray-600 dark:text-brand-grey hover:text-brand-dark hover:bg-brand-dark/10 dark:hover:text-white dark:hover:bg-white/10'
               }`}
             >
-              {locale.nativeName}
+              <span className="text-base">{locale.flag}</span>
+              <span>{locale.nativeName}</span>
             </button>
           ))}
         </div>

@@ -30,8 +30,11 @@ export default function SolutionsGrid() {
   };
 
   return (
-    <section className="relative w-full bg-white dark:bg-brand-dark py-24 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative w-full bg-brand-dark py-24 px-6">
+      {/* Gradient superior per fondre amb HeroSection */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-brand-dark to-transparent pointer-events-none -mt-32" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
 
         {/* Capçalera de la Secció */}
         <div className="mb-16 text-center md:text-left">
