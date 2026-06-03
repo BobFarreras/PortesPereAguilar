@@ -147,6 +147,7 @@ export default function HeroSection() {
               {/* Títol */}
               <motion.h1
                 className="text-5xl md:text-7xl lg:text-8xl xl:text-[7rem] font-black text-white leading-[0.85] tracking-tight"
+                style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6), 0 1px 3px rgba(0,0,0,0.4)' }}
                 variants={titleVariants}
                 initial="hidden"
                 animate="visible"
@@ -160,6 +161,7 @@ export default function HeroSection() {
               {/* Descripció */}
               <motion.p
                 className="max-w-xl text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed font-medium"
+                style={{ textShadow: '0 1px 8px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.3)' }}
                 variants={descVariants}
                 initial="hidden"
                 animate="visible"
