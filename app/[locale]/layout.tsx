@@ -7,7 +7,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import LayoutGroupWrapper from "@/components/providers/layout-group-wrapper";
-import CatalogGhost from "@/components/marketing/CatalogGhost";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -34,7 +33,6 @@ export default async function LocaleLayout({
     <ThemeProvider attribute="class" enableSystem>
       <NextIntlClientProvider messages={messages} locale={locale}>
         <LayoutGroupWrapper>
-          <CatalogGhost />
           <Navbar />
           <div className="flex-grow">
             {children}
