@@ -223,7 +223,14 @@
       "message": "¿Cómo podemos ayudarte?",
       "submit": "Enviar petición",
       "successTitle": "¡Mensaje enviado correctamente!",
-      "successDescription": "Nuestro equipo técnico se pondrá en contacto contigo lo antes posible para analizar tu proyecto."
+      "successDescription": "Nuestro equipo técnico se pondrá en contacto contigo lo antes posible para analizar tu proyecto.",
+      "sending": "Enviando...",
+      "errors": {
+        "required": "Este campo es obligatorio",
+        "invalidEmail": "Introduce un correo electrónico válido",
+        "serverError": "Ha habido un error. Inténtalo de nuevo más tarde.",
+        "submitFailed": "No se ha podido enviar el mensaje. Revisa los datos y vuelve a intentarlo."
+      }
     },
     "info": {
       "subtitle": "Hablemos de tu proyecto",
@@ -243,5 +250,9 @@
     "legal": "Aviso Legal",
     "privacy": "Política de Privacidad",
     "copyright": "Todos los derechos reservados."
+  },
+  "metadata": {
+    "contactTitle": "Contacto | Portes Pere Aguilar",
+    "contactDescription": "Pide presupuesto para tu puerta, automatismo o estructura metálica en La Bisbal de l'Empordà, Girona."
   }
 }

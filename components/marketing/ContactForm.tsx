@@ -5,40 +5,102 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import MagicButton from '@/components/ui/MagicButton';
+import { contactFormSchema, type ContactFormData } from '@/lib/validations/contact';
+
+type FormErrors = Partial<Record<keyof ContactFormData, string>>;
 
 export default function ContactForm() {
   const t = useTranslations('contact.form');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [serverError, setServerError] = useState<string | null>(null);
+
+  const validateField = (name: string, value: string) => {
+    const result = contactFormSchema.shape[name as keyof ContactFormData]?.safeParse(value);
+    if (!result.success) {
+      const key = result.error.issues[0]?.message ?? 'required';
+      return t(`errors.${key}`);
+    }
+    return undefined;
+  };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    const error = validateField(name, value);
+    setErrors(prev => {
+      const next = { ...prev };
+      if (error) {
+        next[name as keyof ContactFormData] = error;
+      } else {
+        delete next[name as keyof ContactFormData];
+      }
+      return next;
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setServerError(null);
+
+    const formData = new FormData(e.currentTarget);
+    const raw = {
+      name: formData.get('name') ?? '',
+      email: formData.get('email') ?? '',
+      phone: formData.get('phone') ?? '',
+      message: formData.get('message') ?? '',
+      honeypot: formData.get('website') ?? '',
+    };
+
+    const parsed = contactFormSchema.safeParse(raw);
+    if (!parsed.success) {
+      const fieldErrors: FormErrors = {};
+      for (const issue of parsed.error.issues) {
+        const field = issue.path[0] as keyof ContactFormData | undefined;
+        if (field && !fieldErrors[field]) {
+          fieldErrors[field] = t(`errors.${issue.message}`);
+        }
+      }
+      setErrors(fieldErrors);
+      return;
+    }
+
+    if (parsed.data.honeypot) {
+      setIsSuccess(true);
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      const formData = new FormData(e.currentTarget);
-      const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: formData.get('phone'),
-        message: formData.get('message'),
-      };
-
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          name: parsed.data.name,
+          email: parsed.data.email,
+          phone: parsed.data.phone || undefined,
+          message: parsed.data.message,
+        }),
       });
 
       if (res.ok) {
         setIsSuccess(true);
+      } else {
+        const data = await res.json();
+        setServerError(t(`errors.${data.errorKey ?? 'serverError'}`));
       }
-    } catch (error) {
-      console.error("Error enviant el formulari:", error);
+    } catch {
+      setServerError(t('errors.serverError'));
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  const inputClasses = "peer w-full bg-transparent border-b px-0 py-3 text-gray-900 dark:text-white placeholder-transparent focus:outline-none transition-colors";
+  const borderNormal = "border-gray-300 dark:border-white/20";
+  const borderError = "border-red-500 dark:border-red-400";
+  const labelClasses = "absolute left-0 top-3 text-gray-500 dark:text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text";
 
   return (
     <div className="w-full max-w-xl relative">
@@ -54,6 +116,18 @@ export default function ContactForm() {
             onSubmit={handleSubmit}
             className="flex flex-col gap-6 bg-white dark:bg-white/[0.03] border border-gray-200 dark:border-white/10 p-8 rounded-2xl backdrop-blur-md shadow-2xl"
           >
+            {/* Honeypot camp invisible */}
+            <div className="absolute opacity-0 pointer-events-none h-0 overflow-hidden" aria-hidden="true">
+              <label htmlFor="website">Noom</label>
+              <input
+                type="text"
+                name="website"
+                id="website"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+
             {/* Input: Nom */}
             <div className="relative">
               <input
@@ -61,15 +135,16 @@ export default function ContactForm() {
                 name="name"
                 id="name"
                 required
-                className="peer w-full bg-transparent border-b border-gray-300 dark:border-white/20 px-0 py-3 text-gray-900 dark:text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors"
+                onBlur={handleBlur}
+                className={`${inputClasses} ${errors.name ? borderError : borderNormal} focus:border-brand-red`}
                 placeholder={t('name')}
               />
-              <label
-                htmlFor="name"
-                className="absolute left-0 top-3 text-gray-500 dark:text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
-              >
+              <label htmlFor="name" className={labelClasses}>
                 {t('name')}
               </label>
+              {errors.name && (
+                <p className="text-red-500 dark:text-red-400 text-xs mt-1">{errors.name}</p>
+              )}
             </div>
 
             {/* Input: Email */}
@@ -79,15 +154,16 @@ export default function ContactForm() {
                 name="email"
                 id="email"
                 required
-                className="peer w-full bg-transparent border-b border-gray-300 dark:border-white/20 px-0 py-3 text-gray-900 dark:text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors"
+                onBlur={handleBlur}
+                className={`${inputClasses} ${errors.email ? borderError : borderNormal} focus:border-brand-red`}
                 placeholder={t('email')}
               />
-              <label
-                htmlFor="email"
-                className="absolute left-0 top-3 text-gray-500 dark:text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
-              >
+              <label htmlFor="email" className={labelClasses}>
                 {t('email')}
               </label>
+              {errors.email && (
+                <p className="text-red-500 dark:text-red-400 text-xs mt-1">{errors.email}</p>
+              )}
             </div>
 
             {/* Input: Telèfon */}
@@ -96,13 +172,11 @@ export default function ContactForm() {
                 type="tel"
                 name="phone"
                 id="phone"
-                className="peer w-full bg-transparent border-b border-gray-300 dark:border-white/20 px-0 py-3 text-gray-900 dark:text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors"
+                onBlur={handleBlur}
+                className={`${inputClasses} ${borderNormal} focus:border-brand-red`}
                 placeholder={t('phone')}
               />
-              <label
-                htmlFor="phone"
-                className="absolute left-0 top-3 text-gray-500 dark:text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
-              >
+              <label htmlFor="phone" className={labelClasses}>
                 {t('phone')}
               </label>
             </div>
@@ -114,16 +188,24 @@ export default function ContactForm() {
                 id="message"
                 required
                 rows={4}
-                className="peer w-full bg-transparent border-b border-gray-300 dark:border-white/20 px-0 py-3 text-gray-900 dark:text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors resize-none"
+                onBlur={handleBlur}
+                className={`${inputClasses} ${errors.message ? borderError : borderNormal} focus:border-brand-red resize-none`}
                 placeholder={t('message')}
               />
-              <label
-                htmlFor="message"
-                className="absolute left-0 top-3 text-gray-500 dark:text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
-              >
+              <label htmlFor="message" className={labelClasses}>
                 {t('message')}
               </label>
+              {errors.message && (
+                <p className="text-red-500 dark:text-red-400 text-xs mt-1">{errors.message}</p>
+              )}
             </div>
+
+            {/* Error del servidor */}
+            {serverError && (
+              <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-3 text-red-700 dark:text-red-300 text-sm">
+                {serverError}
+              </div>
+            )}
 
             {/* Botó Submit */}
             <div className="mt-4">
@@ -133,11 +215,14 @@ export default function ContactForm() {
                 className="w-full flex justify-center items-center py-4 text-base"
               >
                 {isSubmitting ? (
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-                    className="w-6 h-6 border-2 border-white border-t-transparent rounded-full"
-                  />
+                  <div className="flex items-center gap-2">
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+                      className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+                    />
+                    <span>{t('sending')}</span>
+                  </div>
                 ) : (
                   t('submit')
                 )}
@@ -145,7 +230,7 @@ export default function ContactForm() {
             </div>
           </motion.form>
         ) : (
-          /* Estat d'Èxit Animado */
+          /* Estat d'Èxit Animat */
           <motion.div
             key="success"
             initial={{ opacity: 0, scale: 0.8 }}

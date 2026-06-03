@@ -1,18 +1,29 @@
 // app/[locale]/contacte/page.tsx
 import React from 'react';
-import { Metadata } from 'next';
 import { use } from 'react';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import ContactForm from '@/components/marketing/ContactForm';
 
-export const metadata: Metadata = {
-  title: 'Contacte | Portes Pere Aguilar',
-  description: 'Demana pressupost per a la teva porta, automatisme o estructura metàl·lica a La Bisbal de l\'Empordà, Girona.',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return {
+    title: t('contactTitle'),
+    description: t('contactDescription'),
+  };
+}
 
 export default function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = use(params);
   setRequestLocale(locale);
+
+  return (
+    <ContactPageContent locale={locale} />
+  );
+}
+
+async function ContactPageContent({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: 'contact.info' });
 
   return (
     <main className="min-h-screen bg-white dark:bg-brand-dark pt-32 pb-24 px-6 relative overflow-hidden">
@@ -24,16 +35,13 @@ export default function ContactPage({ params }: { params: Promise<{ locale: stri
         {/* Informació a l'esquerra */}
         <div className="flex flex-col">
           <p className="text-brand-red text-sm font-bold tracking-widest uppercase mb-4">
-            Parlem del teu projecte
+            {t('subtitle')}
           </p>
           <h1 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white mb-6 tracking-tight">
-            Estem preparats per <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-dark dark:to-white">
-              donar forma a la teva idea.
-            </span>
+            {t('title')}
           </h1>
           <p className="text-lg text-gray-500 dark:text-brand-grey mb-10 max-w-md">
-            Des d&apos;una simple consulta fins a dissenys complexos d&apos;enginyeria estructural. El nostre equip t&apos;assessorarà sense compromís.
+            {t('description')}
           </p>
 
           <div className="flex flex-col gap-6">
@@ -44,7 +52,7 @@ export default function ContactPage({ params }: { params: Promise<{ locale: stri
                 </svg>
               </div>
               <div>
-                <p className="text-sm text-gray-500 dark:text-brand-grey">Truca&apos;ns directament</p>
+                <p className="text-sm text-gray-500 dark:text-brand-grey">{t('callUs')}</p>
                 <a href="tel:972640817" className="text-lg font-bold text-gray-900 dark:text-white hover:text-brand-red transition-colors outline-none focus-visible:text-brand-red">
                   972 64 08 17
                 </a>
@@ -59,7 +67,7 @@ export default function ContactPage({ params }: { params: Promise<{ locale: stri
                 </svg>
               </div>
               <div>
-                <p className="text-sm text-gray-500 dark:text-brand-grey">Visita&apos;ns a</p>
+                <p className="text-sm text-gray-500 dark:text-brand-grey">{t('visitUs')}</p>
                 <p className="text-lg font-bold text-gray-900 dark:text-white">
                   Carrer Aigüeta, 204 <br />
                   <span className="text-sm font-normal text-gray-500 dark:text-brand-grey">La Bisbal de l&apos;Empordà, Girona</span>

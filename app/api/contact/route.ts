@@ -1,32 +1,32 @@
 import { NextResponse } from 'next/server';
+import { contactFormSchema } from '@/lib/validations/contact';
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, phone, message } = body;
+    const parsed = contactFormSchema.safeParse(body);
 
-    if (!name || !email || !message) {
+    if (!parsed.success) {
+      const firstError = parsed.error.issues[0];
       return NextResponse.json(
-        { error: 'Nom, email i missatge són obligatoris' },
+        { errorKey: firstError?.message ?? 'serverError' },
         { status: 400 }
       );
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: 'El correu electrònic no és vàlid' },
-        { status: 400 }
-      );
+    const { name, email, phone, message, honeypot } = parsed.data;
+
+    if (honeypot) {
+      return NextResponse.json({ success: true });
     }
 
     // TODO: Integrar amb servei d'email (Resend, SendGrid, Nodemailer, etc.)
     console.log('Formulari rebut:', { name, email, phone, message });
 
-    return NextResponse.json({ success: true, message: 'Missatge rebut correctament' });
+    return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json(
-      { error: 'Error processant la petició' },
+      { errorKey: 'serverError' },
       { status: 500 }
     );
   }
