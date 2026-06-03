@@ -64,7 +64,6 @@ const LANGUAGE_CONFIG = {
 } as const;
 
 type SupportedLocale = keyof typeof LANGUAGE_CONFIG;
-const DEFAULT_LOCALE = 'ca';
 const LOCALES = Object.keys(LANGUAGE_CONFIG);
 
 // --- Component Principal ---
@@ -100,14 +99,8 @@ export default function LanguageSwitcher() {
       }
     }
 
-    // Construir la nova ruta
-    let newPath: string;
-    if (nextLocale === DEFAULT_LOCALE) {
-      // Català no porta prefix
-      newPath = pathWithoutLocale === '/' ? '/' : pathWithoutLocale;
-    } else {
-      newPath = `/${nextLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
-    }
+    // Construir la nova ruta (tots els idiomes tenen prefix)
+    const newPath = `/${nextLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
 
     // Navegar
     window.location.href = newPath;

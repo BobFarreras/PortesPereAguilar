@@ -56,6 +56,6 @@ describe('DoorCard Component', () => {
       />
     );
     const link = screen.getByRole('link');
-    expect(link).toHaveAttribute('href', '/cataleg/portes-seccionals');
+    expect(link).toHaveAttribute('href', '/ca/cataleg/portes-seccionals');
   });
 });

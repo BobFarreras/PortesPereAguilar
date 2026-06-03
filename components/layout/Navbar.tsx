@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+import LocaleLink from '@/components/ui/LocaleLink';
 import Image from 'next/image';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
           {/* Logotip */}
-          <Link href="/" className="relative flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-brand-red rounded-md">
+          <LocaleLink href="/" className="relative flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-brand-red rounded-md">
             <div className="relative w-48 h-12">
               <Image 
                 src="/logo.webp" 
@@ -39,19 +39,19 @@ export default function Navbar() {
                 priority
               />
             </div>
-          </Link>
+          </LocaleLink>
 
           {/* Enllaços de Navegació */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-sm font-medium text-brand-dark/70 dark:text-brand-grey hover:text-brand-dark dark:hover:text-white transition-colors outline-none focus-visible:text-brand-red">
+            <LocaleLink href="/" className="text-sm font-medium text-brand-dark/70 dark:text-brand-grey hover:text-brand-dark dark:hover:text-white transition-colors outline-none focus-visible:text-brand-red">
               {t('home')}
-            </Link>
-            <Link href="/cataleg" className="text-sm font-medium text-brand-dark/70 dark:text-brand-grey hover:text-brand-dark dark:hover:text-white transition-colors outline-none focus-visible:text-brand-red">
+            </LocaleLink>
+            <LocaleLink href="/cataleg" className="text-sm font-medium text-brand-dark/70 dark:text-brand-grey hover:text-brand-dark dark:hover:text-white transition-colors outline-none focus-visible:text-brand-red">
               {t('catalog')}
-            </Link>
-            <Link href="/contacte" className="text-sm font-medium text-brand-dark/70 dark:text-brand-grey hover:text-brand-dark dark:hover:text-white transition-colors outline-none focus-visible:text-brand-red">
+            </LocaleLink>
+            <LocaleLink href="/contacte" className="text-sm font-medium text-brand-dark/70 dark:text-brand-grey hover:text-brand-dark dark:hover:text-white transition-colors outline-none focus-visible:text-brand-red">
               {t('contact')}
-            </Link>
+            </LocaleLink>
           </nav>
 
           {/* Accions: Idioma + Tema */}

@@ -3,7 +3,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import LocaleLink from '@/components/ui/LocaleLink';
 import { motion } from 'framer-motion';
 import { ServiceCategory } from '@/types';
 
@@ -16,7 +16,7 @@ interface DoorCardProps {
 
 export default function DoorCard({ service, title, description }: DoorCardProps) {
   return (
-    <Link href={`/cataleg/${service.slug}`} className="block outline-none group">
+    <LocaleLink href={`/cataleg/${service.slug}`} className="block outline-none group">
       <motion.div
         className="relative overflow-hidden rounded-2xl bg-white dark:bg-brand-dark border border-gray-200 dark:border-white/5 shadow-lg flex flex-col h-full"
         whileHover={{
@@ -69,6 +69,6 @@ export default function DoorCard({ service, title, description }: DoorCardProps)
           </p>
         </div>
       </motion.div>
-    </Link>
+    </LocaleLink>
   );
 }
