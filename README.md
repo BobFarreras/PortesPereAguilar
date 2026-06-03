@@ -6,14 +6,16 @@ Aplicació web corporativa per a **Portes Pere Aguilar**, especialistes en estru
 - **Framework:** Next.js 16 (App Router)
 - **Llenguatge:** TypeScript (estricte)
 - **Estils:** Tailwind CSS v4
-- **Animacions:** Framer Motion
-- **i18n:** next-intl
+- **Animacions:** Framer Motion v12
+- **i18n:** next-intl v4 (ca, es, en, fr)
 - **Tema:** next-themes (clar/fosc)
-- **Testing:** Jest + React Testing Library
+- **Testing:** Jest 30 + React Testing Library
+- **Validació:** Zod
 
 ## Estructura clau
-- `app/` — Rutes i pàgines (Server Components per defecte).
+- `app/[locale]/` — Rutes i pàgines (Server Components per defecte).
 - `components/` — Components React reutilitzables (`ui/`, `layout/`, `marketing/`, `doors/`).
+- `components/marketing/quote/` — Steps del configurador de pressupost.
 - `lib/` — Constants, utilitats i helpers.
 - `locales/` — Traduccions en `ca`, `es`, `en`, `fr`.
 - `__tests__/` — Suites de proves unitàries i d'integració (TDD).
@@ -26,6 +28,9 @@ pnpm install
 # Servidor de desenvolupament
 pnpm dev
 
+# Verificació completa (test + lint + typecheck + build)
+pnpm check
+
 # Tests
 pnpm test
 
@@ -33,7 +38,10 @@ pnpm test
 pnpm lint
 
 # Type check
-pnpm tsc --noEmit
+pnpm typecheck
+
+# Build de producció
+pnpm build
 ```
 
 ## Desplegament
@@ -44,4 +52,6 @@ Configurat per a Vercel. Els pushes a `main` despleguen automàticament a produc
 - `AGENTS.md` — Definició de l'agent IA i convencions de codi.
 - `ARQUITECTURE.md` — Arquitectura de software i estructura de directoris.
 - `INFRASTROCTURE.md` — Infraestructura, CI/CD i observabilitat.
-- `PROJECTE.md` — Visió de disseny UX/UI "Disney Futurista".
+- `I18N.md` — Configuració d'internacionalització (next-intl v4).
+- `PROJECTE.md` — Visió de disseny UX/UI.
+- `CLAUDE.md` — Context ràpid per a IA.
