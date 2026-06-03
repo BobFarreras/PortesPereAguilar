@@ -5,7 +5,7 @@
       "part1": "Ingeniería en",
       "part2": "cada cierre."
     },
-    "description": "Cerrajería y estructuras metálicas diseñadas con precisión milimétrica. Protege y eleva tu espacio con materiales de primera calidad.",
+    "description": "Cerrajería y estructuras metálicas diseñadas con precisión. Protege y eleva tu espacio con materiales de primera calidad.",
     "cta": "Solicita tu Presupuesto"
   },
   "navbar": {
@@ -64,7 +64,7 @@
       },
       "estructuresMetaliques": {
         "title": "Estructuras Metálicas",
-        "description": "Ingeniería estructural a medida. Pérgolas, cubiertas y altillos diseñados con precisión milimétrica.",
+        "description": "Ingeniería estructural a medida. Pérgolas, cubiertas y altillos diseñados con precisión.",
         "features": {
           "enginyeriaAMida": {
             "title": "Ingeniería a Medida",
@@ -174,7 +174,7 @@
       },
       "enginyeria": {
         "title": "Ingeniería y Diseño",
-        "description": "Nuestro equipo de ingenieros calcula la estructura, elige los materiales y crea los planos con precisión milimétrica."
+        "description": "Nuestro equipo de ingenieros calcula la estructura, elige los materiales y crea los planos con precisión."
       },
       "fabricacio": {
         "title": "Fabricación Artesanal",
@@ -223,7 +223,14 @@
       "message": "¿Cómo podemos ayudarte?",
       "submit": "Enviar petición",
       "successTitle": "¡Mensaje enviado correctamente!",
-      "successDescription": "Nuestro equipo técnico se pondrá en contacto contigo lo antes posible para analizar tu proyecto."
+      "successDescription": "Nuestro equipo técnico se pondrá en contacto contigo lo antes posible para analizar tu proyecto.",
+      "sending": "Enviando...",
+      "errors": {
+        "required": "Este campo es obligatorio",
+        "invalidEmail": "Introduce un correo electrónico válido",
+        "serverError": "Ha habido un error. Inténtalo de nuevo más tarde.",
+        "submitFailed": "No se ha podido enviar el mensaje. Revisa los datos y vuelve a intentarlo."
+      }
     },
     "info": {
       "subtitle": "Hablemos de tu proyecto",
@@ -243,5 +250,161 @@
     "legal": "Aviso Legal",
     "privacy": "Política de Privacidad",
     "copyright": "Todos los derechos reservados."
+  },
+  "quote": {
+    "hero": {
+      "subtitle": "Configurador de Presupuesto",
+      "title": "Configura tu puerta ideal",
+      "description": "Responde las preguntas y nuestro equipo te preparará un presupuesto personalizado en menos de 24 horas."
+    },
+    "progress": {
+      "step": "Paso {{current}} de {{total}}"
+    },
+    "steps": {
+      "product": {
+        "title": "¿Qué necesitas?",
+        "subtitle": "Selecciona el tipo de producto",
+        "options": {
+          "portes": "Puertas",
+          "estructures": "Estructuras",
+          "automatismes": "Automatismos"
+        }
+      },
+      "type": {
+        "title": "Tipo de puerta",
+        "subtitle": "¿Qué estilo de puerta buscas?",
+        "options": {
+          "seccional": "Puerta Seccional",
+          "basculant": "Puerta Basculante",
+          "corredissa": "Puerta Corredera",
+          "enrotllable": "Puerta Enrollable",
+          "practicable": "Puerta Practicable"
+        }
+      },
+      "structure": {
+        "title": "Tipo de estructura",
+        "subtitle": "¿Qué tipo de estructura necesitas?",
+        "options": {
+          "tancaments": "Cerramientos",
+          "pergoles": "Pérgolas",
+          "disseny": "Diseño",
+          "altres": "Otros"
+        }
+      },
+      "automation": {
+        "title": "¿Qué puerta quieres automatizar?",
+        "subtitle": "Selecciona la puerta a la que quieres añadir el automatismo",
+        "options": {
+          "seccional": "Puerta Seccional",
+          "basculant": "Puerta Basculante",
+          "corredissa": "Puerta Corredera",
+          "enrotllable": "Puerta Enrollable",
+          "practicable": "Puerta Practicable"
+        }
+      },
+      "dimensions": {
+        "title": "Dimensiones",
+        "subtitle": "Indica las medidas aproximadas de la puerta",
+        "width": "Ancho",
+        "height": "Alto"
+      },
+      "colors": {
+        "title": "Color y Acabado",
+        "subtitle": "Personaliza la apariencia de tu puerta",
+        "material": "Material",
+        "finish": "Acabado",
+        "ralColor": "Color RAL",
+        "materialOptions": {
+          "galvanitzat": "Galvanizado",
+          "corten": "Corten",
+          "inox": "Inox",
+          "alumini": "Aluminio",
+          "fusta": "Madera"
+        },
+        "finishOptions": {
+          "llis": "Liso",
+          "woodgrain": "Imitación Madera",
+          "brushed": "Raspeado",
+          "microperforat": "Microperforado",
+          "llacat": "Lacado"
+        }
+      },
+      "accessories": {
+        "title": "Accesorios",
+        "subtitle": "Añade accesorios a tu proyecto",
+        "options": {
+          "motor": {
+            "title": "Motor Automático",
+            "description": "Apertura y cierre automático con mando a distancia"
+          },
+          "fotocelules": {
+            "title": "Fotocélulas",
+            "description": "Sensores de seguridad que detectan obstáculos y detienen el movimiento"
+          },
+          "comandamentWifi": {
+            "title": "Mando WiFi",
+            "description": "Control desde tu móvil o tableta desde cualquier lugar"
+          },
+          "timbre": {
+            "title": "Timbre Integrado",
+            "description": "Timbre incorporado en la puerta para visitantes"
+          },
+          "plexiglass": {
+            "title": "Plexiglass",
+            "description": "Paneles transparentes para dejar pasar la luz natural"
+          },
+          "barrots": {
+            "title": "Barrotes Decorativos",
+            "description": "Elemento decorativo que aporta carácter y seguridad"
+          },
+          "pantallaPrivacitat": {
+            "title": "Pantalla de Privacidad",
+            "description": "Bloqueo visual total para la intimidad"
+          },
+          "detectorObstacle": {
+            "title": "Detector de Obstáculos",
+            "description": "Sensor avanzado que detiene la puerta si detecta cualquier obstáculo"
+          }
+        }
+      },
+      "contact": {
+        "title": "Tus datos",
+        "subtitle": "¿Cómo podemos contactarte?",
+        "name": "Nombre completo",
+        "email": "Correo electrónico",
+        "phone": "Teléfono",
+        "message": "Mensaje (opcional)",
+        "errors": {
+          "required": "Este campo es obligatorio",
+          "invalidEmail": "Introduce un correo electrónico válido",
+          "invalidDimension": "Medida no válida",
+          "serverError": "Ha habido un error. Inténtalo de nuevo más tarde.",
+          "submitFailed": "No se ha podido enviar. Revisa los datos y vuelve a intentarlo."
+        }
+      }
+    },
+    "navigation": {
+      "back": "Atrás",
+      "next": "Siguiente",
+      "submit": "Solicitar Presupuesto Gratuito",
+      "sending": "Enviando..."
+    },
+    "success": {
+      "title": "¡Presupuesto solicitado!",
+      "description": "¡Gracias! Nuestro equipo técnico preparará tu presupuesto personalizado y te contactaremos en menos de 24 horas."
+    }
+  },
+  "navbar": {
+    "home": "Inicio",
+    "catalog": "Catálogo",
+    "contact": "Contacto",
+    "quote": "Presupuesto",
+    "language": "Cambiar idioma"
+  },
+  "metadata": {
+    "contactTitle": "Contacto | Portes Pere Aguilar",
+    "contactDescription": "Pide presupuesto para tu puerta, automatismo o estructura metálica en La Bisbal de l'Empordà, Girona.",
+    "quoteTitle": "Presupuesto | Portes Pere Aguilar",
+    "quoteDescription": "Configura tu puerta ideal y solicita un presupuesto personalizado a Portes Pere Aguilar."
   }
 }

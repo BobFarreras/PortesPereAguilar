@@ -5,7 +5,7 @@
       "part1": "Enginyeria en",
       "part2": "cada tancament."
     },
-    "description": "Serralleria i estructures metàl·liques dissenyades amb precisió mil·limètrica. Protegeix i eleva el teu espai amb materials de primera qualitat.",
+    "description": "Serralleria i estructures metàl·liques dissenyades amb precisió. Protegeix i eleva el teu espai amb materials de primera qualitat.",
     "cta": "Demana el teu Pressupost"
   },
   "navbar": {
@@ -64,7 +64,7 @@
       },
       "estructuresMetaliques": {
         "title": "Estructures Metàl·liques",
-        "description": "Enginyeria estructural a mida. Pèrgoles, cobertes i altells dissenyats amb precisió mil·limètrica.",
+        "description": "Enginyeria estructural a mida. Pèrgoles, cobertes i altells dissenyats amb precisió.",
         "features": {
           "enginyeriaAMida": {
             "title": "Enginyeria a Mida",
@@ -174,7 +174,7 @@
       },
       "enginyeria": {
         "title": "Enginyeria i Disseny",
-        "description": "El nostre equip d'enginyers calcula l'estructura, escull els materials i crea els plànols amb precisió mil·limètrica."
+        "description": "El nostre equip d'enginyers calcula l'estructura, escull els materials i crea els plànols amb precisió."
       },
       "fabricacio": {
         "title": "Fabricació Artesanal",
@@ -223,7 +223,14 @@
       "message": "Com et podem ajudar?",
       "submit": "Enviar petició",
       "successTitle": "Missatge enviat correctament!",
-      "successDescription": "El nostre equip tècnic es posarà en contacte amb tu el més aviat possible per analitzar el teu projecte."
+      "successDescription": "El nostre equip tècnic es posarà en contacte amb tu el més aviat possible per analitzar el teu projecte.",
+      "sending": "Enviant...",
+      "errors": {
+        "required": "Aquest camp és obligatori",
+        "invalidEmail": "Introdueix un correu electrònic vàlid",
+        "serverError": "Hi ha hagut un error. Torna-ho a provar més tard.",
+        "submitFailed": "No s'ha pogut enviar el missatge. Revisa les dades i torna-ho a provar."
+      }
     },
     "info": {
       "subtitle": "Parlem del teu projecte",
@@ -243,5 +250,161 @@
     "legal": "Avís Legal",
     "privacy": "Política de Privacitat",
     "copyright": "Tots els drets reservats."
+  },
+  "quote": {
+    "hero": {
+      "subtitle": "Configurador de Pressupost",
+      "title": "Configura la teva porta ideal",
+      "description": "Respon les preguntes i el nostre equip t'elaborarà un pressupost personalitzat en menys de 24 hores."
+    },
+    "progress": {
+      "step": "Pas {{current}} de {{total}}"
+    },
+    "steps": {
+      "product": {
+        "title": "Què necessites?",
+        "subtitle": "Selecciona el tipus de producte",
+        "options": {
+          "portes": "Portes",
+          "estructures": "Estructures",
+          "automatismes": "Automatismes"
+        }
+      },
+      "type": {
+        "title": "Tipus de porta",
+        "subtitle": "Quin estil de porta busques?",
+        "options": {
+          "seccional": "Porta Seccional",
+          "basculant": "Porta Basculant",
+          "corredissa": "Porta Corredissa",
+          "enrotllable": "Porta Enrotllable",
+          "practicable": "Porta Practicable"
+        }
+      },
+      "structure": {
+        "title": "Tipus d'estructura",
+        "subtitle": "Quin tipus d'estructura necessites?",
+        "options": {
+          "tancaments": "Tancaments",
+          "pergoles": "Pèrgoles",
+          "disseny": "Disseny",
+          "altres": "Altres"
+        }
+      },
+      "automation": {
+        "title": "Quina porta vols automatitzar?",
+        "subtitle": "Selecciona la porta a la qual vols afegir l'automatisme",
+        "options": {
+          "seccional": "Porta Seccional",
+          "basculant": "Porta Basculant",
+          "corredissa": "Porta Corredissa",
+          "enrotllable": "Porta Enrotllable",
+          "practicable": "Porta Practicable"
+        }
+      },
+      "dimensions": {
+        "title": "Dimensions",
+        "subtitle": "Indica les mides aproximades de la porta",
+        "width": "Ample",
+        "height": "Alçada"
+      },
+      "colors": {
+        "title": "Color i Acabat",
+        "subtitle": "Personalitza l'aparença de la teva porta",
+        "material": "Material",
+        "finish": "Acabat",
+        "ralColor": "Color RAL",
+        "materialOptions": {
+          "galvanitzat": "Galvanitzat",
+          "corten": "Corten",
+          "inox": "Inox",
+          "alumini": "Alumini",
+          "fusta": "Fusta"
+        },
+        "finishOptions": {
+          "llis": "Llís",
+          "woodgrain": "Imitació Fusta",
+          "brushed": "Raspat",
+          "microperforat": "Microperforat",
+          "llacat": "Llacat"
+        }
+      },
+      "accessories": {
+        "title": "Accessoris",
+        "subtitle": "Afegeix accessoris al teu projecte",
+        "options": {
+          "motor": {
+            "title": "Motor Automàtic",
+            "description": "Obertura i tancament automàtic amb comandament remot"
+          },
+          "fotocelules": {
+            "title": "Fotocèl·lules",
+            "description": "Sensors de seguretat que detecten obstacles i aturen el moviment"
+          },
+          "comandamentWifi": {
+            "title": "Comandament WiFi",
+            "description": "Control des del teu mòbil o tauleta des de qualsevol lloc"
+          },
+          "timbre": {
+            "title": "Timbre Integrat",
+            "description": "Timbre incorporat a la porta per a visitants"
+          },
+          "plexiglass": {
+            "title": "Plexiglass",
+            "description": "Panells transparents per deixar pas a la llum natural"
+          },
+          "barrots": {
+            "title": "Barrots Decoratius",
+            "description": "Element decoratiu que aporta caràcter i seguretat"
+          },
+          "pantallaPrivacitat": {
+            "title": "Pantalla de Privacitat",
+            "description": "Bloqueig visual total per a la intimitat"
+          },
+          "detectorObstacle": {
+            "title": "Detector d'Obstacles",
+            "description": "Sensor avançat que atura la porta si detecta qualsevol obstacle"
+          }
+        }
+      },
+      "contact": {
+        "title": "Les teves dades",
+        "subtitle": "Com et podem contactar?",
+        "name": "Nom complet",
+        "email": "Correu electrònic",
+        "phone": "Telèfon",
+        "message": "Missatge (opcional)",
+        "errors": {
+          "required": "Aquest camp és obligatori",
+          "invalidEmail": "Introdueix un correu electrònic vàlid",
+          "invalidDimension": "Mida no vàlida",
+          "serverError": "Hi ha hagut un error. Torna-ho a provar més tard.",
+          "submitFailed": "No s'ha pogut enviar. Revisa les dades i torna-ho a provar."
+        }
+      }
+    },
+    "navigation": {
+      "back": "Enrere",
+      "next": "Següent",
+      "submit": "Demanar Pressupost Gratüït",
+      "sending": "Enviant..."
+    },
+    "success": {
+      "title": "Pressupost sol·licitat!",
+      "description": "Gràcies! El nostre equip tècnic prepararà el teu pressupost personalitzat i et contactarem en menys de 24 hores."
+    }
+  },
+  "navbar": {
+    "home": "Inici",
+    "catalog": "Catàleg",
+    "contact": "Contacte",
+    "quote": "Pressupost",
+    "language": "Canviar idioma"
+  },
+  "metadata": {
+    "contactTitle": "Contacte | Portes Pere Aguilar",
+    "contactDescription": "Demana pressupost per a la teva porta, automatisme o estructura metàl·lica a La Bisbal de l'Empordà, Girona.",
+    "quoteTitle": "Pressupost | Portes Pere Aguilar",
+    "quoteDescription": "Configura la teva porta ideal i demana un pressupost personalitzat a Portes Pere Aguilar."
   }
 }

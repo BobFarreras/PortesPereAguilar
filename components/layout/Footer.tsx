@@ -1,6 +1,6 @@
 // components/layout/Footer.tsx
 import React from 'react';
-import Link from 'next/link';
+import LocaleLink from '@/components/ui/LocaleLink';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
@@ -15,14 +15,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Columna 1: Marca i Descripció */}
           <div className="flex flex-col">
-            <Link href="/" className="relative w-48 h-12 mb-6 outline-none focus-visible:ring-2 focus-visible:ring-brand-red rounded-md block">
+            <LocaleLink href="/" className="relative w-48 h-12 mb-6 outline-none focus-visible:ring-2 focus-visible:ring-brand-red rounded-md block">
               <Image
                 src="/logo.webp"
                 alt="Logotip Portes Pere Aguilar"
                 fill
                 className="object-contain object-left"
               />
-            </Link>
+            </LocaleLink>
             <p className="text-brand-dark/70 dark:text-brand-grey text-sm leading-relaxed max-w-sm">
               {t('description')}
             </p>
@@ -32,12 +32,15 @@ export default function Footer() {
           <div className="flex flex-col">
             <h4 className="text-brand-dark dark:text-white font-bold mb-6 tracking-wide uppercase text-sm">{t('explore')}</h4>
             <nav className="flex flex-col gap-4">
-              <Link href="/cataleg" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
+              <LocaleLink href="/cataleg" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
                 {t('catalog')}
-              </Link>
-              <Link href="/contacte" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
+              </LocaleLink>
+              <LocaleLink href="/pressupost" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
                 {t('requestQuote')}
-              </Link>
+              </LocaleLink>
+              <LocaleLink href="/contacte" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
+                {t('contact')}
+              </LocaleLink>
             </nav>
           </div>
 
@@ -74,12 +77,12 @@ export default function Footer() {
             &copy; {currentYear} Portes Pere Aguilar. {t('copyright')}
           </p>
           <div className="flex gap-4">
-            <Link href="/avis-legal" className="text-xs text-brand-dark/60 dark:text-brand-grey/60 hover:text-brand-dark dark:hover:text-brand-grey transition-colors outline-none focus-visible:text-brand-red">
+            <LocaleLink href="/avis-legal" className="text-xs text-brand-dark/60 dark:text-brand-grey/60 hover:text-brand-dark dark:hover:text-brand-grey transition-colors outline-none focus-visible:text-brand-red">
               {t('legal')}
-            </Link>
-            <Link href="/privacitat" className="text-xs text-brand-dark/60 dark:text-brand-grey/60 hover:text-brand-dark dark:hover:text-brand-grey transition-colors outline-none focus-visible:text-brand-red">
+            </LocaleLink>
+            <LocaleLink href="/privacitat" className="text-xs text-brand-dark/60 dark:text-brand-grey/60 hover:text-brand-dark dark:hover:text-brand-grey transition-colors outline-none focus-visible:text-brand-red">
               {t('privacy')}
-            </Link>
+            </LocaleLink>
           </div>
         </div>
 

@@ -2,7 +2,6 @@
 import ContactForm from '@/components/marketing/ContactForm';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 
-
 describe('ContactForm Component', () => {
   it('renderitza tots els camps requerits del formulari', () => {
     render(<ContactForm />);
@@ -18,14 +17,30 @@ describe('ContactForm Component', () => {
     expect(screen.getByRole('button', { name: /submit/i })).toBeInTheDocument();
   });
 
-  it('mostra l\'estat d\'èxit després d\'enviar (simulació)', async () => {
+  it('mostra errors de validació si s\'envia buit', async () => {
     render(<ContactForm />);
     const form = screen.getByTestId('contact-form');
 
-    // Simulem l'enviament del formulari
     fireEvent.submit(form);
 
-    // Verifiquem que el missatge d'èxit apareix
-    expect(await screen.findByText(/successTitle/i, {}, { timeout: 2000 })).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getAllByText(/errors\.required/i).length).toBeGreaterThan(0);
+    });
+  });
+
+  it('mostra l\'estat d\'èxit després d\'enviar correctament', async () => {
+    global.fetch = jest.fn().mockResolvedValue({ ok: true });
+
+    render(<ContactForm />);
+
+    fireEvent.change(screen.getByLabelText(/name/i), { target: { value: 'Test User' } });
+    fireEvent.change(screen.getByLabelText(/email/i), { target: { value: 'test@example.com' } });
+    fireEvent.change(screen.getByLabelText(/message/i), { target: { value: 'Test message' } });
+
+    fireEvent.submit(screen.getByTestId('contact-form'));
+
+    expect(await screen.findByText(/successTitle/i, {}, { timeout: 3000 })).toBeInTheDocument();
+
+    (global.fetch as jest.Mock).mockRestore();
   });
 });

@@ -3,7 +3,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import LocaleLink from '@/components/ui/LocaleLink';
 import { motion } from 'framer-motion';
 import { ServiceCategory } from '@/types';
 
@@ -16,7 +16,7 @@ interface DoorCardProps {
 
 export default function DoorCard({ service, title, description }: DoorCardProps) {
   return (
-    <Link href={`/cataleg/${service.slug}`} className="block outline-none group">
+    <LocaleLink href={`/cataleg/${service.slug}`} className="block outline-none group">
       <motion.div
         className="relative overflow-hidden rounded-2xl bg-white dark:bg-brand-dark border border-gray-200 dark:border-white/5 shadow-lg flex flex-col h-full"
         whileHover={{
@@ -28,16 +28,22 @@ export default function DoorCard({ service, title, description }: DoorCardProps)
       >
         {/* Contenidor de la Imatge amb Zoom Interior */}
         <div className="relative h-64 w-full overflow-hidden bg-brand-grey/10">
-          <Image
-            src={service.imageUrl}
-            alt={title}
-            fill
-            priority
-            loading="eager"
-            className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 dark:from-brand-dark/80 via-transparent to-transparent opacity-80" />
+          <motion.div
+            layoutId={`product-image-${service.slug}`}
+            layout="position"
+            className="absolute inset-0"
+            transition={{ type: 'spring', stiffness: 350, damping: 30 }}
+          >
+            <Image
+              src={service.imageUrl}
+              alt={title}
+              fill
+              priority
+              loading="eager"
+              className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </motion.div>
         </div>
 
         {/* Contingut Textual */}
@@ -62,6 +68,6 @@ export default function DoorCard({ service, title, description }: DoorCardProps)
           </p>
         </div>
       </motion.div>
-    </Link>
+    </LocaleLink>
   );
 }

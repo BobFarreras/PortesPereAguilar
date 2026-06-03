@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import LocaleLink from '@/components/ui/LocaleLink';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import MagicButton from '@/components/ui/MagicButton';
@@ -73,9 +73,10 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-20">
         {/* Esquerra: Carrusel */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+          layoutId={`product-image-${service.slug}`}
+          layout="position"
+          className="relative overflow-hidden rounded-2xl"
+          transition={{ type: 'spring', stiffness: 350, damping: 30 }}
         >
           <ImageCarousel
             images={imagesToDisplay}
@@ -90,7 +91,7 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ type: 'spring', stiffness: 200, damping: 20, delay: 0.15 }}
         >
-          <Link
+          <LocaleLink
             href="/cataleg"
             className="inline-flex items-center text-sm font-bold text-gray-500 dark:text-brand-grey hover:text-brand-red transition-colors mb-6 outline-none focus-visible:text-brand-red w-fit"
           >
@@ -98,7 +99,7 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
             {tCommon('backToCatalog')}
-          </Link>
+          </LocaleLink>
 
           <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
             {t(`servicesList.${service.translationKey}.title`)}
@@ -110,11 +111,11 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
             {t(`servicesList.${service.translationKey}.description`)}
           </p>
 
-          <Link href="/contacte" tabIndex={-1} className="self-start">
+          <LocaleLink href="/contacte" tabIndex={-1} className="self-start">
             <MagicButton className="px-8 py-4 text-base">
               {tCommon('requestQuote')}
             </MagicButton>
-          </Link>
+          </LocaleLink>
 
           {/* Teaser de característiques (Highlights) */}
           {service.features && service.features.length > 0 && (
@@ -311,11 +312,11 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
         <p className="text-gray-500 dark:text-brand-grey mb-8 max-w-xl mx-auto">
           {tCommon('ctaDescription')}
         </p>
-        <Link href="/contacte" tabIndex={-1}>
+        <LocaleLink href="/contacte" tabIndex={-1}>
           <MagicButton className="px-10 py-4 text-lg">
             {tCommon('requestQuote')}
           </MagicButton>
-        </Link>
+        </LocaleLink>
       </motion.section>
     </div>
   );

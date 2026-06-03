@@ -5,7 +5,7 @@
       "part1": "Engineering in",
       "part2": "every closure."
     },
-    "description": "Metalwork and metal structures designed with millimetric precision. Protect and elevate your space with top-quality materials.",
+    "description": "Metalwork and metal structures designed with precision. Protect and elevate your space with top-quality materials.",
     "cta": "Request your Quote"
   },
   "navbar": {
@@ -64,7 +64,7 @@
       },
       "estructuresMetaliques": {
         "title": "Metal Structures",
-        "description": "Bespoke structural engineering. Pergolas, roofing and mezzanines designed with millimetric precision.",
+        "description": "Bespoke structural engineering. Pergolas, roofing and mezzanines designed with precision.",
         "features": {
           "enginyeriaAMida": {
             "title": "Tailored Engineering",
@@ -174,7 +174,7 @@
       },
       "enginyeria": {
         "title": "Engineering & Design",
-        "description": "Our engineering team calculates the structure, selects materials and creates blueprints with millimetric precision."
+        "description": "Our engineering team calculates the structure, selects materials and creates blueprints with precision."
       },
       "fabricacio": {
         "title": "Artisan Manufacturing",
@@ -223,7 +223,14 @@
       "message": "How can we help you?",
       "submit": "Send request",
       "successTitle": "Message sent successfully!",
-      "successDescription": "Our technical team will contact you as soon as possible to analyse your project."
+      "successDescription": "Our technical team will contact you as soon as possible to analyse your project.",
+      "sending": "Sending...",
+      "errors": {
+        "required": "This field is required",
+        "invalidEmail": "Enter a valid email address",
+        "serverError": "An error occurred. Please try again later.",
+        "submitFailed": "Could not send the message. Please check your details and try again."
+      }
     },
     "info": {
       "subtitle": "Let's talk about your project",
@@ -243,5 +250,161 @@
     "legal": "Legal Notice",
     "privacy": "Privacy Policy",
     "copyright": "All rights reserved."
+  },
+  "quote": {
+    "hero": {
+      "subtitle": "Quote Configurator",
+      "title": "Configure your ideal door",
+      "description": "Answer the questions and our team will prepare a personalised quote within 24 hours."
+    },
+    "progress": {
+      "step": "Step {{current}} of {{total}}"
+    },
+    "steps": {
+      "product": {
+        "title": "What do you need?",
+        "subtitle": "Select the product type",
+        "options": {
+          "portes": "Doors",
+          "estructures": "Structures",
+          "automatismes": "Automation"
+        }
+      },
+      "type": {
+        "title": "Door type",
+        "subtitle": "What style of door are you looking for?",
+        "options": {
+          "seccional": "Sectional Door",
+          "basculant": "Up-and-Over Door",
+          "corredissa": "Sliding Door",
+          "enrotllable": "Roller Door",
+          "practicable": "Side-Hinged Door"
+        }
+      },
+      "structure": {
+        "title": "Structure type",
+        "subtitle": "What type of structure do you need?",
+        "options": {
+          "tancaments": "Enclosures",
+          "pergoles": "Pergolas",
+          "disseny": "Design",
+          "altres": "Other"
+        }
+      },
+      "automation": {
+        "title": "Which door do you want to automate?",
+        "subtitle": "Select the door you want to add automation to",
+        "options": {
+          "seccional": "Sectional Door",
+          "basculant": "Up-and-Over Door",
+          "corredissa": "Sliding Door",
+          "enrotllable": "Roller Door",
+          "practicable": "Side-Hinged Door"
+        }
+      },
+      "dimensions": {
+        "title": "Dimensions",
+        "subtitle": "Enter the approximate door measurements",
+        "width": "Width",
+        "height": "Height"
+      },
+      "colors": {
+        "title": "Colour & Finish",
+        "subtitle": "Personalise the look of your door",
+        "material": "Material",
+        "finish": "Finish",
+        "ralColor": "RAL Colour",
+        "materialOptions": {
+          "galvanitzat": "Galvanised",
+          "corten": "Corten",
+          "inox": "Stainless",
+          "alumini": "Aluminium",
+          "fusta": "Wood"
+        },
+        "finishOptions": {
+          "llis": "Smooth",
+          "woodgrain": "Woodgrain",
+          "brushed": "Brushed",
+          "microperforat": "Micro-perforated",
+          "llacat": "Lacquered"
+        }
+      },
+      "accessories": {
+        "title": "Accessories",
+        "subtitle": "Add accessories to your project",
+        "options": {
+          "motor": {
+            "title": "Automatic Motor",
+            "description": "Automatic opening and closing with remote control"
+          },
+          "fotocelules": {
+            "title": "Photocells",
+            "description": "Safety sensors that detect obstacles and stop movement"
+          },
+          "comandamentWifi": {
+            "title": "WiFi Remote",
+            "description": "Control from your phone or tablet from anywhere"
+          },
+          "timbre": {
+            "title": "Integrated Doorbell",
+            "description": "Built-in doorbell in the door for visitors"
+          },
+          "plexiglass": {
+            "title": "Plexiglass",
+            "description": "Transparent panels to let in natural light"
+          },
+          "barrots": {
+            "title": "Decorative Bars",
+            "description": "Decorative element that adds character and security"
+          },
+          "pantallaPrivacitat": {
+            "title": "Privacy Screen",
+            "description": "Total visual block for complete privacy"
+          },
+          "detectorObstacle": {
+            "title": "Obstacle Detector",
+            "description": "Advanced sensor that stops the door if any obstacle is detected"
+          }
+        }
+      },
+      "contact": {
+        "title": "Your details",
+        "subtitle": "How can we contact you?",
+        "name": "Full name",
+        "email": "Email address",
+        "phone": "Phone",
+        "message": "Message (optional)",
+        "errors": {
+          "required": "This field is required",
+          "invalidEmail": "Enter a valid email address",
+          "invalidDimension": "Invalid dimension",
+          "serverError": "An error occurred. Please try again later.",
+          "submitFailed": "Could not send. Please check your details and try again."
+        }
+      }
+    },
+    "navigation": {
+      "back": "Back",
+      "next": "Next",
+      "submit": "Request Free Quote",
+      "sending": "Sending..."
+    },
+    "success": {
+      "title": "Quote requested!",
+      "description": "Thank you! Our technical team will prepare your personalised quote and we will contact you within 24 hours."
+    }
+  },
+  "navbar": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "contact": "Contact",
+    "quote": "Quote",
+    "language": "Change language"
+  },
+  "metadata": {
+    "contactTitle": "Contact | Portes Pere Aguilar",
+    "contactDescription": "Get a quote for your door, automation or metal structure in La Bisbal de l'Empordà, Girona.",
+    "quoteTitle": "Quote | Portes Pere Aguilar",
+    "quoteDescription": "Configure your ideal door and request a personalised quote from Portes Pere Aguilar."
   }
 }
