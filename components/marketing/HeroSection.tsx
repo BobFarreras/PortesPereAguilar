@@ -18,7 +18,7 @@ export default function HeroSection() {
         preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
         poster="/images/Practicables/imgi_57_prac-fixe-corten.webp"
-        src="/videos/youtube-hero.mp4"
+        src="/videos/hero-youtube.mp4"
       />
 
       {/* Gradient esquerre per llegibilitat del text */}
