@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
@@ -9,42 +9,75 @@ interface ImageCarouselProps {
   altPrefix: string;
 }
 
-const variants = {
-  enter: {
-    opacity: 0,
-  },
-  center: {
-    zIndex: 1,
-    opacity: 1,
-  },
-  exit: {
-    zIndex: 0,
-    opacity: 0,
-  },
-};
-
 export default function ImageCarousel({ images, altPrefix }: ImageCarouselProps) {
   const [page, setPage] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Si no hi ha array de galeria o està buit, utilitzem un fallback silenciós
+  const imageIndex = images && images.length > 0 ? Math.abs(page % images.length) : 0;
+
+  const paginate = useCallback((newDirection: number) => {
+    setDirection(newDirection);
+    setPage((prev) => prev + newDirection);
+  }, []);
+
+  // Auto-play cada 5s
+  useEffect(() => {
+    if (!images || images.length <= 1) return;
+    intervalRef.current = setInterval(() => {
+      setDirection(1);
+      setPage((prev) => prev + 1);
+    }, 5000);
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, [images?.length]);
+
+  // Pausar auto-play al hover
+  const pauseAutoPlay = () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  const resumeAutoPlay = () => {
+    if (!images || images.length <= 1) return;
+    intervalRef.current = setInterval(() => {
+      setDirection(1);
+      setPage((prev) => prev + 1);
+    }, 5000);
+  };
+
   if (!images || images.length === 0) return null;
 
-  const imageIndex = Math.abs(page % images.length);
-
-  const paginate = (newDirection: number) => {
-    setPage(page + newDirection);
+  const variants = {
+    enter: (d: number) => ({
+      x: d > 0 ? '100%' : '-100%',
+      opacity: 0,
+      scale: 1.05,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      zIndex: 1,
+    },
+    exit: (d: number) => ({
+      x: d > 0 ? '-100%' : '100%',
+      opacity: 0,
+      scale: 0.95,
+      zIndex: 0,
+    }),
   };
 
   return (
-    <div className="relative w-full h-[400px] md:h-[600px] flex items-center justify-center overflow-hidden rounded-2xl border border-white/10 shadow-2xl group">
-      <AnimatePresence initial={false} mode="wait">
+    <div
+      className="relative w-full h-[400px] md:h-[600px] overflow-hidden rounded-2xl border border-white/10 shadow-2xl group bg-black"
+      onMouseEnter={pauseAutoPlay}
+      onMouseLeave={resumeAutoPlay}
+    >
+      <AnimatePresence initial={false} custom={direction} mode="popLayout">
         <motion.div
           key={imageIndex}
+          custom={direction}
           variants={variants}
           initial="enter"
           animate="center"
           exit="exit"
-          transition={{ opacity: { duration: 0.2 } }}
+          transition={{ x: { type: 'spring', stiffness: 300, damping: 30 }, opacity: { duration: 0.3 }, scale: { duration: 0.4 } }}
           className="absolute inset-0 w-full h-full"
         >
           <Image
@@ -58,7 +91,6 @@ export default function ImageCarousel({ images, altPrefix }: ImageCarouselProps)
         </motion.div>
       </AnimatePresence>
 
-      {/* Botons de navegació (només visibles si hi ha +1 imatge) */}
       {images.length > 1 && (
         <>
           <button
@@ -80,12 +112,14 @@ export default function ImageCarousel({ images, altPrefix }: ImageCarouselProps)
             </svg>
           </button>
 
-          {/* Indicadors (Dots) */}
           <div className="absolute bottom-6 z-10 flex gap-2">
             {images.map((_, i) => (
               <button
                 key={i}
-                onClick={() => setPage(i)}
+                onClick={() => {
+                  setDirection(i > imageIndex ? 1 : -1);
+                  setPage(i);
+                }}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${i === imageIndex ? 'w-8 bg-brand-red' : 'bg-white/40 hover:bg-white'}`}
                 aria-label={`Anar a la imatge ${i + 1}`}
               />

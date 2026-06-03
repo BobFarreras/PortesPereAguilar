@@ -1,14 +1,57 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+
+function createAmbientPad(ctx: AudioContext, destination: AudioNode) {
+  const now = ctx.currentTime;
+  const masterGain = ctx.createGain();
+  masterGain.gain.setValueAtTime(0, now);
+  masterGain.gain.linearRampToValueAtTime(0.15, now + 3);
+  masterGain.connect(destination);
+
+  const notes = [130.81, 164.81, 196.00, 261.63]; // C3, E3, G3, C4
+
+  notes.forEach((freq) => {
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    const filter = ctx.createBiquadFilter();
+
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(freq, now);
+
+    // LFO per vibrato suau
+    const lfo = ctx.createOscillator();
+    const lfoGain = ctx.createGain();
+    lfo.frequency.setValueAtTime(0.3 + Math.random() * 0.2, now);
+    lfoGain.gain.setValueAtTime(1.5, now);
+    lfo.connect(lfoGain);
+    lfoGain.connect(osc.frequency);
+    lfo.start(now);
+
+    filter.type = 'lowpass';
+    filter.frequency.setValueAtTime(400, now);
+    filter.Q.setValueAtTime(1, now);
+
+    gain.gain.setValueAtTime(0.08, now);
+
+    osc.connect(filter);
+    filter.connect(gain);
+    gain.connect(masterGain);
+    osc.start(now);
+  });
+
+  return masterGain;
+}
 
 export default function HeroSection() {
   const t = useTranslations('hero');
   const sectionRef = useRef<HTMLDivElement>(null);
   const [showText, setShowText] = useState(false);
   const isFirstLoad = useRef(true);
+  const audioCtxRef = useRef<AudioContext | null>(null);
+  const audioStarted = useRef(false);
 
   // IntersectionObserver + delay només al primer load
   useEffect(() => {
@@ -52,6 +95,14 @@ export default function HeroSection() {
       clearTimeout(showTimer);
       clearTimeout(hideTimer);
     };
+  }, []);
+
+  const startAudio = useCallback(() => {
+    if (audioStarted.current) return;
+    audioStarted.current = true;
+    const ctx = new AudioContext();
+    audioCtxRef.current = ctx;
+    createAmbientPad(ctx, ctx.destination);
   }, []);
 
   const lineVariants: Variants = {
@@ -212,6 +263,20 @@ export default function HeroSection() {
           </svg>
         </motion.div>
       </motion.div>
+
+      {/* Botó so ambiental */}
+      <motion.button
+        onClick={startAudio}
+        className="absolute bottom-8 right-8 z-10 p-3 rounded-full bg-white/10 text-white backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 0.8 }}
+        aria-label="Activar so ambiental"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+        </svg>
+      </motion.button>
     </section>
   );
 }
