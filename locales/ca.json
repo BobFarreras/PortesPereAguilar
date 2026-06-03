@@ -161,6 +161,30 @@
   "productDetail": {
     "backToCatalog": "Tornar al catàleg",
     "requestQuote": "Demanar pressupost",
+    "featuresTitle": "Característiques Tècniques",
+    "featuresSubtitle": "Descobreix els detalls que fan la diferència en cada projecte.",
+    "processTitle": "El Nostre Procés",
+    "processSubtitle": "De la idea a la realitat en quatre passes professionals.",
+    "process": {
+      "consulta": {
+        "title": "Consulta i Mesura",
+        "description": "Visitem la teva obra, prenem mesures precises i escoltem les teves necessitats per definir el projecte perfecte."
+      },
+      "enginyeria": {
+        "title": "Enginyeria i Disseny",
+        "description": "El nostre equip d'enginyers calcula l'estructura, escull els materials i crea els plànols amb precisió mil·limètrica."
+      },
+      "fabricacio": {
+        "title": "Fabricació Artesanal",
+        "description": "A l'obrador, cada peça es talla, solda i acaba a mà per artesans especialitzats amb més de 30 anys d'experiència."
+      },
+      "instalacio": {
+        "title": "Instal·lació i Garantia",
+        "description": "Equip propi d'instal·ladors certificats munta el teu projecte i el posa a punt amb garantia completa de funcionament."
+      }
+    },
+    "ctaTitle": "T'ajudem a fer realitat el teu projecte",
+    "ctaDescription": "Explica'ns què necessites i t'elaborarem un pressupost a mida sense compromís.",
     "fallback": {
       "premiumTitle": "Materials Premium",
       "premiumDescription": "Dissenyats per a la màxima durabilitat i resistència.",

@@ -38,6 +38,8 @@ describe('ProductDetailView Component', () => {
   it('renderitza els botons d\'acció (Tornar i Contactar) amb claus de traducció', () => {
     render(<ProductDetailView service={mockService} />);
     expect(screen.getByRole('link', { name: /backToCatalog/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /requestQuote/i })).toBeInTheDocument();
+    // Hi ha 2 links "requestQuote" (un al header i un al CTA final)
+    const quoteLinks = screen.getAllByRole('link', { name: /requestQuote/i });
+    expect(quoteLinks.length).toBeGreaterThanOrEqual(1);
   });
 });

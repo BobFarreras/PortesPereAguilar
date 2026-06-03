@@ -161,6 +161,30 @@
   "productDetail": {
     "backToCatalog": "Retour au catalogue",
     "requestQuote": "Demander un devis",
+    "featuresTitle": "Caractéristiques Techniques",
+    "featuresSubtitle": "Découvrez les détails qui font la différence dans chaque projet.",
+    "processTitle": "Notre Processus",
+    "processSubtitle": "De l'idée à la réalité en quatre étapes professionnelles.",
+    "process": {
+      "consulta": {
+        "title": "Consultation & Mesure",
+        "description": "Nous visitons votre chantier, prenons des mesures précises et écoutons vos besoins pour définir le projet parfait."
+      },
+      "enginyeria": {
+        "title": "Ingénierie & Design",
+        "description": "Notre équipe d'ingénieurs calcule la structure, choisit les matériaux et crée les plans avec une précision millimétrique."
+      },
+      "fabricacio": {
+        "title": "Fabrication Artisanale",
+        "description": "À l'atelier, chaque pièce est coupée, soudée et finie à la main par des artisans spécialisés avec plus de 30 ans d'expérience."
+      },
+      "instalacio": {
+        "title": "Installation & Garantie",
+        "description": "Notre propre équipe d'installateurs certifiés assemble votre projet et le met en service avec une garantie complète de fonctionnement."
+      }
+    },
+    "ctaTitle": "Nous vous aidons à concrétiser votre projet",
+    "ctaDescription": "Dites-nous ce dont vous avez besoin et nous vous préparerons un devis sur mesure sans engagement.",
     "fallback": {
       "premiumTitle": "Matériaux Premium",
       "premiumDescription": "Conçus pour une durabilité et une résistance maximales.",

@@ -161,10 +161,34 @@
   "productDetail": {
     "backToCatalog": "Back to catalog",
     "requestQuote": "Request a quote",
+    "featuresTitle": "Technical Features",
+    "featuresSubtitle": "Discover the details that make the difference in every project.",
+    "processTitle": "Our Process",
+    "processSubtitle": "From idea to reality in four professional steps.",
+    "process": {
+      "consulta": {
+        "title": "Consultation & Measurement",
+        "description": "We visit your site, take precise measurements and listen to your needs to define the perfect project."
+      },
+      "enginyeria": {
+        "title": "Engineering & Design",
+        "description": "Our engineering team calculates the structure, selects materials and creates blueprints with millimetric precision."
+      },
+      "fabricacio": {
+        "title": "Artisan Manufacturing",
+        "description": "In the workshop, each piece is cut, welded and finished by hand by specialised craftsmen with over 30 years of experience."
+      },
+      "instalacio": {
+        "title": "Installation & Warranty",
+        "description": "Our own certified installation team assembles your project and commissions it with a full performance warranty."
+      }
+    },
+    "ctaTitle": "We help you bring your project to life",
+    "ctaDescription": "Tell us what you need and we'll prepare a bespoke quote with no obligation.",
     "fallback": {
       "premiumTitle": "Premium Materials",
       "premiumDescription": "Designed for maximum durability and resistance.",
-      "customTitle": "Exact Bespoke",
+      "customTitle": "Exact Fit",
       "customDescription": "We adapt to the dimensions and needs of your space."
     }
   },

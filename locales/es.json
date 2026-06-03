@@ -161,6 +161,30 @@
   "productDetail": {
     "backToCatalog": "Volver al catálogo",
     "requestQuote": "Solicitar presupuesto",
+    "featuresTitle": "Características Técnicas",
+    "featuresSubtitle": "Descubre los detalles que marcan la diferencia en cada proyecto.",
+    "processTitle": "Nuestro Proceso",
+    "processSubtitle": "De la idea a la realidad en cuatro pasos profesionales.",
+    "process": {
+      "consulta": {
+        "title": "Consulta y Medida",
+        "description": "Visitamos tu obra, tomamos medidas precisas y escuchamos tus necesidades para definir el proyecto perfecto."
+      },
+      "enginyeria": {
+        "title": "Ingeniería y Diseño",
+        "description": "Nuestro equipo de ingenieros calcula la estructura, elige los materiales y crea los planos con precisión milimétrica."
+      },
+      "fabricacio": {
+        "title": "Fabricación Artesanal",
+        "description": "En el taller, cada pieza se corta, suelda y acaba a mano por artesanos especializados con más de 30 años de experiencia."
+      },
+      "instalacio": {
+        "title": "Instalación y Garantía",
+        "description": "Equipo propio de instaladores certificados monta tu proyecto y lo pone a punto con garantía completa de funcionamiento."
+      }
+    },
+    "ctaTitle": "Te ayudamos a hacer realidad tu proyecto",
+    "ctaDescription": "Cuéntanos qué necesitas y te elaboraremos un presupuesto a medida sin compromiso.",
     "fallback": {
       "premiumTitle": "Materiales Premium",
       "premiumDescription": "Diseñados para la máxima durabilidad y resistencia.",
