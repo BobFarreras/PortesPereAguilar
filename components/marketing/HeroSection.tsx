@@ -4,31 +4,55 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
+const MUTE_STORAGE_KEY = 'hero-audio-muted';
+
 export default function HeroSection() {
   const t = useTranslations('hero');
   const sectionRef = useRef<HTMLDivElement>(null);
   const [showText, setShowText] = useState(false);
   const isFirstLoad = useRef(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isMuted, setIsMuted] = useState(false);
+  const hasPlayedOnce = useRef(false);
+  const [isMuted, setIsMuted] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return localStorage.getItem(MUTE_STORAGE_KEY) === 'true';
+  });
 
-  // Auto-play àudio + pausa al sortir del viewport
+  // Crear àudio — el navegador requereix interacció d'usuari per reproduir
   useEffect(() => {
     const audio = new Audio('/audio/litesaturation-motivational-corporate-medium1-110677.mp3');
     audio.loop = true;
     audio.volume = 0.3;
+    audio.muted = isMuted;
     audioRef.current = audio;
 
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {});
-    }
+    const tryPlay = () => {
+      if (audio.paused && !audio.muted) {
+        audio.play().then(() => {
+          hasPlayedOnce.current = true;
+        }).catch(() => {});
+      }
+    };
+
+    // Intentar reproduir immediatament (pot fallar si no hi ha user gesture)
+    tryPlay();
+
+    // Escoltar CQUALSEVOL interacció (click, touch, key) per reproduir
+    const onInteraction = () => {
+      if (!hasPlayedOnce.current) {
+        tryPlay();
+      }
+    };
+    document.addEventListener('pointerdown', onInteraction);
+    document.addEventListener('keydown', onInteraction);
 
     return () => {
+      document.removeEventListener('pointerdown', onInteraction);
+      document.removeEventListener('keydown', onInteraction);
       audio.pause();
       audioRef.current = null;
     };
-  }, []);
+  }, [isMuted]);
 
   // Pausa/resum àudio segons visibilitat del hero
   useEffect(() => {
@@ -41,8 +65,8 @@ export default function HeroSection() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Reproduir àudio
-          if (audioRef.current && audioRef.current.paused) {
+          // Intentar reproduir àudio quan el hero és visible
+          if (audioRef.current && audioRef.current.paused && hasPlayedOnce.current) {
             audioRef.current.play().catch(() => {});
           }
           if (isFirstLoad.current) {
@@ -85,9 +109,15 @@ export default function HeroSection() {
     if (isMuted) {
       audioRef.current.muted = false;
       setIsMuted(false);
+      localStorage.setItem(MUTE_STORAGE_KEY, 'false');
+      // El click compta com a user gesture → reproduir
+      audioRef.current.play().then(() => {
+        hasPlayedOnce.current = true;
+      }).catch(() => {});
     } else {
       audioRef.current.muted = true;
       setIsMuted(true);
+      localStorage.setItem(MUTE_STORAGE_KEY, 'true');
     }
   }, [isMuted]);
 
