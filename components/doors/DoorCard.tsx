@@ -31,6 +31,7 @@ export default function DoorCard({ service, title, description }: DoorCardProps)
           <motion.div
             layoutId={`product-image-${service.slug}`}
             className="absolute inset-0"
+            transition={{ type: 'spring', stiffness: 400, damping: 30 }}
           >
             <Image
               src={service.imageUrl}

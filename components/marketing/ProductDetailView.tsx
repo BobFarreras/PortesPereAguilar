@@ -77,7 +77,7 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
           className="relative overflow-hidden rounded-2xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 30 }}
         >
           <ImageCarousel
             images={imagesToDisplay}
