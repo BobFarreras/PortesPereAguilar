@@ -116,19 +116,30 @@ export default function HeroSection() {
       <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24 max-w-7xl mx-auto">
         <AnimatePresence mode="wait">
           {showText && (
-            <motion.div
-              key="hero-text"
-              className="flex flex-col gap-5 w-fit backdrop-blur-xl px-20 py-16"
-              style={{
-                background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 40%, transparent 75%)',
-                maskImage: 'radial-gradient(ellipse at center, black 20%, transparent 70%)',
-                WebkitMaskImage: 'radial-gradient(ellipse at center, black 20%, transparent 70%)',
-              }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
+            <div className="relative w-fit">
+              {/* Fons difuminat — separat del text */}
+              <motion.div
+                className="absolute inset-0 -m-24 backdrop-blur-2xl"
+                style={{
+                  background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 45%, transparent 75%)',
+                  maskImage: 'radial-gradient(ellipse at center, black 15%, transparent 65%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse at center, black 15%, transparent 65%)',
+                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              />
+
+              {/* Text — completament opac */}
+              <motion.div
+                key="hero-text"
+                className="relative flex flex-col gap-5 w-fit"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
               {/* Línia vertical vermella */}
               <motion.div
                 className="w-[3px] h-16 bg-brand-red origin-top"
@@ -172,7 +183,8 @@ export default function HeroSection() {
               >
                 {t('description')}
               </motion.p>
-            </motion.div>
+              </motion.div>
+            </div>
           )}
         </AnimatePresence>
       </div>
