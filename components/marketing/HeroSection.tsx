@@ -12,11 +12,20 @@ export default function HeroSection() {
   const [showText, setShowText] = useState(false);
   const isFirstLoad = useRef(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioEnabled = useRef(false);
   const [isMuted, setIsMuted] = useState(() => {
     if (typeof window === 'undefined') return true;
     const stored = localStorage.getItem(MUTE_STORAGE_KEY);
     return stored === null ? true : stored === 'true';
   });
+
+  // Restaurar audioEnabled després del mount del client
+  useEffect(() => {
+    const stored = localStorage.getItem(MUTE_STORAGE_KEY);
+    if (stored === 'false') {
+      audioEnabled.current = true;
+    }
+  }, []);
 
   // Crear àudio — sempre comença mutat (autoplay bloquejat pels navegadors)
   useEffect(() => {
@@ -43,8 +52,10 @@ export default function HeroSection() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Reproduir àudio si no està mutat i està pausat
-          if (audioRef.current && audioRef.current.paused && !audioRef.current.muted) {
+          // Reproduir àudio si l'usuari l'ha activat mai i està pausat
+          if (audioRef.current && audioRef.current.paused && audioEnabled.current) {
+            audioRef.current.muted = false;
+            setIsMuted(false);
             audioRef.current.play().catch(() => {});
           }
           if (isFirstLoad.current) {
@@ -85,12 +96,14 @@ export default function HeroSection() {
   const toggleAudio = useCallback(() => {
     if (!audioRef.current) return;
     if (isMuted) {
+      // Activar so → marcar com a habilitat (per scroll-back)
+      audioEnabled.current = true;
       audioRef.current.muted = false;
       setIsMuted(false);
       localStorage.setItem(MUTE_STORAGE_KEY, 'false');
-      // El click compta com a user gesture → reproduir
       audioRef.current.play().catch(() => {});
     } else {
+      // Silenciar → mantenir audioEnabled perquè al tornar torni a sonar
       audioRef.current.muted = true;
       setIsMuted(true);
       localStorage.setItem(MUTE_STORAGE_KEY, 'true');
