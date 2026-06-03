@@ -1,7 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import MagicButton from '@/components/ui/MagicButton';
@@ -47,8 +48,18 @@ const PROCESS_STEPS = ['consulta', 'enginyeria', 'fabricacio', 'instalacio'];
 export default function ProductDetailView({ service }: ProductDetailViewProps) {
   const t = useTranslations('solutions');
   const tCommon = useTranslations('productDetail');
+  const router = useRouter();
+  const [isNavigating, setIsNavigating] = useState(false);
 
   const imagesToDisplay = service.gallery?.length ? service.gallery : [service.imageUrl];
+
+  const handleBackClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsNavigating(true);
+    setTimeout(() => {
+      router.push('/cataleg');
+    }, 300);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -73,9 +84,10 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-20">
         {/* Esquerra: Carrusel */}
         <motion.div
-          layoutId={`product-image-${service.slug}`}
+          layoutId={isNavigating ? undefined : `product-image-${service.slug}`}
           layout="position"
           className="relative overflow-hidden rounded-2xl"
+          animate={isNavigating ? { scale: 0.8, opacity: 0 } : { scale: 1, opacity: 1 }}
           transition={{ type: 'spring', stiffness: 350, damping: 30 }}
         >
           <ImageCarousel
@@ -93,6 +105,7 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
         >
           <Link
             href="/cataleg"
+            onClick={handleBackClick}
             className="inline-flex items-center text-sm font-bold text-gray-500 dark:text-brand-grey hover:text-brand-red transition-colors mb-6 outline-none focus-visible:text-brand-red w-fit"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
