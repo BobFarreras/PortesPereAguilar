@@ -111,7 +111,7 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
             {t(`servicesList.${service.translationKey}.description`)}
           </p>
 
-          <LocaleLink href="/contacte" tabIndex={-1} className="self-start">
+          <LocaleLink href="/pressupost" tabIndex={-1} className="self-start">
             <MagicButton className="px-8 py-4 text-base">
               {tCommon('requestQuote')}
             </MagicButton>
@@ -312,7 +312,7 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
         <p className="text-gray-500 dark:text-brand-grey mb-8 max-w-xl mx-auto">
           {tCommon('ctaDescription')}
         </p>
-        <LocaleLink href="/contacte" tabIndex={-1}>
+        <LocaleLink href="/pressupost" tabIndex={-1}>
           <MagicButton className="px-10 py-4 text-lg">
             {tCommon('requestQuote')}
           </MagicButton>

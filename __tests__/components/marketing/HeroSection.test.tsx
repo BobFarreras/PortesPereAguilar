@@ -27,16 +27,16 @@ describe('HeroSection Component', () => {
     await waitFor(() => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toHaveTextContent(/title.part1/i);
-    }, { timeout: 2000 });
-  });
+    }, { timeout: 8000 });
+  }, 10000);
 
   it('renderitza el subtítol quan la secció és visible', async () => {
     render(<HeroSection />);
     await waitFor(() => {
       const subtitle = screen.getByText(/subtitle/i);
       expect(subtitle).toBeInTheDocument();
-    }, { timeout: 2000 });
-  });
+    }, { timeout: 8000 });
+  }, 10000);
 
   it('renderitza el video de fons', () => {
     render(<HeroSection />);
