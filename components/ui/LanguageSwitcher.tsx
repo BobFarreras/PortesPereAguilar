@@ -6,32 +6,86 @@ import { useTranslations, useLocale } from 'next-intl';
 
 const DEFAULT_LOCALE = 'ca';
 
-export default function LanguageSwitcher() {
-  const t = useTranslations('navbar');
-  const pathname = usePathname();
-  const currentLocale = useLocale();
-  const [isOpen, setIsOpen] = useState(false);
+// --- Components SVG Flags (36x24, disseny consistent) ---
 
-  const locales = [
-    { code: 'ca', nativeName: 'Català', flag: '🏴' },
-    { code: 'es', nativeName: 'Español', flag: '🇪🇸' },
-    { code: 'en', nativeName: 'English', flag: '🇬🇧' },
-    { code: 'fr', nativeName: 'Français', flag: '🇫🇷' },
-  ];
+function CatalanFlag({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24" className={className} preserveAspectRatio="none">
+      <rect width="36" height="24" fill="#FACC15" />
+      <rect y="3" width="36" height="3" fill="#EF4444" />
+      <rect y="9" width="36" height="3" fill="#EF4444" />
+      <rect y="15" width="36" height="3" fill="#EF4444" />
+      <rect y="21" width="36" height="3" fill="#EF4444" />
+    </svg>
+  );
+}
+
+function SpanishFlag({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24" className={className} preserveAspectRatio="none">
+      <rect width="36" height="6" fill="#AD1519" />
+      <rect y="6" width="36" height="12" fill="#FABD00" />
+      <rect y="18" width="36" height="6" fill="#AD1519" />
+    </svg>
+  );
+}
+
+function EnglishFlag({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24" className={className} preserveAspectRatio="none">
+      <rect width="36" height="24" fill="#B22234" />
+      <rect y="2.18" width="36" height="2.18" fill="white" />
+      <rect y="6.54" width="36" height="2.18" fill="white" />
+      <rect y="10.9" width="36" height="2.18" fill="white" />
+      <rect y="15.26" width="36" height="2.18" fill="white" />
+      <rect y="19.62" width="36" height="2.18" fill="white" />
+      <rect width="14.4" height="12.9" fill="#3C3B6E" />
+      <circle cx="2.5" cy="2.5" r="1" fill="white" />
+      <circle cx="7" cy="6" r="1" fill="white" />
+      <circle cx="11.5" cy="10" r="1" fill="white" />
+    </svg>
+  );
+}
+
+function FrenchFlag({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24" className={className} preserveAspectRatio="none">
+      <rect width="12" height="24" fill="#002395" />
+      <rect x="12" width="12" height="24" fill="#FFFFFF" />
+      <rect x="24" width="12" height="24" fill="#ED2939" />
+    </svg>
+  );
+}
+
+// --- Configuració ---
+
+const LANGUAGE_CONFIG = {
+  ca: { Flag: CatalanFlag, label: 'Català' },
+  es: { Flag: SpanishFlag, label: 'Español' },
+  en: { Flag: EnglishFlag, label: 'English' },
+  fr: { Flag: FrenchFlag, label: 'Français' },
+} as const;
+
+type SupportedLocale = keyof typeof LANGUAGE_CONFIG;
+
+// --- Component Principal ---
+
+export default function LanguageSwitcher() {
+  const pathname = usePathname();
+  const currentLocale = useLocale() as SupportedLocale;
+  const [isOpen, setIsOpen] = useState(false);
 
   const changeLanguage = (locale: string) => {
     setIsOpen(false);
 
     const pathSegments = pathname.split('/').filter(Boolean);
-    // Detecta si el primer segment és un locale
-    const currentLocalePrefix = locales.find(l => l.code === pathSegments[0]);
+    const currentLocalePrefix = Object.keys(LANGUAGE_CONFIG).find(l => l === pathSegments[0]);
     const pathWithoutLocale = currentLocalePrefix
       ? pathSegments.slice(1).join('/')
       : pathSegments.join('/');
 
     let newPath: string;
     if (locale === DEFAULT_LOCALE) {
-      // El locale per defecte (ca) NO porta prefix
       newPath = '/' + pathWithoutLocale;
     } else {
       newPath = '/' + locale + '/' + pathWithoutLocale;
@@ -47,34 +101,44 @@ export default function LanguageSwitcher() {
     window.location.assign(newPath);
   };
 
+  const CurrentFlag = LANGUAGE_CONFIG[currentLocale]?.Flag;
+
   return (
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        aria-label={t('language')}
+        aria-label="language"
         aria-expanded={isOpen}
-        className="flex items-center gap-1.5 w-auto h-10 px-3 rounded-md text-sm font-bold text-brand-grey hover:text-brand-dark hover:bg-brand-dark/10 dark:hover:text-white dark:hover:bg-white/10 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
+        className="flex items-center justify-center w-10 h-10 rounded-md hover:bg-brand-dark/10 dark:hover:bg-white/10 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
       >
-        <span className="text-base">{locales.find(l => l.code === currentLocale)?.flag}</span>
-        <span className="text-xs">{currentLocale.toUpperCase()}</span>
+        {CurrentFlag && <CurrentFlag className="w-6 h-4 rounded-[2px] shadow-sm border border-black/10" />}
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white/90 dark:bg-brand-dark/80 backdrop-blur-md rounded-lg border border-brand-dark/10 dark:border-white/10 p-2 z-50">
-          {locales.map(locale => (
-            <button
-              key={locale.code}
-              onClick={() => changeLanguage(locale.code)}
-              className={`w-full text-left px-3 py-2 rounded-md text-sm font-medium flex items-center gap-2 ${
-                locale.code === currentLocale
-                  ? 'text-brand-red bg-brand-red/10'
-                  : 'text-gray-600 dark:text-brand-grey hover:text-brand-dark hover:bg-brand-dark/10 dark:hover:text-white dark:hover:bg-white/10'
-              }`}
-            >
-              <span className="text-base">{locale.flag}</span>
-              <span>{locale.nativeName}</span>
-            </button>
-          ))}
+        <div className="absolute right-0 mt-2 w-44 bg-white/95 dark:bg-brand-dark/95 backdrop-blur-md rounded-lg border border-brand-dark/10 dark:border-white/10 shadow-xl p-1.5 z-50">
+          {Object.entries(LANGUAGE_CONFIG).map(([key, config]) => {
+            const langKey = key as SupportedLocale;
+            const { Flag, label } = config;
+            const isActive = langKey === currentLocale;
+
+            return (
+              <button
+                key={langKey}
+                onClick={() => changeLanguage(langKey)}
+                className={`w-full text-left px-3 py-2 rounded-md text-sm font-medium flex items-center gap-3 transition-colors ${
+                  isActive
+                    ? 'text-brand-red bg-brand-red/10 font-bold'
+                    : 'text-gray-600 dark:text-brand-grey hover:text-brand-dark hover:bg-brand-dark/5 dark:hover:text-white dark:hover:bg-white/5'
+                }`}
+              >
+                <Flag className="w-6 h-4 rounded-[2px] shadow-sm border border-black/10 flex-shrink-0" />
+                <span className="leading-none">{label}</span>
+                {isActive && (
+                  <span className="ml-auto w-1.5 h-1.5 rounded-full bg-brand-red" />
+                )}
+              </button>
+            );
+          })}
         </div>
       )}
     </div>

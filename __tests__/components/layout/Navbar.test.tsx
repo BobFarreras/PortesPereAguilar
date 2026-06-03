@@ -29,9 +29,9 @@ describe('Navbar Component', () => {
 
   it('renderitza el botó per canviar d\'idioma (clau de traducció)', () => {
     render(<Navbar />);
-    // Busquem l'element pel seu nom accessible (aria-label)
     const langSwitcher = screen.getByRole('button', { name: /^language$/i });
     expect(langSwitcher).toBeInTheDocument();
-    expect(langSwitcher).toHaveTextContent('CA'); // El mock de useLocale retorna 'ca'
+    // La bandera SVG és dins del botó
+    expect(langSwitcher.querySelector('svg')).toBeInTheDocument();
   });
 });
