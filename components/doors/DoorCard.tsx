@@ -28,15 +28,20 @@ export default function DoorCard({ service, title, description }: DoorCardProps)
       >
         {/* Contenidor de la Imatge amb Zoom Interior */}
         <div className="relative h-64 w-full overflow-hidden bg-brand-grey/10">
-          <Image
-            src={service.imageUrl}
-            alt={title}
-            fill
-            priority
-            loading="eager"
-            className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+          <motion.div
+            layoutId={`product-image-${service.slug}`}
+            className="absolute inset-0"
+          >
+            <Image
+              src={service.imageUrl}
+              alt={title}
+              fill
+              priority
+              loading="eager"
+              className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </motion.div>
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 dark:from-brand-dark/80 via-transparent to-transparent opacity-80" />
         </div>
 

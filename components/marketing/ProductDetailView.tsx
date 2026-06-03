@@ -73,9 +73,11 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-20">
         {/* Esquerra: Carrusel */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+          layoutId={`product-image-${service.slug}`}
+          className="relative overflow-hidden rounded-2xl"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
         >
           <ImageCarousel
             images={imagesToDisplay}

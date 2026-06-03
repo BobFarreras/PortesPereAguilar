@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import LayoutGroupWrapper from "@/components/providers/layout-group-wrapper";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -31,11 +32,13 @@ export default async function LocaleLayout({
   return (
     <ThemeProvider attribute="class" enableSystem>
       <NextIntlClientProvider messages={messages} locale={locale}>
-        <Navbar />
-        <div className="flex-grow">
-          {children}
-        </div>
-        <Footer />
+        <LayoutGroupWrapper>
+          <Navbar />
+          <div className="flex-grow">
+            {children}
+          </div>
+          <Footer />
+        </LayoutGroupWrapper>
       </NextIntlClientProvider>
     </ThemeProvider>
   );
