@@ -251,8 +251,160 @@
     "privacy": "Politique de Confidentialité",
     "copyright": "Tous droits réservés."
   },
+  "quote": {
+    "hero": {
+      "subtitle": "Configurateur de Devis",
+      "title": "Configurez votre porte idéale",
+      "description": "Répondez aux questions et notre équipe vous préparera un devis personnalisé sous 24 heures."
+    },
+    "progress": {
+      "step": "Étape {{current}} sur {{total}}"
+    },
+    "steps": {
+      "product": {
+        "title": "Qu'avez-vous besoin?",
+        "subtitle": "Sélectionnez le type de produit",
+        "options": {
+          "portes": "Portes",
+          "estructures": "Structures",
+          "automatismes": "Automatismes"
+        }
+      },
+      "type": {
+        "title": "Type de porte",
+        "subtitle": "Quel style de porte recherchez-vous?",
+        "options": {
+          "seccional": "Porte Sectionnelle",
+          "basculant": "Porte Basculante",
+          "corredissa": "Porte Coulissante",
+          "enrotllable": "Porte Enroulable",
+          "practicable": "Porte Battante"
+        }
+      },
+      "structure": {
+        "title": "Type de structure",
+        "subtitle": "Quel type de structure nécessitez-vous?",
+        "options": {
+          "tancaments": "Clôtures",
+          "pergoles": "Pergolas",
+          "disseny": "Design",
+          "altres": "Autres"
+        }
+      },
+      "automation": {
+        "title": "Quelle porte souhaitez-vous automatiser?",
+        "subtitle": "Sélectionnez la porte à laquelle vous souhaitez ajouter l'automatisme",
+        "options": {
+          "seccional": "Porte Sectionnelle",
+          "basculant": "Porte Basculante",
+          "corredissa": "Porte Coulissante",
+          "enrotllable": "Porte Enroulable",
+          "practicable": "Porte Battante"
+        }
+      },
+      "dimensions": {
+        "title": "Dimensions",
+        "subtitle": "Indiquez les mesures approximatives de la porte",
+        "width": "Largeur",
+        "height": "Hauteur"
+      },
+      "colors": {
+        "title": "Couleur et Finition",
+        "subtitle": "Personnalisez l'apparence de votre porte",
+        "material": "Matériau",
+        "finish": "Finition",
+        "ralColor": "Couleur RAL",
+        "materialOptions": {
+          "galvanitzat": "Galvanisé",
+          "corten": "Corten",
+          "inox": "Inox",
+          "alumini": "Aluminium",
+          "fusta": "Bois"
+        },
+        "finishOptions": {
+          "llis": "Lisse",
+          "woodgrain": "Imitation Bois",
+          "brushed": "Brossé",
+          "microperforat": "Micro-perforé",
+          "llacat": "Laqué"
+        }
+      },
+      "accessories": {
+        "title": "Accessoires",
+        "subtitle": "Ajoutez des accessoires à votre projet",
+        "options": {
+          "motor": {
+            "title": "Moteur Automatique",
+            "description": "Ouverture et fermeture automatiques avec télécommande"
+          },
+          "fotocelules": {
+            "title": "Photocellules",
+            "description": "Capteurs de sécurité qui détectent les obstacles et arrêtent le mouvement"
+          },
+          "comandamentWifi": {
+            "title": "Télécommande WiFi",
+            "description": "Contrôle depuis votre téléphone ou tablette, où que vous soyez"
+          },
+          "timbre": {
+            "title": "Sonnette Intégrée",
+            "description": "Sonnette incorporée dans la porte pour les visiteurs"
+          },
+          "plexiglass": {
+            "title": "Plexiglass",
+            "description": "Panneaux transparents pour laisser entrer la lumière naturelle"
+          },
+          "barrots": {
+            "title": "Barreaux Décoratifs",
+            "description": "Élément décoratif qui apporte caractère et sécurité"
+          },
+          "pantallaPrivacitat": {
+            "title": "Écran de Confidentialité",
+            "description": "Blocage visuel total pour l'intimité"
+          },
+          "detectorObstacle": {
+            "title": "Détecteur d'Obstacles",
+            "description": "Capteur avancé qui arrête la porte s'il détecte un obstacle"
+          }
+        }
+      },
+      "contact": {
+        "title": "Vos coordonnées",
+        "subtitle": "Comment pouvons-nous vous contacter?",
+        "name": "Nom complet",
+        "email": "Adresse e-mail",
+        "phone": "Téléphone",
+        "message": "Message (optionnel)",
+        "errors": {
+          "required": "Ce champ est obligatoire",
+          "invalidEmail": "Entrez une adresse e-mail valide",
+          "invalidDimension": "Dimension non valide",
+          "serverError": "Une erreur s'est produite. Veuillez réessayer plus tard.",
+          "submitFailed": "Impossible d'envoyer. Vérifiez vos données et réessayez."
+        }
+      }
+    },
+    "navigation": {
+      "back": "Retour",
+      "next": "Suivant",
+      "submit": "Demander un Devis Gratuit",
+      "sending": "Envoi en cours..."
+    },
+    "success": {
+      "title": "Devis demandé!",
+      "description": "Merci! Notre équipe technique préparera votre devis personnalisé et vous contactera sous 24 heures."
+    }
+  },
+  "navbar": {
+    "home": "Accueil",
+    "catalog": "Catalogue",
+    "contact": "Contact",
+    "quote": "Devis",
+    "language": "Changer de langue"
+  },
   "metadata": {
     "contactTitle": "Contact | Portes Pere Aguilar",
-    "contactDescription": "Demandez un devis pour votre porte, automatisme ou structure métallique à La Bisbal de l'Empordà, Girona."
+    "contactDescription": "Demandez un devis pour votre porte, automatisme ou structure métallique à La Bisbal de l'Empordà, Girona.",
+    "quoteTitle": "Devis | Portes Pere Aguilar",
+    "quoteDescription": "Configurez votre porte idéale et demandez un devis personnalisé à Portes Pere Aguilar."
   }
 }

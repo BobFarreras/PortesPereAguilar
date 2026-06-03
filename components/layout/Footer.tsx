@@ -35,8 +35,11 @@ export default function Footer() {
               <LocaleLink href="/cataleg" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
                 {t('catalog')}
               </LocaleLink>
-              <LocaleLink href="/contacte" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
+              <LocaleLink href="/pressupost" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
                 {t('requestQuote')}
+              </LocaleLink>
+              <LocaleLink href="/contacte" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
+                {t('contact')}
               </LocaleLink>
             </nav>
           </div>

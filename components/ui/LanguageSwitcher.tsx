@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useLocale } from 'next-intl';
+import { useRouter } from 'next/navigation';
 
 // --- Components SVG Flags (36x24, disseny consistent) ---
 
@@ -70,6 +71,7 @@ const LOCALES = Object.keys(LANGUAGE_CONFIG);
 
 export default function LanguageSwitcher() {
   const currentLocale = useLocale() as SupportedLocale;
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -103,7 +105,7 @@ export default function LanguageSwitcher() {
     const newPath = `/${nextLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
 
     // Navegar
-    window.location.href = newPath;
+    router.push(newPath);
   };
 
   const CurrentFlag = LANGUAGE_CONFIG[currentLocale]?.Flag;

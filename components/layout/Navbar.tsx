@@ -21,6 +21,7 @@ export default function Navbar() {
   const navLinks = [
     { href: '/', label: t('home') },
     { href: '/cataleg', label: t('catalog') },
+    { href: '/pressupost', label: t('quote') },
     { href: '/contacte', label: t('contact') },
   ];
 
