@@ -53,7 +53,7 @@ export default function LanguageSwitcher() {
         onClick={() => setIsOpen(!isOpen)}
         aria-label={t('language')}
         aria-expanded={isOpen}
-        className="flex items-center justify-center w-10 h-10 rounded-md text-xs font-bold text-brand-grey hover:text-white hover:bg-white/10 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
+        className="flex items-center justify-center w-10 h-10 rounded-md text-xs font-bold text-brand-grey hover:text-brand-dark hover:bg-brand-dark/10 dark:hover:text-white dark:hover:bg-white/10 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
       >
         {currentLocale.toUpperCase()}
       </button>
@@ -66,8 +66,8 @@ export default function LanguageSwitcher() {
               onClick={() => changeLanguage(locale.code)}
               className={`w-full text-left px-3 py-2 rounded-md text-sm font-medium ${
                 locale.code === currentLocale
-                  ? 'text-brand-red bg-white/10'
-                  : 'text-brand-grey hover:text-white hover:bg-white/10'
+                  ? 'text-brand-red bg-brand-red/10'
+                  : 'text-gray-600 dark:text-brand-grey hover:text-brand-dark hover:bg-brand-dark/10 dark:hover:text-white dark:hover:bg-white/10'
               }`}
             >
               {locale.nativeName}

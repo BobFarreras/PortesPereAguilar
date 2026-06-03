@@ -35,9 +35,6 @@ export default function Footer() {
               <Link href="/cataleg" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
                 {t('catalog')}
               </Link>
-              <Link href="/serveis" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
-                {t('structures')}
-              </Link>
               <Link href="/contacte" className="text-brand-dark/70 dark:text-brand-grey hover:text-brand-red transition-colors text-sm w-fit outline-none focus-visible:text-brand-red">
                 {t('requestQuote')}
               </Link>

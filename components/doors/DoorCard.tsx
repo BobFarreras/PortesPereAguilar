@@ -18,7 +18,7 @@ export default function DoorCard({ service, title, description }: DoorCardProps)
   return (
     <Link href={`/cataleg/${service.slug}`} className="block outline-none group">
       <motion.div
-        className="relative overflow-hidden rounded-2xl bg-brand-dark border border-white/5 shadow-lg flex flex-col h-full"
+        className="relative overflow-hidden rounded-2xl bg-white dark:bg-brand-dark border border-gray-200 dark:border-white/5 shadow-lg flex flex-col h-full"
         whileHover={{
           y: -10,
           borderColor: 'rgba(227, 65, 51, 0.4)',
@@ -37,18 +37,18 @@ export default function DoorCard({ service, title, description }: DoorCardProps)
             className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 dark:from-brand-dark/80 via-transparent to-transparent opacity-80" />
         </div>
 
         {/* Contingut Textual */}
         <div className="relative p-6 flex flex-col flex-grow backdrop-blur-sm">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-xl font-bold text-white group-hover:text-brand-red transition-colors duration-300">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-red transition-colors duration-300">
               {title}
             </h3>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-brand-grey transform transition-transform duration-300 group-hover:translate-x-1 group-hover:text-brand-red"
+              className="h-5 w-5 text-gray-400 dark:text-brand-grey transform transition-transform duration-300 group-hover:translate-x-1 group-hover:text-brand-red"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -57,7 +57,7 @@ export default function DoorCard({ service, title, description }: DoorCardProps)
             </svg>
           </div>
 
-          <p className="text-sm text-brand-grey line-clamp-3">
+          <p className="text-sm text-gray-500 dark:text-brand-grey line-clamp-3">
             {description}
           </p>
         </div>

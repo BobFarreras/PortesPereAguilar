@@ -52,7 +52,7 @@ export default function ContactForm() {
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.4 }}
             onSubmit={handleSubmit}
-            className="flex flex-col gap-6 bg-white/[0.03] border border-white/10 p-8 rounded-2xl backdrop-blur-md shadow-2xl"
+            className="flex flex-col gap-6 bg-white dark:bg-white/[0.03] border border-gray-200 dark:border-white/10 p-8 rounded-2xl backdrop-blur-md shadow-2xl"
           >
             {/* Input: Nom */}
             <div className="relative">
@@ -61,12 +61,12 @@ export default function ContactForm() {
                 name="name"
                 id="name"
                 required
-                className="peer w-full bg-transparent border-b border-white/20 px-0 py-3 text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors"
+                className="peer w-full bg-transparent border-b border-gray-300 dark:border-white/20 px-0 py-3 text-gray-900 dark:text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors"
                 placeholder={t('name')}
               />
               <label
                 htmlFor="name"
-                className="absolute left-0 top-3 text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
+                className="absolute left-0 top-3 text-gray-500 dark:text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
               >
                 {t('name')}
               </label>
@@ -79,12 +79,12 @@ export default function ContactForm() {
                 name="email"
                 id="email"
                 required
-                className="peer w-full bg-transparent border-b border-white/20 px-0 py-3 text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors"
+                className="peer w-full bg-transparent border-b border-gray-300 dark:border-white/20 px-0 py-3 text-gray-900 dark:text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors"
                 placeholder={t('email')}
               />
               <label
                 htmlFor="email"
-                className="absolute left-0 top-3 text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
+                className="absolute left-0 top-3 text-gray-500 dark:text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
               >
                 {t('email')}
               </label>
@@ -96,12 +96,12 @@ export default function ContactForm() {
                 type="tel"
                 name="phone"
                 id="phone"
-                className="peer w-full bg-transparent border-b border-white/20 px-0 py-3 text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors"
+                className="peer w-full bg-transparent border-b border-gray-300 dark:border-white/20 px-0 py-3 text-gray-900 dark:text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors"
                 placeholder={t('phone')}
               />
               <label
                 htmlFor="phone"
-                className="absolute left-0 top-3 text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
+                className="absolute left-0 top-3 text-gray-500 dark:text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
               >
                 {t('phone')}
               </label>
@@ -114,12 +114,12 @@ export default function ContactForm() {
                 id="message"
                 required
                 rows={4}
-                className="peer w-full bg-transparent border-b border-white/20 px-0 py-3 text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors resize-none"
+                className="peer w-full bg-transparent border-b border-gray-300 dark:border-white/20 px-0 py-3 text-gray-900 dark:text-white placeholder-transparent focus:outline-none focus:border-brand-red transition-colors resize-none"
                 placeholder={t('message')}
               />
               <label
                 htmlFor="message"
-                className="absolute left-0 top-3 text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
+                className="absolute left-0 top-3 text-gray-500 dark:text-brand-grey text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-red cursor-text"
               >
                 {t('message')}
               </label>
@@ -150,15 +150,15 @@ export default function ContactForm() {
             key="success"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="flex flex-col items-center justify-center text-center bg-white/[0.03] border border-brand-red/30 p-12 rounded-2xl backdrop-blur-md shadow-2xl"
+            className="flex flex-col items-center justify-center text-center bg-white dark:bg-white/[0.03] border border-brand-red/30 p-12 rounded-2xl backdrop-blur-md shadow-2xl"
           >
             <div className="w-16 h-16 bg-brand-red/20 rounded-full flex items-center justify-center mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">{t('successTitle')}</h3>
-            <p className="text-brand-grey">{t('successDescription')}</p>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{t('successTitle')}</h3>
+            <p className="text-gray-500 dark:text-brand-grey">{t('successDescription')}</p>
           </motion.div>
         )}
       </AnimatePresence>

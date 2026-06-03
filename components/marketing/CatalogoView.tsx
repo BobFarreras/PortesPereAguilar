@@ -45,10 +45,10 @@ export default function CatalogView({ items }: CatalogViewProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-4xl md:text-6xl font-black text-white mb-4 tracking-tight">
+        <h1 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
           {tCatalog('title').split(' ').slice(0, -1).join(' ')} <span className="text-brand-red">{tCatalog('title').split(' ').slice(-1)}</span>
         </h1>
-        <p className="text-lg text-brand-grey max-w-2xl mx-auto">
+        <p className="text-lg text-gray-500 dark:text-brand-grey max-w-2xl mx-auto">
           {tCatalog('description')}
         </p>
       </motion.div>
@@ -72,8 +72,8 @@ export default function CatalogView({ items }: CatalogViewProps) {
           ))}
         </motion.div>
       ) : (
-        <div className="text-center py-20 bg-white/[0.02] border border-white/5 rounded-2xl">
-          <p className="text-brand-grey text-lg">{tCatalog('empty')}</p>
+        <div className="text-center py-20 bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-2xl">
+          <p className="text-gray-500 dark:text-brand-grey text-lg">{tCatalog('empty')}</p>
         </div>
       )}
     </div>

@@ -16,7 +16,7 @@ export default function ThemeToggle() {
     return (
       <button
         aria-label="Canviar tema"
-        className="flex items-center justify-center w-10 h-10 rounded-md text-brand-grey hover:text-white hover:bg-white/10 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
+        className="flex items-center justify-center w-10 h-10 rounded-md text-brand-grey hover:text-brand-dark hover:bg-brand-dark/10 dark:hover:text-white dark:hover:bg-white/10 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
       >
         <div className="h-4 w-4" />
       </button>
