@@ -30,8 +30,9 @@ export default function DoorCard({ service, title, description }: DoorCardProps)
         <div className="relative h-64 w-full overflow-hidden bg-brand-grey/10">
           <motion.div
             layoutId={`product-image-${service.slug}`}
+            layout="position"
             className="absolute inset-0"
-            transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+            transition={{ type: 'spring', stiffness: 350, damping: 30 }}
           >
             <Image
               src={service.imageUrl}

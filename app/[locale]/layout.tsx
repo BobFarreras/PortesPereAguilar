@@ -7,7 +7,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import LayoutGroupWrapper from "@/components/providers/layout-group-wrapper";
-import PageTransition from "@/components/providers/page-transition";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -36,7 +35,7 @@ export default async function LocaleLayout({
         <LayoutGroupWrapper>
           <Navbar />
           <div className="flex-grow">
-            <PageTransition>{children}</PageTransition>
+            {children}
           </div>
           <Footer />
         </LayoutGroupWrapper>
