@@ -36,7 +36,7 @@ export default function ImageCarousel({ images, altPrefix }: ImageCarouselProps)
   };
 
   return (
-    <div className="relative w-full h-[400px] md:h-[600px] flex items-center justify-center overflow-hidden rounded-2xl bg-brand-dark/50 border border-white/10 shadow-2xl group">
+    <div className="relative w-full h-[400px] md:h-[600px] flex items-center justify-center overflow-hidden rounded-2xl border border-white/10 shadow-2xl group">
       <AnimatePresence initial={false} mode="wait">
         <motion.div
           key={imageIndex}
@@ -55,7 +55,6 @@ export default function ImageCarousel({ images, altPrefix }: ImageCarouselProps)
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent" />
         </motion.div>
       </AnimatePresence>
 

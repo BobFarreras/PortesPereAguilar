@@ -44,7 +44,6 @@ export default function DoorCard({ service, title, description }: DoorCardProps)
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </motion.div>
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 dark:from-brand-dark/80 via-transparent to-transparent opacity-80" />
         </div>
 
         {/* Contingut Textual */}

@@ -112,13 +112,13 @@ export default function HeroSection() {
         src="/videos/hero-youtube.mp4"
       />
 
-      {/* Contingut — alineat a l'esquerra, sense container fosc */}
+      {/* Contingut — alineat a l'esquerra */}
       <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24 max-w-7xl mx-auto">
         <AnimatePresence mode="wait">
           {showText && (
             <motion.div
               key="hero-text"
-              className="flex flex-col gap-5 w-fit"
+              className="flex flex-col gap-5 w-fit backdrop-blur-md bg-black/20 rounded-3xl p-8 -m-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
