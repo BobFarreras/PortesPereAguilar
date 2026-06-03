@@ -29,13 +29,13 @@ export default function HeroSection() {
     return () => observer.disconnect();
   }, []);
 
-  // Amaga el text després de 4 segons (quan és visible)
+  // Amaga el text després de 7 segons (quan és visible)
   useEffect(() => {
     if (!showText) return;
 
     const timer = setTimeout(() => {
       setShowText(false);
-    }, 4000);
+    }, 7000);
 
     return () => clearTimeout(timer);
   }, [showText]);
@@ -100,6 +100,9 @@ export default function HeroSection() {
     },
   };
 
+  // Estil de text-shadow per llegibilitat sobre el video
+  const textShadow = '0 2px 20px rgba(0,0,0,0.9), 0 4px 40px rgba(0,0,0,0.7), 0 0 80px rgba(0,0,0,0.5)';
+
   return (
     <section ref={sectionRef} className="relative h-screen w-full overflow-hidden bg-black">
       {/* Video de fons — sempre visible, sense overlay */}
@@ -112,13 +115,13 @@ export default function HeroSection() {
         src="/videos/hero-youtube.mp4"
       />
 
-      {/* Contingut — alineat a l'esquerra */}
+      {/* Contingut — alineat a l'esquerra, sense container fosc */}
       <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24 max-w-7xl mx-auto">
         <AnimatePresence mode="wait">
           {showText && (
             <motion.div
               key="hero-text"
-              className="flex flex-col gap-5 p-8 md:p-12 rounded-3xl bg-black/50 backdrop-blur-md w-fit"
+              className="flex flex-col gap-5 w-fit"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -136,6 +139,7 @@ export default function HeroSection() {
               {/* Subtítol */}
               <motion.p
                 className="text-sm md:text-base font-bold uppercase tracking-[0.35em] text-brand-red"
+                style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8)' }}
                 variants={subtitleVariants}
                 initial="hidden"
                 animate="visible"
@@ -147,6 +151,7 @@ export default function HeroSection() {
               {/* Títol */}
               <motion.h1
                 className="text-5xl md:text-7xl lg:text-8xl xl:text-[7rem] font-black text-white leading-[0.85] tracking-tight"
+                style={{ textShadow }}
                 variants={titleVariants}
                 initial="hidden"
                 animate="visible"
@@ -159,7 +164,8 @@ export default function HeroSection() {
 
               {/* Descripció */}
               <motion.p
-                className="max-w-xl text-lg md:text-xl lg:text-2xl text-white/80 leading-relaxed font-medium"
+                className="max-w-xl text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed font-medium"
+                style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8), 0 4px 30px rgba(0,0,0,0.6)' }}
                 variants={descVariants}
                 initial="hidden"
                 animate="visible"
@@ -190,6 +196,7 @@ export default function HeroSection() {
             strokeWidth={1.5}
             stroke="currentColor"
             className="w-6 h-6 text-white/60"
+            style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.8))' }}
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
           </svg>
