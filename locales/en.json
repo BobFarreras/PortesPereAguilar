@@ -1,0 +1,410 @@
+{
+  "hero": {
+    "subtitle": "High-Tech Craftsmanship",
+    "title": {
+      "part1": "Engineering in",
+      "part2": "every closure."
+    },
+    "description": "Metalwork and metal structures designed with precision. Protect and elevate your space with top-quality materials.",
+    "cta": "Request your Quote"
+  },
+  "navbar": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "contact": "Contact",
+    "language": "Change language"
+  },
+  "solutions": {
+    "title": "Our Solutions",
+    "description": "Discover our range of high-engineering products. Designed to last, built to protect, and automated to make your life easier.",
+    "servicesList": {
+      "portesCorredisses": {
+        "title": "Sliding Doors",
+        "description": "Smooth automation and robust design for residential and industrial high-traffic entrances.",
+        "features": {
+          "automatitzacioFluida": {
+            "title": "Fluid Automation",
+            "description": "High-precision motor with inertia control for smooth, bump-free and noise-free opening and closing."
+          },
+          "materialsAltaQualitat": {
+            "title": "High-Quality Materials",
+            "description": "Corten steel, stainless steel or galvanised sheet profiles treated with anti-oxidation processes to guarantee years of durability."
+          },
+          "seguretatIntegrada": {
+            "title": "Integrated Safety",
+            "description": "Active safety photocell sensors and emergency stop system that protect users and vehicles."
+          },
+          "dissenyPersonalitzable": {
+            "title": "Customisable Design",
+            "description": "Various finishes, colours and infill types: bars, solid leaves, combinations or privacy screens."
+          }
+        }
+      },
+      "portesSeccionals": {
+        "title": "Sectional Doors",
+        "description": "Superior thermal insulation and silent vertical opening that maximises your garage space.",
+        "features": {
+          "panellsSandvitx": {
+            "title": "40mm Sandwich Panels",
+            "description": "Double galvanised steel sheet with injected polyurethane foam core for extreme thermal and acoustic insulation."
+          },
+          "antipinsament": {
+            "title": "Anti-Pinch System",
+            "description": "Exclusive design of the joints between panels that prevents any risk of finger entrapment during opening or closing."
+          },
+          "motoritzacio": {
+            "title": "Silent Motorisation",
+            "description": "High-resistance toothed belt automation with smooth opening, emergency stop and encrypted remote control."
+          },
+          "estanqueitat": {
+            "title": "Total Watertightness",
+            "description": "EPDM rubber seals on the entire lower, upper and lateral perimeter that block wind, rain and dust."
+          }
+        }
+      },
+      "estructuresMetaliques": {
+        "title": "Metal Structures",
+        "description": "Bespoke structural engineering. Pergolas, roofing and mezzanines designed with precision.",
+        "features": {
+          "enginyeriaAMida": {
+            "title": "Tailored Engineering",
+            "description": "Custom structural calculation for every project: pergolas, roofs, mezzanines and supports with stability guarantee."
+          },
+          "altaResistencia": {
+            "title": "High Strength",
+            "description": "Structures welded with S275 or S355 structural steel, with anti-oxidation surface treatments and hot-dip galvanising."
+          },
+          "acabatsPersonalitzats": {
+            "title": "Custom Finishes",
+            "description": "Choose from Corten steel, RAL powder coating, galvanising or stainless steel to integrate the structure with your space's architecture."
+          },
+          "muntatgeProfessional": {
+            "title": "Professional Assembly",
+            "description": "Specialised industrial assembly team with cranes, certified welding and load testing before handover."
+          }
+        }
+      },
+      "serralleriaDisseny": {
+        "title": "Design Metalwork",
+        "description": "Grilles, railings and perimeter enclosures where unbreakable security meets aesthetics.",
+        "features": {
+          "seguretatMaxima": {
+            "title": "Maximum Security",
+            "description": "Superior thickness steel bars, high-strength welded joints and controlled access with high-security locks."
+          },
+          "dissenyEstetic": {
+            "title": "Aesthetic Design",
+            "description": "Geometric lines, organic curves or cutting-edge designs: we transform security into a piece of architectural art."
+          },
+          "materialsRobustos": {
+            "title": "Robust Materials",
+            "description": "Corten steel, AISI 304/316 stainless steel or galvanised sheet with anti-oxidation treatments to withstand the test of time."
+          },
+          "mantenimentMinim": {
+            "title": "Minimal Maintenance",
+            "description": "Modular design and professional TIG welding that minimise wear points and facilitate future repairs."
+          }
+        }
+      },
+      "portesBasculants": {
+        "title": "Up-and-Over Doors",
+        "description": "Classic and efficient opening for garages, combining precise counterweight mechanisms with customised aesthetics.",
+        "features": {
+          "mecanismeContrapesos": {
+            "title": "Counterweight Mechanism",
+            "description": "Articulated arm system with individually calibrated counterweights for minimal opening and closing effort."
+          },
+          "oberturaEficient": {
+            "title": "Efficient Opening",
+            "description": "Design that utilises ceiling space without the need for rails or side guides, ideal for garages with limited width."
+          },
+          "esteticaPersonalitzable": {
+            "title": "Customisable Aesthetics",
+            "description": "Wide or narrow slats, corten steel, natural wood or lacquered sheet: close your space with your own style."
+          },
+          "durabilitatExtrema": {
+            "title": "Extreme Durability",
+            "description": "Tempered steel shafts, sealed ball bearings and anti-corrosion coatings that guarantee decades of operation."
+          }
+        }
+      },
+      "portesPracticables": {
+        "title": "Side-Hinged Doors",
+        "description": "Elegance and functionality in swing doors, ideal for residential and pedestrian entrances with high-end automation.",
+        "features": {
+          "automatitzacioInteligent": {
+            "title": "Smart Automation",
+            "description": "Electromechanical operators with partial opening control for pedestrians, passcode and video intercom integration."
+          },
+          "eleganciaFunctional": {
+            "title": "Functional Elegance",
+            "description": "Symmetrical design with clean lines: vertical bars, smooth leaves or combinations for a refined property image."
+          },
+          "versatilitatAccessos": {
+            "title": "Access Versatility",
+            "description": "One or two leaves, with or without integrated pedestrian door, adaptable to any width and ground slope."
+          },
+          "acabatsPremium": {
+            "title": "Premium Finishes",
+            "description": "Patinised corten steel, polished stainless steel, powder-coated sheet or technical wood: noble materials for a distinguished entrance."
+          }
+        }
+      }
+    }
+  },
+  "catalog": {
+    "title": "Solutions Catalog",
+    "description": "Explore our complete range of doors, automation and metal structures custom-designed for your project.",
+    "empty": "No products available at the moment."
+  },
+  "productDetail": {
+    "backToCatalog": "Back to catalog",
+    "requestQuote": "Request a quote",
+    "heroBadge": "Artisan Manufacturing in La Bisbal",
+    "highlightsLabel": "Highlights",
+    "scrollToExplore": "Explore more",
+    "featuresTitle": "Technical Features",
+    "featuresSubtitle": "Discover the details that make the difference in every project.",
+    "processTitle": "Our Process",
+    "processSubtitle": "From idea to reality in four professional steps.",
+    "process": {
+      "consulta": {
+        "title": "Consultation & Measurement",
+        "description": "We visit your site, take precise measurements and listen to your needs to define the perfect project."
+      },
+      "enginyeria": {
+        "title": "Engineering & Design",
+        "description": "Our engineering team calculates the structure, selects materials and creates blueprints with precision."
+      },
+      "fabricacio": {
+        "title": "Artisan Manufacturing",
+        "description": "In the workshop, each piece is cut, welded and finished by hand by specialised craftsmen with over 30 years of experience."
+      },
+      "instalacio": {
+        "title": "Installation & Warranty",
+        "description": "Our own certified installation team assembles your project and commissions it with a full performance warranty."
+      }
+    },
+    "ctaTitle": "We help you bring your project to life",
+    "ctaDescription": "Tell us what you need and we'll prepare a bespoke quote with no obligation.",
+    "fallback": {
+      "premiumTitle": "Premium Materials",
+      "premiumDescription": "Designed for maximum durability and resistance.",
+      "customTitle": "Exact Fit",
+      "customDescription": "We adapt to the dimensions and needs of your space."
+    }
+  },
+  "trust": {
+    "title": "Trust and Precision",
+    "description": "We don't just manufacture metal structures, we create lasting solutions backed by our track record and technological commitment.",
+    "items": [
+      {
+        "metric": "+30",
+        "title": "Years of Experience",
+        "description": "Three decades perfecting the art of metalwork and precision metal engineering."
+      },
+      {
+        "metric": "+2000",
+        "title": "Completed Projects",
+        "description": "From residential doors to complex industrial structures, guaranteeing flawless operation."
+      },
+      {
+        "metric": "100%",
+        "title": "Quality Guarantee",
+        "description": "We use noble materials and high-end automation to offer unbreakable and secure closures."
+      }
+    ]
+  },
+  "contact": {
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone",
+      "message": "How can we help you?",
+      "submit": "Send request",
+      "successTitle": "Message sent successfully!",
+      "successDescription": "Our technical team will contact you as soon as possible to analyse your project.",
+      "sending": "Sending...",
+      "errors": {
+        "required": "This field is required",
+        "invalidEmail": "Enter a valid email address",
+        "serverError": "An error occurred. Please try again later.",
+        "submitFailed": "Could not send the message. Please check your details and try again."
+      }
+    },
+    "info": {
+      "subtitle": "Let's talk about your project",
+      "title": "We are ready to shape your idea.",
+      "description": "From a simple query to complex structural engineering designs. Our team will advise you with no obligation.",
+      "callUs": "Call us directly",
+      "visitUs": "Visit us at"
+    }
+  },
+  "footer": {
+    "description": "High-tech craftsmanship in metal structures and industrial or residential doors. We guarantee security, design and precision in every closure.",
+    "explore": "Explore",
+    "catalog": "Doors Catalog",
+    "structures": "Metal Structures",
+    "requestQuote": "Request a Quote",
+    "contact": "Contact",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "copyright": "All rights reserved."
+  },
+  "quote": {
+    "hero": {
+      "subtitle": "Quote Configurator",
+      "title": "Configure your ideal door",
+      "description": "Answer the questions and our team will prepare a personalised quote within 24 hours."
+    },
+    "progress": {
+      "step": "Step {{current}} of {{total}}"
+    },
+    "steps": {
+      "product": {
+        "title": "What do you need?",
+        "subtitle": "Select the product type",
+        "options": {
+          "portes": "Doors",
+          "estructures": "Structures",
+          "automatismes": "Automation"
+        }
+      },
+      "type": {
+        "title": "Door type",
+        "subtitle": "What style of door are you looking for?",
+        "options": {
+          "seccional": "Sectional Door",
+          "basculant": "Up-and-Over Door",
+          "corredissa": "Sliding Door",
+          "enrotllable": "Roller Door",
+          "practicable": "Side-Hinged Door"
+        }
+      },
+      "structure": {
+        "title": "Structure type",
+        "subtitle": "What type of structure do you need?",
+        "options": {
+          "tancaments": "Enclosures",
+          "pergoles": "Pergolas",
+          "disseny": "Design",
+          "altres": "Other"
+        }
+      },
+      "automation": {
+        "title": "Which door do you want to automate?",
+        "subtitle": "Select the door you want to add automation to",
+        "options": {
+          "seccional": "Sectional Door",
+          "basculant": "Up-and-Over Door",
+          "corredissa": "Sliding Door",
+          "enrotllable": "Roller Door",
+          "practicable": "Side-Hinged Door"
+        }
+      },
+      "dimensions": {
+        "title": "Dimensions",
+        "subtitle": "Enter the approximate door measurements",
+        "width": "Width",
+        "height": "Height"
+      },
+      "colors": {
+        "title": "Colour & Finish",
+        "subtitle": "Personalise the look of your door",
+        "material": "Material",
+        "finish": "Finish",
+        "ralColor": "RAL Colour",
+        "materialOptions": {
+          "galvanitzat": "Galvanised",
+          "corten": "Corten",
+          "inox": "Stainless",
+          "alumini": "Aluminium",
+          "fusta": "Wood"
+        },
+        "finishOptions": {
+          "llis": "Smooth",
+          "woodgrain": "Woodgrain",
+          "brushed": "Brushed",
+          "microperforat": "Micro-perforated",
+          "llacat": "Lacquered"
+        }
+      },
+      "accessories": {
+        "title": "Accessories",
+        "subtitle": "Add accessories to your project",
+        "options": {
+          "motor": {
+            "title": "Automatic Motor",
+            "description": "Automatic opening and closing with remote control"
+          },
+          "fotocelules": {
+            "title": "Photocells",
+            "description": "Safety sensors that detect obstacles and stop movement"
+          },
+          "comandamentWifi": {
+            "title": "WiFi Remote",
+            "description": "Control from your phone or tablet from anywhere"
+          },
+          "timbre": {
+            "title": "Integrated Doorbell",
+            "description": "Built-in doorbell in the door for visitors"
+          },
+          "plexiglass": {
+            "title": "Plexiglass",
+            "description": "Transparent panels to let in natural light"
+          },
+          "barrots": {
+            "title": "Decorative Bars",
+            "description": "Decorative element that adds character and security"
+          },
+          "pantallaPrivacitat": {
+            "title": "Privacy Screen",
+            "description": "Total visual block for complete privacy"
+          },
+          "detectorObstacle": {
+            "title": "Obstacle Detector",
+            "description": "Advanced sensor that stops the door if any obstacle is detected"
+          }
+        }
+      },
+      "contact": {
+        "title": "Your details",
+        "subtitle": "How can we contact you?",
+        "name": "Full name",
+        "email": "Email address",
+        "phone": "Phone",
+        "message": "Message (optional)",
+        "errors": {
+          "required": "This field is required",
+          "invalidEmail": "Enter a valid email address",
+          "invalidDimension": "Invalid dimension",
+          "serverError": "An error occurred. Please try again later.",
+          "submitFailed": "Could not send. Please check your details and try again."
+        }
+      }
+    },
+    "navigation": {
+      "back": "Back",
+      "next": "Next",
+      "submit": "Request Free Quote",
+      "sending": "Sending..."
+    },
+    "success": {
+      "title": "Quote requested!",
+      "description": "Thank you! Our technical team will prepare your personalised quote and we will contact you within 24 hours."
+    }
+  },
+  "navbar": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "contact": "Contact",
+    "quote": "Quote",
+    "language": "Change language"
+  },
+  "metadata": {
+    "contactTitle": "Contact | Portes Pere Aguilar",
+    "contactDescription": "Get a quote for your door, automation or metal structure in La Bisbal de l'Empordà, Girona.",
+    "quoteTitle": "Quote | Portes Pere Aguilar",
+    "quoteDescription": "Configure your ideal door and request a personalised quote from Portes Pere Aguilar."
+  }
+}

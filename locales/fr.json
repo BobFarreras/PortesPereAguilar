@@ -1,0 +1,410 @@
+{
+  "hero": {
+    "subtitle": "Artisanat de Haute Technologie",
+    "title": {
+      "part1": "L'ingénierie dans",
+      "part2": "chaque fermeture."
+    },
+    "description": "Serrurerie et structures métalliques conçues avec une précision. Protégez et sublimer votre espace avec des matériaux de première qualité.",
+    "cta": "Demandez votre Devis"
+  },
+  "navbar": {
+    "home": "Accueil",
+    "catalog": "Catalogue",
+    "contact": "Contact",
+    "language": "Changer de langue"
+  },
+  "solutions": {
+    "title": "Nos Solutions",
+    "description": "Découvrez notre gamme de produits de haute ingénierie. Conçus pour durer, fabriqués pour protéger et automatisés pour vous faciliter la vie.",
+    "servicesList": {
+      "portesCorredisses": {
+        "title": "Portes Coulissantes",
+        "description": "Automatismes fluides et design robuste pour les accès résidentiels et industriels à fort trafic.",
+        "features": {
+          "automatitzacioFluida": {
+            "title": "Automatisation Fluide",
+            "description": "Moteur haute précision avec contrôle d'inertie pour une ouverture et fermeture douces, sans à-coups ni bruit."
+          },
+          "materialsAltaQualitat": {
+            "title": "Matériaux de Haute Qualité",
+            "description": "Profilés en acier corten, inox ou tôle galvanisée traités avec des procédés anti-oxydation pour garantir des années de durabilité."
+          },
+          "seguretatIntegrada": {
+            "title": "Sécurité Intégrée",
+            "description": "Cellules photoélectriques de sécurité active et système d'arrêt d'urgence qui protègent les utilisateurs et les véhicules."
+          },
+          "dissenyPersonalitzable": {
+            "title": "Design Personnalisable",
+            "description": "Différentes finitions, couleurs et types de remplissage : barreaux, lames pleines, combinés ou avec écran de confidentialité."
+          }
+        }
+      },
+      "portesSeccionals": {
+        "title": "Portes Sectionnelles",
+        "description": "Isolation thermique supérieure et ouverture verticale silencieuse qui maximise l'espace de votre garage.",
+        "features": {
+          "panellsSandvitx": {
+            "title": "Panneaux Sandwich de 40mm",
+            "description": "Double tôle d'acier galvanisé avec noyau en mousse de polyuréthane injecté pour une isolation thermique et acoustique extrême."
+          },
+          "antipinsament": {
+            "title": "Système Anti-Pince",
+            "description": "Conception exclusive des joints entre panneaux qui empêche tout risque de coincement des doigts lors de l'ouverture ou de la fermeture."
+          },
+          "motoritzacio": {
+            "title": "Motorisation Silencieuse",
+            "description": "Automatismes à courroie dentée haute résistance avec ouverture douce, arrêt d'urgence et télécommande cryptée."
+          },
+          "estanqueitat": {
+            "title": "Étanchéité Totale",
+            "description": "Joints en caoutchouc EPDM sur tout le périmètre inférieur, supérieur et latéral qui bloquent le vent, la pluie et la poussière."
+          }
+        }
+      },
+      "estructuresMetaliques": {
+        "title": "Structures Métalliques",
+        "description": "Ingénierie structurelle sur mesure. Pergolas, couvertures et mezzanines conçues avec une précision.",
+        "features": {
+          "enginyeriaAMida": {
+            "title": "Ingénierie Sur Mesure",
+            "description": "Calcul structurel personnalisé pour chaque projet : pergolas, couvertures, mezzanines et supports avec garantie de stabilité."
+          },
+          "altaResistencia": {
+            "title": "Haute Résistance",
+            "description": "Structures soudées avec acier structurel S275 ou S355, avec traitements superficiels anti-oxydation et galvanisation à chaud."
+          },
+          "acabatsPersonalitzats": {
+            "title": "Finitions Personnalisées",
+            "description": "Choisissez entre acier corten, laquage au four RAL, galvanisation ou inox pour intégrer la structure avec l'architecture de votre espace."
+          },
+          "muntatgeProfessional": {
+            "title": "Montage Professionnel",
+            "description": "Équipe spécialisée en montage industriel avec grues, soudage certifié et essai de charge avant livraison."
+          }
+        }
+      },
+      "serralleriaDisseny": {
+        "title": "Serrurerie de Design",
+        "description": "Grilles, garde-corps et clôtures périmétriques où la sécurité incassable rencontre l'esthétique.",
+        "features": {
+          "seguretatMaxima": {
+            "title": "Sécurité Maximale",
+            "description": "Barreaux d'acier de forte épaisseur, joints soudés haute résistance et accès contrôlés avec serrures haute sécurité."
+          },
+          "dissenyEstetic": {
+            "title": "Design Esthétique",
+            "description": "Lignes géométriques, courbes organiques ou designs novateurs : nous transformons la sécurité en une œuvre d'art architectural."
+          },
+          "materialsRobustos": {
+            "title": "Matériaux Robustes",
+            "description": "Acier corten, inox AISI 304/316 ou tôle galvanisée avec traitements anti-oxydation pour résister à l'épreuve du temps."
+          },
+          "mantenimentMinim": {
+            "title": "Maintenance Minimale",
+            "description": "Design modulaire et soudure TIG professionnelle qui minimisent les points d'usure et facilitent les réparations futures."
+          }
+        }
+      },
+      "portesBasculants": {
+        "title": "Portes Basculantes",
+        "description": "Ouverture classique et efficace pour garages, combinant mécanismes de contrepoids précis et esthétique personnalisée.",
+        "features": {
+          "mecanismeContrapesos": {
+            "title": "Mécanisme de Contrepoids",
+            "description": "Système de bras articulés avec contrepoids calibrés individuellement pour un effort minimal d'ouverture et de fermeture."
+          },
+          "oberturaEficient": {
+            "title": "Ouverture Efficace",
+            "description": "Design qui utilise l'espace du plafond sans besoin de rails ni guides latéraux, idéal pour les garages avec largeur limitée."
+          },
+          "esteticaPersonalitzable": {
+            "title": "Esthétique Personnalisable",
+            "description": "Lames larges ou étroites, acier corten, bois naturel ou tôle laquée : fermez votre espace avec votre propre style."
+          },
+          "durabilitatExtrema": {
+            "title": "Durabilité Extrême",
+            "description": "Axes en acier trempé, roulements à billes scellés et revêtements anticorrosion qui garantissent des décennies de fonctionnement."
+          }
+        }
+      },
+      "portesPracticables": {
+        "title": "Portes Battantes",
+        "description": "Élégance et fonctionnalité pour portes battantes, idéales pour les accès de résidences et piétons avec automatisation haut de gamme.",
+        "features": {
+          "automatitzacioInteligent": {
+            "title": "Automatisation Intelligente",
+            "description": "Opérateurs électromécaniques avec contrôle d'ouverture partielle pour piétons, code d'accès et intégration avec visiophone."
+          },
+          "eleganciaFunctional": {
+            "title": "Élégance Fonctionnelle",
+            "description": "Design symétrique avec lignes épurées : barreaux verticaux, lames lisses ou combinées pour une image soignée de la résidence."
+          },
+          "versatilitatAccessos": {
+            "title": "Polyvalence d'Accès",
+            "description": "Une ou deux lames, avec ou sans porte piétonne intégrée, adaptables à toute largeur et pente du terrain."
+          },
+          "acabatsPremium": {
+            "title": "Finitions Premium",
+            "description": "Acier corten patiné, inox poli, tôle laquée au four ou bois technique : matériaux nobles pour un accès distingué."
+          }
+        }
+      }
+    }
+  },
+  "catalog": {
+    "title": "Catalogue de Solutions",
+    "description": "Explorez notre gamme complète de portes, automatismes et structures métalliques conçus sur mesure pour votre projet.",
+    "empty": "Aucun produit disponible pour le moment."
+  },
+  "productDetail": {
+    "backToCatalog": "Retour au catalogue",
+    "requestQuote": "Demander un devis",
+    "heroBadge": "Fabrication Artisanale à La Bisbal",
+    "highlightsLabel": "Points Forts",
+    "scrollToExplore": "Découvrir plus",
+    "featuresTitle": "Caractéristiques Techniques",
+    "featuresSubtitle": "Découvrez les détails qui font la différence dans chaque projet.",
+    "processTitle": "Notre Processus",
+    "processSubtitle": "De l'idée à la réalité en quatre étapes professionnelles.",
+    "process": {
+      "consulta": {
+        "title": "Consultation & Mesure",
+        "description": "Nous visitons votre chantier, prenons des mesures précises et écoutons vos besoins pour définir le projet parfait."
+      },
+      "enginyeria": {
+        "title": "Ingénierie & Design",
+        "description": "Notre équipe d'ingénieurs calcule la structure, choisit les matériaux et crée les plans avec une précision."
+      },
+      "fabricacio": {
+        "title": "Fabrication Artisanale",
+        "description": "À l'atelier, chaque pièce est coupée, soudée et finie à la main par des artisans spécialisés avec plus de 30 ans d'expérience."
+      },
+      "instalacio": {
+        "title": "Installation & Garantie",
+        "description": "Notre propre équipe d'installateurs certifiés assemble votre projet et le met en service avec une garantie complète de fonctionnement."
+      }
+    },
+    "ctaTitle": "Nous vous aidons à concrétiser votre projet",
+    "ctaDescription": "Dites-nous ce dont vous avez besoin et nous vous préparerons un devis sur mesure sans engagement.",
+    "fallback": {
+      "premiumTitle": "Matériaux Premium",
+      "premiumDescription": "Conçus pour une durabilité et une résistance maximales.",
+      "customTitle": "Sur Mesure Exacte",
+      "customDescription": "Nous nous adaptons aux dimensions et aux besoins de votre espace."
+    }
+  },
+  "trust": {
+    "title": "Confiance et Précision",
+    "description": "Nous ne fabriquons pas seulement des structures métalliques, nous créons des solutions durables soutenues par notre parcours et notre engagement technologique.",
+    "items": [
+      {
+        "metric": "+30",
+        "title": "Années d'Expérience",
+        "description": "Trois décennies à perfectionner l'art de la serrurerie et de l'ingénierie métallique de précision."
+      },
+      {
+        "metric": "+2000",
+        "title": "Projets Réalisés",
+        "description": "Des portes résidentielles aux structures industrielles complexes, garantissant un fonctionnement impeccable."
+      },
+      {
+        "metric": "100%",
+        "title": "Garantie de Qualité",
+        "description": "Nous utilisons des matériaux nobles et des automatismes haut de gamme pour offrir des fermetures infranchissables et sûres."
+      }
+    ]
+  },
+  "contact": {
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "message": "Comment pouvons-nous vous aider ?",
+      "submit": "Envoyer la demande",
+      "successTitle": "Message envoyé avec succès !",
+      "successDescription": "Notre équipe technique vous contactera dès que possible pour analyser votre projet.",
+      "sending": "Envoi en cours...",
+      "errors": {
+        "required": "Ce champ est obligatoire",
+        "invalidEmail": "Entrez une adresse e-mail valide",
+        "serverError": "Une erreur s'est produite. Veuillez réessayer plus tard.",
+        "submitFailed": "Impossible d'envoyer le message. Vérifiez vos données et réessayez."
+      }
+    },
+    "info": {
+      "subtitle": "Parlons de votre projet",
+      "title": "Nous sommes prêts à donner forme à votre idée.",
+      "description": "D'une simple consultation aux conceptions complexes d'ingénierie structurelle. Notre équipe vous conseillera sans engagement.",
+      "callUs": "Appelez-nous directement",
+      "visitUs": "Visitez-nous à"
+    }
+  },
+  "footer": {
+    "description": "Artisanat de haute technologie en structures métalliques et portes industrielles ou résidentielles. Nous garantissons sécurité, design et précision dans chaque fermeture.",
+    "explore": "Explorer",
+    "catalog": "Catalogue de Portes",
+    "structures": "Structures Métalliques",
+    "requestQuote": "Demander un Devis",
+    "contact": "Contact",
+    "legal": "Mentions Légales",
+    "privacy": "Politique de Confidentialité",
+    "copyright": "Tous droits réservés."
+  },
+  "quote": {
+    "hero": {
+      "subtitle": "Configurateur de Devis",
+      "title": "Configurez votre porte idéale",
+      "description": "Répondez aux questions et notre équipe vous préparera un devis personnalisé sous 24 heures."
+    },
+    "progress": {
+      "step": "Étape {{current}} sur {{total}}"
+    },
+    "steps": {
+      "product": {
+        "title": "Qu'avez-vous besoin?",
+        "subtitle": "Sélectionnez le type de produit",
+        "options": {
+          "portes": "Portes",
+          "estructures": "Structures",
+          "automatismes": "Automatismes"
+        }
+      },
+      "type": {
+        "title": "Type de porte",
+        "subtitle": "Quel style de porte recherchez-vous?",
+        "options": {
+          "seccional": "Porte Sectionnelle",
+          "basculant": "Porte Basculante",
+          "corredissa": "Porte Coulissante",
+          "enrotllable": "Porte Enroulable",
+          "practicable": "Porte Battante"
+        }
+      },
+      "structure": {
+        "title": "Type de structure",
+        "subtitle": "Quel type de structure nécessitez-vous?",
+        "options": {
+          "tancaments": "Clôtures",
+          "pergoles": "Pergolas",
+          "disseny": "Design",
+          "altres": "Autres"
+        }
+      },
+      "automation": {
+        "title": "Quelle porte souhaitez-vous automatiser?",
+        "subtitle": "Sélectionnez la porte à laquelle vous souhaitez ajouter l'automatisme",
+        "options": {
+          "seccional": "Porte Sectionnelle",
+          "basculant": "Porte Basculante",
+          "corredissa": "Porte Coulissante",
+          "enrotllable": "Porte Enroulable",
+          "practicable": "Porte Battante"
+        }
+      },
+      "dimensions": {
+        "title": "Dimensions",
+        "subtitle": "Indiquez les mesures approximatives de la porte",
+        "width": "Largeur",
+        "height": "Hauteur"
+      },
+      "colors": {
+        "title": "Couleur et Finition",
+        "subtitle": "Personnalisez l'apparence de votre porte",
+        "material": "Matériau",
+        "finish": "Finition",
+        "ralColor": "Couleur RAL",
+        "materialOptions": {
+          "galvanitzat": "Galvanisé",
+          "corten": "Corten",
+          "inox": "Inox",
+          "alumini": "Aluminium",
+          "fusta": "Bois"
+        },
+        "finishOptions": {
+          "llis": "Lisse",
+          "woodgrain": "Imitation Bois",
+          "brushed": "Brossé",
+          "microperforat": "Micro-perforé",
+          "llacat": "Laqué"
+        }
+      },
+      "accessories": {
+        "title": "Accessoires",
+        "subtitle": "Ajoutez des accessoires à votre projet",
+        "options": {
+          "motor": {
+            "title": "Moteur Automatique",
+            "description": "Ouverture et fermeture automatiques avec télécommande"
+          },
+          "fotocelules": {
+            "title": "Photocellules",
+            "description": "Capteurs de sécurité qui détectent les obstacles et arrêtent le mouvement"
+          },
+          "comandamentWifi": {
+            "title": "Télécommande WiFi",
+            "description": "Contrôle depuis votre téléphone ou tablette, où que vous soyez"
+          },
+          "timbre": {
+            "title": "Sonnette Intégrée",
+            "description": "Sonnette incorporée dans la porte pour les visiteurs"
+          },
+          "plexiglass": {
+            "title": "Plexiglass",
+            "description": "Panneaux transparents pour laisser entrer la lumière naturelle"
+          },
+          "barrots": {
+            "title": "Barreaux Décoratifs",
+            "description": "Élément décoratif qui apporte caractère et sécurité"
+          },
+          "pantallaPrivacitat": {
+            "title": "Écran de Confidentialité",
+            "description": "Blocage visuel total pour l'intimité"
+          },
+          "detectorObstacle": {
+            "title": "Détecteur d'Obstacles",
+            "description": "Capteur avancé qui arrête la porte s'il détecte un obstacle"
+          }
+        }
+      },
+      "contact": {
+        "title": "Vos coordonnées",
+        "subtitle": "Comment pouvons-nous vous contacter?",
+        "name": "Nom complet",
+        "email": "Adresse e-mail",
+        "phone": "Téléphone",
+        "message": "Message (optionnel)",
+        "errors": {
+          "required": "Ce champ est obligatoire",
+          "invalidEmail": "Entrez une adresse e-mail valide",
+          "invalidDimension": "Dimension non valide",
+          "serverError": "Une erreur s'est produite. Veuillez réessayer plus tard.",
+          "submitFailed": "Impossible d'envoyer. Vérifiez vos données et réessayez."
+        }
+      }
+    },
+    "navigation": {
+      "back": "Retour",
+      "next": "Suivant",
+      "submit": "Demander un Devis Gratuit",
+      "sending": "Envoi en cours..."
+    },
+    "success": {
+      "title": "Devis demandé!",
+      "description": "Merci! Notre équipe technique préparera votre devis personnalisé et vous contactera sous 24 heures."
+    }
+  },
+  "navbar": {
+    "home": "Accueil",
+    "catalog": "Catalogue",
+    "contact": "Contact",
+    "quote": "Devis",
+    "language": "Changer de langue"
+  },
+  "metadata": {
+    "contactTitle": "Contact | Portes Pere Aguilar",
+    "contactDescription": "Demandez un devis pour votre porte, automatisme ou structure métallique à La Bisbal de l'Empordà, Girona.",
+    "quoteTitle": "Devis | Portes Pere Aguilar",
+    "quoteDescription": "Configurez votre porte idéale et demandez un devis personnalisé à Portes Pere Aguilar."
+  }
+}

@@ -70,3 +70,11 @@ $RECYCLE.BIN/
 *.njsproj
 *.sln
 *.sw?
+tsconfig.tsbuildinfo
+
+# =========================================
+# 8. Videos grans (>100MB)
+# =========================================
+public/videos/PortesPereAguilar.mp4
+public/videos/PortesPereAguilar-optimized.mp4
+public/videos/youtube-hero.mp4

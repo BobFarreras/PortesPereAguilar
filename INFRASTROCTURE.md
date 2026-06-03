@@ -2,23 +2,35 @@
 
 ## Entorn de Desplegament
 * **Proveïdor Principal:** Vercel.
-* **Entorns:** * `Development`: Màquines locals dels desenvolupadors.
-    * `Preview`: Desplegaments automàtics per cada Pull Request (Vercel Preview Deployments).
-    * `Production`: Branca `main`, desplegada automàticament a Vercel vinculada al domini `portespereaguilar.com`.
+* **Entorns:**
+  * `Development`: Màquines locals dels desenvolupadors.
+  * `Preview`: Desplegaments automàtics per cada Pull Request (Vercel Preview Deployments).
+  * `Production`: Branca `main`, desplegada automàticament a Vercel vinculada al domini `portespereaguilar.com`.
 
 ## Monitorització i Observabilitat
-1. **Sentry:** * Integrat a nivell de client i de servidor per a la traçabilitat d'errors.
+1. **Sentry:** Integrat a nivell de client i de servidor per a la traçabilitat d'errors. *(Pendent d'implementar)*
    * Captura automàtica d'excepcions i alertes enviades als desenvolupadors.
-2. **Vercel Analytics & Speed Insights:** * Recopilació de mètriques de Core Web Vitals (LCP, FID, CLS).
+2. **Vercel Analytics & Speed Insights:** Recopilació de mètriques de Core Web Vitals (LCP, FID, CLS).
    * Anàlisi de trànsit i retenció d'usuaris per iterar sobre l'UX "Disney futurista".
 
 ## Integració Contínua / Desplegament Continu (CI/CD)
-* **GitHub Actions:** * S'executarà un workflow en cada PR que validarà:
-        1. Compilació de TypeScript (`tsc --noEmit`).
-        2. Linter (`eslint`).
-        3. Tests Unitaris (`jest`).
-    * El codi no es pot fusionar a `main` si els tests fallen (TDD obligatori).
+* **GitHub Actions:** *(Pendent de configurar)*
+  * S'executarà un workflow en cada PR que validarà:
+    1. Compilació de TypeScript (`tsc --noEmit`).
+    2. Linter (`eslint`).
+    3. Tests Unitaris (`jest`).
+  * El codi no es pot fusionar a `main` si els tests fallen (TDD obligatori).
 
 ## Serveis Externs Recomanats
-* **Base de Dades / CMS:** Sanity.io o Supabase per gestionar el catàleg de portes fàcilment (opcional però recomanat per no hardcodejar els productes).
+* **Base de Dades / CMS:** Sanity.io o Supabase per gestionar el catàleg de portes fàcilment (recomanat per no hardcodejar els productes).
 * **Emmagatzematge d'Imatges:** Cloudinary o Vercel Blob Storage per servir imatges en alta resolució (.webp) de manera ultraràpida.
+
+## Estat Actual de l'Entorn
+- [x] Next.js 16 + React 19 configurats.
+- [x] Tailwind CSS v4 + PostCSS configurats.
+- [x] Jest + React Testing Library configurats.
+- [ ] ESLint `next lint` presenta incidències de resolució de directori (revisar script).
+- [ ] Husky (Git hooks) no configurat.
+- [ ] Sentry no integrat.
+- [ ] GitHub Actions no configurat.
+- [ ] `services/` buit o inexistent. Cal definir capa de serveis quan s'integrin dades externes.

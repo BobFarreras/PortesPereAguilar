@@ -1,0 +1,410 @@
+{
+  "hero": {
+    "subtitle": "Artesania d'Alta Tecnologia",
+    "title": {
+      "part1": "Enginyeria en",
+      "part2": "cada tancament."
+    },
+    "description": "Serralleria i estructures metàl·liques dissenyades amb precisió. Protegeix i eleva el teu espai amb materials de primera qualitat.",
+    "cta": "Demana el teu Pressupost"
+  },
+  "navbar": {
+    "home": "Inici",
+    "catalog": "Catàleg",
+    "contact": "Contacte",
+    "language": "Canviar idioma"
+  },
+  "solutions": {
+    "title": "Les Nostres Solucions",
+    "description": "Descobreix la nostra gamma de productes d'alta enginyeria. Dissenyats per durar, fabricats per protegir i automatitzats per facilitar-te la vida.",
+    "servicesList": {
+      "portesCorredisses": {
+        "title": "Portes Corredisses",
+        "description": "Automatismes fluids i disseny robust per a accessos residencials i industrials de màxim trànsit.",
+        "features": {
+          "automatitzacioFluida": {
+            "title": "Automatització Fluida",
+            "description": "Motor d'alta precisió amb control d'inèrcia per a una obertura i tancament suaus, sense sobresalts ni soroll."
+          },
+          "materialsAltaQualitat": {
+            "title": "Materials d'Alta Qualitat",
+            "description": "Perfils d'acer corten, inox o xapa galvanitzada tractats amb processos antiòxid per garantir anys de durabilitat."
+          },
+          "seguretatIntegrada": {
+            "title": "Seguretat Integrada",
+            "description": "Sensors fotocèl·lules de seguretat activa i sistema d'aturada d'emergència que protegeix usuaris i vehicles."
+          },
+          "dissenyPersonalitzable": {
+            "title": "Disseny Personalitzable",
+            "description": "Diferents acabats, colors i tipus de farciment: barrots, fulles sòlides, combinats o amb pantalla de privacitat."
+          }
+        }
+      },
+      "portesSeccionals": {
+        "title": "Portes Seccionals",
+        "description": "Aïllament tèrmic superior i obertura vertical silenciosa que maximitza l'espai del teu garatge.",
+        "features": {
+          "panellsSandvitx": {
+            "title": "Panells Sandvitx de 40mm",
+            "description": "Doble xapa d'acer galvanitzat amb nucli d'escuma de poliuretà injectat per a un aïllament tèrmic i acústic extrem."
+          },
+          "antipinsament": {
+            "title": "Sistema Antipinsament",
+            "description": "Disseny exclusiu de les juntes entre panells que impedeix qualsevol risc d'atrapament de dits durant l'obertura o tancament."
+          },
+          "motoritzacio": {
+            "title": "Motorització Silenciosa",
+            "description": "Automatismes de corretja dentada d'alta resistència amb obertura suau, aturada d'emergència i control remot encriptat."
+          },
+          "estanqueitat": {
+            "title": "Estanqueïtat Total",
+            "description": "Juntes de cautxú EPDM a tot el perímetre inferior, superior i lateral que bloquegen el vent, la pluja i la pols."
+          }
+        }
+      },
+      "estructuresMetaliques": {
+        "title": "Estructures Metàl·liques",
+        "description": "Enginyeria estructural a mida. Pèrgoles, cobertes i altells dissenyats amb precisió.",
+        "features": {
+          "enginyeriaAMida": {
+            "title": "Enginyeria a Mida",
+            "description": "Càlcul estructural personalitzat per a cada projecte: pèrgoles, cobertes, altells i suports amb garantia d'estabilitat."
+          },
+          "altaResistencia": {
+            "title": "Alta Resistència",
+            "description": "Estructures soldades amb acer estructural S275 o S355, amb tractaments superficials antiòxid i galvanització a calent."
+          },
+          "acabatsPersonalitzats": {
+            "title": "Acabats Personalitzats",
+            "description": "Escull entre acer corten, lacat al forn RAL, galvanització o inox per integrar l'estructura amb l'arquitectura del teu espai."
+          },
+          "muntatgeProfessional": {
+            "title": "Muntatge Professional",
+            "description": "Equip especialitzat en muntatge industrial amb gruixudes, soldadura certificada i assaig de càrrega abans de lliurament."
+          }
+        }
+      },
+      "serralleriaDisseny": {
+        "title": "Serralleria de Disseny",
+        "description": "Reixes, baranes i tancaments perimetrals on la seguretat inquebrantable es troba amb l'estètica.",
+        "features": {
+          "seguretatMaxima": {
+            "title": "Seguretat Màxima",
+            "description": "Barrots d'acer de gruix superior, unions soldades d'alta resistència i accessos controlats amb panys d'alta seguretat."
+          },
+          "dissenyEstetic": {
+            "title": "Disseny Estètic",
+            "description": "Línies geomètriques, corbes orgàniques o dissenys trencadors: transformem la seguretat en una peça d'art arquitectònic."
+          },
+          "materialsRobustos": {
+            "title": "Materials Robutsos",
+            "description": "Acer corten, inoxidable AISI 304/316 o xapa galvanitzada amb tractaments antiòxid per resistir el pas del temps."
+          },
+          "mantenimentMinim": {
+            "title": "Manteniment Mínim",
+            "description": "Disseny modular i soldadura TIG professional que minimitza els punts de desgast i facilita futures reparacions."
+          }
+        }
+      },
+      "portesBasculants": {
+        "title": "Portes Basculants",
+        "description": "Obertura clàssica i eficient per a garatges, combinant mecanismes de contrapesos precisos amb estètica personalitzada.",
+        "features": {
+          "mecanismeContrapesos": {
+            "title": "Mecanisme de Contrapesos",
+            "description": "Sistema de braços articulats amb contrapesos calibrats individualment per a un esforç mínim d'obertura i tancament."
+          },
+          "oberturaEficient": {
+            "title": "Obertura Eficient",
+            "description": "Disseny que aprofita l'espai del sostre sense necessitat de rails ni guies laterals, ideal per a garatges amb amplada limitada."
+          },
+          "esteticaPersonalitzable": {
+            "title": "Estètica Personalitzable",
+            "description": "Lames amples o estretes, acer corten, fusta natural o xapa lacada: tanca el teu espai amb estil propi."
+          },
+          "durabilitatExtrema": {
+            "title": "Durabilitat Extrema",
+            "description": "Eixos d'acer temperat, rodaments de boles sellats i recobriments anticorrosius que garanteixen dècades de funcionament."
+          }
+        }
+      },
+      "portesPracticables": {
+        "title": "Portes Practicables",
+        "description": "Elegància i funcionalitat en portes batents, ideals per a accessos de finques i vianants amb automatització d'alta gamma.",
+        "features": {
+          "automatitzacioInteligent": {
+            "title": "Automatització Intel·ligent",
+            "description": "Operadors electromecànics amb control d'obertura parcial per a peatons, còdig de pas i integració amb videoporter."
+          },
+          "eleganciaFunctional": {
+            "title": "Elegància Funcional",
+            "description": "Disseny simètric amb línies netes: barrots verticals, fulles llises o combinades per a una imatge cuidada de la finca."
+          },
+          "versatilitatAccessos": {
+            "title": "Versatilitat d'Accessos",
+            "description": "Una o dues fulles, amb o sense porta peatonal integrada, adaptables a qualsevol amplada i desnivell del terreny."
+          },
+          "acabatsPremium": {
+            "title": "Acabats Premium",
+            "description": "Acer corten patinat, inoxidable polit, xapa lacada al forn o fusta tècnica: materials nobles per a un accés distingit."
+          }
+        }
+      }
+    }
+  },
+  "catalog": {
+    "title": "Catàleg de Solucions",
+    "description": "Explora la nostra gamma completa de portes, automatismes i estructures metàl·liques dissenyades a mesura per al teu projecte.",
+    "empty": "Actualment no hi ha productes disponibles."
+  },
+  "productDetail": {
+    "backToCatalog": "Tornar al catàleg",
+    "requestQuote": "Demanar pressupost",
+    "heroBadge": "Fabricació Artesanal a La Bisbal",
+    "highlightsLabel": "Destacats",
+    "scrollToExplore": "Descobreix més",
+    "featuresTitle": "Característiques Tècniques",
+    "featuresSubtitle": "Descobreix els detalls que fan la diferència en cada projecte.",
+    "processTitle": "El Nostre Procés",
+    "processSubtitle": "De la idea a la realitat en quatre passes professionals.",
+    "process": {
+      "consulta": {
+        "title": "Consulta i Mesura",
+        "description": "Visitem la teva obra, prenem mesures precises i escoltem les teves necessitats per definir el projecte perfecte."
+      },
+      "enginyeria": {
+        "title": "Enginyeria i Disseny",
+        "description": "El nostre equip d'enginyers calcula l'estructura, escull els materials i crea els plànols amb precisió."
+      },
+      "fabricacio": {
+        "title": "Fabricació Artesanal",
+        "description": "A l'obrador, cada peça es talla, solda i acaba a mà per artesans especialitzats amb més de 30 anys d'experiència."
+      },
+      "instalacio": {
+        "title": "Instal·lació i Garantia",
+        "description": "Equip propi d'instal·ladors certificats munta el teu projecte i el posa a punt amb garantia completa de funcionament."
+      }
+    },
+    "ctaTitle": "T'ajudem a fer realitat el teu projecte",
+    "ctaDescription": "Explica'ns què necessites i t'elaborarem un pressupost a mida sense compromís.",
+    "fallback": {
+      "premiumTitle": "Materials Premium",
+      "premiumDescription": "Dissenyats per a la màxima durabilitat i resistència.",
+      "customTitle": "A Mida Exacta",
+      "customDescription": "Ens adaptem a les mides i necessitats del teu espai."
+    }
+  },
+  "trust": {
+    "title": "Confiança i Precisió",
+    "description": "No només fabriquem estructures metàl·liques, creem solucions perdurables avalades per la nostra trajectòria i compromís tecnològic.",
+    "items": [
+      {
+        "metric": "+30",
+        "title": "Anys d'Experiència",
+        "description": "Tres dècades perfeccionant l'art de la serralleria i l'enginyeria metàl·lica de precisió."
+      },
+      {
+        "metric": "+2000",
+        "title": "Projectes Realitzats",
+        "description": "Des de portes residencials fins a estructures industrials complexes, garantint un funcionament impecable."
+      },
+      {
+        "metric": "100%",
+        "title": "Garantia de Qualitat",
+        "description": "Utilitzem materials nobles i automatismes d'alta gamma per oferir tancaments infranquejables i segurs."
+      }
+    ]
+  },
+  "contact": {
+    "form": {
+      "name": "Nom complet",
+      "email": "Correu electrònic",
+      "phone": "Telèfon",
+      "message": "Com et podem ajudar?",
+      "submit": "Enviar petició",
+      "successTitle": "Missatge enviat correctament!",
+      "successDescription": "El nostre equip tècnic es posarà en contacte amb tu el més aviat possible per analitzar el teu projecte.",
+      "sending": "Enviant...",
+      "errors": {
+        "required": "Aquest camp és obligatori",
+        "invalidEmail": "Introdueix un correu electrònic vàlid",
+        "serverError": "Hi ha hagut un error. Torna-ho a provar més tard.",
+        "submitFailed": "No s'ha pogut enviar el missatge. Revisa les dades i torna-ho a provar."
+      }
+    },
+    "info": {
+      "subtitle": "Parlem del teu projecte",
+      "title": "Estem preparats per donar forma a la teva idea.",
+      "description": "Des d'una simple consulta fins a dissenys complexos d'enginyeria estructural. El nostre equip t'assessorarà sense compromís.",
+      "callUs": "Truca'ns directament",
+      "visitUs": "Visita'ns a"
+    }
+  },
+  "footer": {
+    "description": "Artesania d'alta tecnologia en estructures metàl·liques i portes industrials o residencials. Garantim seguretat, disseny i precisió en cada tancament.",
+    "explore": "Explora",
+    "catalog": "Catàleg de Portes",
+    "structures": "Estructures Metàl·liques",
+    "requestQuote": "Demanar Pressupost",
+    "contact": "Contacte",
+    "legal": "Avís Legal",
+    "privacy": "Política de Privacitat",
+    "copyright": "Tots els drets reservats."
+  },
+  "quote": {
+    "hero": {
+      "subtitle": "Configurador de Pressupost",
+      "title": "Configura la teva porta ideal",
+      "description": "Respon les preguntes i el nostre equip t'elaborarà un pressupost personalitzat en menys de 24 hores."
+    },
+    "progress": {
+      "step": "Pas {{current}} de {{total}}"
+    },
+    "steps": {
+      "product": {
+        "title": "Què necessites?",
+        "subtitle": "Selecciona el tipus de producte",
+        "options": {
+          "portes": "Portes",
+          "estructures": "Estructures",
+          "automatismes": "Automatismes"
+        }
+      },
+      "type": {
+        "title": "Tipus de porta",
+        "subtitle": "Quin estil de porta busques?",
+        "options": {
+          "seccional": "Porta Seccional",
+          "basculant": "Porta Basculant",
+          "corredissa": "Porta Corredissa",
+          "enrotllable": "Porta Enrotllable",
+          "practicable": "Porta Practicable"
+        }
+      },
+      "structure": {
+        "title": "Tipus d'estructura",
+        "subtitle": "Quin tipus d'estructura necessites?",
+        "options": {
+          "tancaments": "Tancaments",
+          "pergoles": "Pèrgoles",
+          "disseny": "Disseny",
+          "altres": "Altres"
+        }
+      },
+      "automation": {
+        "title": "Quina porta vols automatitzar?",
+        "subtitle": "Selecciona la porta a la qual vols afegir l'automatisme",
+        "options": {
+          "seccional": "Porta Seccional",
+          "basculant": "Porta Basculant",
+          "corredissa": "Porta Corredissa",
+          "enrotllable": "Porta Enrotllable",
+          "practicable": "Porta Practicable"
+        }
+      },
+      "dimensions": {
+        "title": "Dimensions",
+        "subtitle": "Indica les mides aproximades de la porta",
+        "width": "Ample",
+        "height": "Alçada"
+      },
+      "colors": {
+        "title": "Color i Acabat",
+        "subtitle": "Personalitza l'aparença de la teva porta",
+        "material": "Material",
+        "finish": "Acabat",
+        "ralColor": "Color RAL",
+        "materialOptions": {
+          "galvanitzat": "Galvanitzat",
+          "corten": "Corten",
+          "inox": "Inox",
+          "alumini": "Alumini",
+          "fusta": "Fusta"
+        },
+        "finishOptions": {
+          "llis": "Llís",
+          "woodgrain": "Imitació Fusta",
+          "brushed": "Raspat",
+          "microperforat": "Microperforat",
+          "llacat": "Llacat"
+        }
+      },
+      "accessories": {
+        "title": "Accessoris",
+        "subtitle": "Afegeix accessoris al teu projecte",
+        "options": {
+          "motor": {
+            "title": "Motor Automàtic",
+            "description": "Obertura i tancament automàtic amb comandament remot"
+          },
+          "fotocelules": {
+            "title": "Fotocèl·lules",
+            "description": "Sensors de seguretat que detecten obstacles i aturen el moviment"
+          },
+          "comandamentWifi": {
+            "title": "Comandament WiFi",
+            "description": "Control des del teu mòbil o tauleta des de qualsevol lloc"
+          },
+          "timbre": {
+            "title": "Timbre Integrat",
+            "description": "Timbre incorporat a la porta per a visitants"
+          },
+          "plexiglass": {
+            "title": "Plexiglass",
+            "description": "Panells transparents per deixar pas a la llum natural"
+          },
+          "barrots": {
+            "title": "Barrots Decoratius",
+            "description": "Element decoratiu que aporta caràcter i seguretat"
+          },
+          "pantallaPrivacitat": {
+            "title": "Pantalla de Privacitat",
+            "description": "Bloqueig visual total per a la intimitat"
+          },
+          "detectorObstacle": {
+            "title": "Detector d'Obstacles",
+            "description": "Sensor avançat que atura la porta si detecta qualsevol obstacle"
+          }
+        }
+      },
+      "contact": {
+        "title": "Les teves dades",
+        "subtitle": "Com et podem contactar?",
+        "name": "Nom complet",
+        "email": "Correu electrònic",
+        "phone": "Telèfon",
+        "message": "Missatge (opcional)",
+        "errors": {
+          "required": "Aquest camp és obligatori",
+          "invalidEmail": "Introdueix un correu electrònic vàlid",
+          "invalidDimension": "Mida no vàlida",
+          "serverError": "Hi ha hagut un error. Torna-ho a provar més tard.",
+          "submitFailed": "No s'ha pogut enviar. Revisa les dades i torna-ho a provar."
+        }
+      }
+    },
+    "navigation": {
+      "back": "Enrere",
+      "next": "Següent",
+      "submit": "Demanar Pressupost Gratüït",
+      "sending": "Enviant..."
+    },
+    "success": {
+      "title": "Pressupost sol·licitat!",
+      "description": "Gràcies! El nostre equip tècnic prepararà el teu pressupost personalitzat i et contactarem en menys de 24 hores."
+    }
+  },
+  "navbar": {
+    "home": "Inici",
+    "catalog": "Catàleg",
+    "contact": "Contacte",
+    "quote": "Pressupost",
+    "language": "Canviar idioma"
+  },
+  "metadata": {
+    "contactTitle": "Contacte | Portes Pere Aguilar",
+    "contactDescription": "Demana pressupost per a la teva porta, automatisme o estructura metàl·lica a La Bisbal de l'Empordà, Girona.",
+    "quoteTitle": "Pressupost | Portes Pere Aguilar",
+    "quoteDescription": "Configura la teva porta ideal i demana un pressupost personalitzat a Portes Pere Aguilar."
+  }
+}
