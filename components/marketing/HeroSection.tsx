@@ -118,7 +118,12 @@ export default function HeroSection() {
           {showText && (
             <motion.div
               key="hero-text"
-              className="flex flex-col gap-5 w-fit backdrop-blur-md bg-black/20 rounded-3xl p-8 -m-8"
+              className="flex flex-col gap-5 w-fit backdrop-blur-xl px-12 py-10"
+              style={{
+                background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 50%, transparent 80%)',
+                maskImage: 'radial-gradient(ellipse at center, black 30%, transparent 75%)',
+                WebkitMaskImage: 'radial-gradient(ellipse at center, black 30%, transparent 75%)',
+              }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
