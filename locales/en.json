@@ -21,7 +21,25 @@
     "servicesList": {
       "portesCorredisses": {
         "title": "Sliding Doors",
-        "description": "Smooth automation and robust design for residential and industrial high-traffic entrances."
+        "description": "Smooth automation and robust design for residential and industrial high-traffic entrances.",
+        "features": {
+          "automatitzacioFluida": {
+            "title": "Fluid Automation",
+            "description": "High-precision motor with inertia control for smooth, bump-free and noise-free opening and closing."
+          },
+          "materialsAltaQualitat": {
+            "title": "High-Quality Materials",
+            "description": "Corten steel, stainless steel or galvanised sheet profiles treated with anti-oxidation processes to guarantee years of durability."
+          },
+          "seguretatIntegrada": {
+            "title": "Integrated Safety",
+            "description": "Active safety photocell sensors and emergency stop system that protect users and vehicles."
+          },
+          "dissenyPersonalitzable": {
+            "title": "Customisable Design",
+            "description": "Various finishes, colours and infill types: bars, solid leaves, combinations or privacy screens."
+          }
+        }
       },
       "portesSeccionals": {
         "title": "Sectional Doors",
@@ -47,19 +65,91 @@
       },
       "estructuresMetaliques": {
         "title": "Metal Structures",
-        "description": "Bespoke structural engineering. Pergolas, roofing and mezzanines designed with millimetric precision."
+        "description": "Bespoke structural engineering. Pergolas, roofing and mezzanines designed with millimetric precision.",
+        "features": {
+          "enginyeriaAMida": {
+            "title": "Tailored Engineering",
+            "description": "Custom structural calculation for every project: pergolas, roofs, mezzanines and supports with stability guarantee."
+          },
+          "altaResistencia": {
+            "title": "High Strength",
+            "description": "Structures welded with S275 or S355 structural steel, with anti-oxidation surface treatments and hot-dip galvanising."
+          },
+          "acabatsPersonalitzats": {
+            "title": "Custom Finishes",
+            "description": "Choose from Corten steel, RAL powder coating, galvanising or stainless steel to integrate the structure with your space's architecture."
+          },
+          "muntatgeProfessional": {
+            "title": "Professional Assembly",
+            "description": "Specialised industrial assembly team with cranes, certified welding and load testing before handover."
+          }
+        }
       },
       "serralleriaDisseny": {
         "title": "Design Metalwork",
-        "description": "Grilles, railings and perimeter enclosures where unbreakable security meets aesthetics."
+        "description": "Grilles, railings and perimeter enclosures where unbreakable security meets aesthetics.",
+        "features": {
+          "seguretatMaxima": {
+            "title": "Maximum Security",
+            "description": "Superior thickness steel bars, high-strength welded joints and controlled access with high-security locks."
+          },
+          "dissenyEstetic": {
+            "title": "Aesthetic Design",
+            "description": "Geometric lines, organic curves or cutting-edge designs: we transform security into a piece of architectural art."
+          },
+          "materialsRobustos": {
+            "title": "Robust Materials",
+            "description": "Corten steel, AISI 304/316 stainless steel or galvanised sheet with anti-oxidation treatments to withstand the test of time."
+          },
+          "mantenimentMinim": {
+            "title": "Minimal Maintenance",
+            "description": "Modular design and professional TIG welding that minimise wear points and facilitate future repairs."
+          }
+        }
       },
       "portesBasculants": {
         "title": "Up-and-Over Doors",
-        "description": "Classic and efficient opening for garages, combining precise counterweight mechanisms with customised aesthetics."
+        "description": "Classic and efficient opening for garages, combining precise counterweight mechanisms with customised aesthetics.",
+        "features": {
+          "mecanismeContrapesos": {
+            "title": "Counterweight Mechanism",
+            "description": "Articulated arm system with individually calibrated counterweights for minimal opening and closing effort."
+          },
+          "oberturaEficient": {
+            "title": "Efficient Opening",
+            "description": "Design that utilises ceiling space without the need for rails or side guides, ideal for garages with limited width."
+          },
+          "esteticaPersonalitzable": {
+            "title": "Customisable Aesthetics",
+            "description": "Wide or narrow slats, corten steel, natural wood or lacquered sheet: close your space with your own style."
+          },
+          "durabilitatExtrema": {
+            "title": "Extreme Durability",
+            "description": "Tempered steel shafts, sealed ball bearings and anti-corrosion coatings that guarantee decades of operation."
+          }
+        }
       },
       "portesPracticables": {
         "title": "Side-Hinged Doors",
-        "description": "Elegance and functionality in swing doors, ideal for residential and pedestrian entrances with high-end automation."
+        "description": "Elegance and functionality in swing doors, ideal for residential and pedestrian entrances with high-end automation.",
+        "features": {
+          "automatitzacioInteligent": {
+            "title": "Smart Automation",
+            "description": "Electromechanical operators with partial opening control for pedestrians, passcode and video intercom integration."
+          },
+          "eleganciaFunctional": {
+            "title": "Functional Elegance",
+            "description": "Symmetrical design with clean lines: vertical bars, smooth leaves or combinations for a refined property image."
+          },
+          "versatilitatAccessos": {
+            "title": "Access Versatility",
+            "description": "One or two leaves, with or without integrated pedestrian door, adaptable to any width and ground slope."
+          },
+          "acabatsPremium": {
+            "title": "Premium Finishes",
+            "description": "Patinised corten steel, polished stainless steel, powder-coated sheet or technical wood: noble materials for a distinguished entrance."
+          }
+        }
       }
     }
   },

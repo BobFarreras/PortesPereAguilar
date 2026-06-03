@@ -21,7 +21,25 @@
     "servicesList": {
       "portesCorredisses": {
         "title": "Puertas Correderas",
-        "description": "Automatismos fluidos y diseño robusto para accesos residenciales e industriales de máximo tránsito."
+        "description": "Automatismos fluidos y diseño robusto para accesos residenciales e industriales de máximo tránsito.",
+        "features": {
+          "automatitzacioFluida": {
+            "title": "Automatización Fluida",
+            "description": "Motor de alta precisión con control de inercia para una apertura y cierre suaves, sin sobresaltos ni ruido."
+          },
+          "materialsAltaQualitat": {
+            "title": "Materiales de Alta Calidad",
+            "description": "Perfiles de acero corten, inox o chapa galvanizada tratados con procesos antioxidantes para garantizar años de durabilidad."
+          },
+          "seguretatIntegrada": {
+            "title": "Seguridad Integrada",
+            "description": "Sensores fotocélulas de seguridad activa y sistema de parada de emergencia que protegen usuarios y vehículos."
+          },
+          "dissenyPersonalitzable": {
+            "title": "Diseño Personalizable",
+            "description": "Diferentes acabados, colores y tipos de relleno: barrotes, hojas sólidas, combinados o con pantalla de privacidad."
+          }
+        }
       },
       "portesSeccionals": {
         "title": "Puertas Seccionales",
@@ -47,19 +65,91 @@
       },
       "estructuresMetaliques": {
         "title": "Estructuras Metálicas",
-        "description": "Ingeniería estructural a medida. Pérgolas, cubiertas y altillos diseñados con precisión milimétrica."
+        "description": "Ingeniería estructural a medida. Pérgolas, cubiertas y altillos diseñados con precisión milimétrica.",
+        "features": {
+          "enginyeriaAMida": {
+            "title": "Ingeniería a Medida",
+            "description": "Cálculo estructural personalizado para cada proyecto: pérgolas, cubiertas, altillos y soportes con garantía de estabilidad."
+          },
+          "altaResistencia": {
+            "title": "Alta Resistencia",
+            "description": "Estructuras soldadas con acero estructural S275 o S355, con tratamientos superficiales antioxidantes y galvanización en caliente."
+          },
+          "acabatsPersonalitzats": {
+            "title": "Acabados Personalizados",
+            "description": "Elige entre acero corten, lacado al horno RAL, galvanización o inox para integrar la estructura con la arquitectura de tu espacio."
+          },
+          "muntatgeProfessional": {
+            "title": "Montaje Profesional",
+            "description": "Equipo especializado en montaje industrial con grúas, soldadura certificada y ensayo de carga antes de la entrega."
+          }
+        }
       },
       "serralleriaDisseny": {
         "title": "Cerrajería de Diseño",
-        "description": "Rejas, barandillas y cerramientos perimetrales donde la seguridad inquebrantable se encuentra con la estética."
+        "description": "Rejas, barandillas y cerramientos perimetrales donde la seguridad inquebrantable se encuentra con la estética.",
+        "features": {
+          "seguretatMaxima": {
+            "title": "Seguridad Máxima",
+            "description": "Barrotes de acero de gran grosor, uniones soldadas de alta resistencia y accesos controlados con cerraduras de alta seguridad."
+          },
+          "dissenyEstetic": {
+            "title": "Diseño Estético",
+            "description": "Líneas geométricas, curvas orgánicas o diseños rompedores: transformamos la seguridad en una pieza de arte arquitectónico."
+          },
+          "materialsRobustos": {
+            "title": "Materiales Robustos",
+            "description": "Acero corten, inoxidable AISI 304/316 o chapa galvanizada con tratamientos antioxidantes para resistir el paso del tiempo."
+          },
+          "mantenimentMinim": {
+            "title": "Mantenimiento Mínimo",
+            "description": "Diseño modular y soldadura TIG profesional que minimiza los puntos de desgaste y facilita futuras reparaciones."
+          }
+        }
       },
       "portesBasculants": {
         "title": "Puertas Basculantes",
-        "description": "Apertura clásica y eficiente para garajes, combinando mecanismos de contrapesos precisos con estética personalizada."
+        "description": "Apertura clásica y eficiente para garajes, combinando mecanismos de contrapesos precisos con estética personalizada.",
+        "features": {
+          "mecanismeContrapesos": {
+            "title": "Mecanismo de Contrapesos",
+            "description": "Sistema de brazos articulados con contrapesos calibrados individualmente para un esfuerzo mínimo de apertura y cierre."
+          },
+          "oberturaEficient": {
+            "title": "Apertura Eficiente",
+            "description": "Diseño que aprovecha el espacio del techo sin necesidad de raíles ni guías laterales, ideal para garajes con anchura limitada."
+          },
+          "esteticaPersonalitzable": {
+            "title": "Estética Personalizable",
+            "description": "Lamas anchas o estrechas, acero corten, madera natural o chapa lacada: cierra tu espacio con estilo propio."
+          },
+          "durabilitatExtrema": {
+            "title": "Durabilidad Extrema",
+            "description": "Ejes de acero templado, rodamientos de bolas sellados y recubrimientos anticorrosivos que garantizan décadas de funcionamiento."
+          }
+        }
       },
       "portesPracticables": {
         "title": "Puertas Practicables",
-        "description": "Elegancia y funcionalidad en puertas batientes, ideales para accesos de fincas y peatones con automatización de alta gama."
+        "description": "Elegancia y funcionalidad en puertas batientes, ideales para accesos de fincas y peatones con automatización de alta gama.",
+        "features": {
+          "automatitzacioInteligent": {
+            "title": "Automatización Inteligente",
+            "description": "Operadores electromecánicos con control de apertura parcial para peatones, código de paso e integración con videoportero."
+          },
+          "eleganciaFunctional": {
+            "title": "Elegancia Funcional",
+            "description": "Diseño simétrico con líneas limpias: barrotes verticales, hojas lisas o combinadas para una imagen cuidada de la finca."
+          },
+          "versatilitatAccessos": {
+            "title": "Versatilidad de Accesos",
+            "description": "Una o dos hojas, con o sin puerta peatonal integrada, adaptables a cualquier anchura y desnivel del terreno."
+          },
+          "acabatsPremium": {
+            "title": "Acabados Premium",
+            "description": "Acero corten patinado, inoxidable pulido, chapa lacada al horno o madera técnica: materiales nobles para un acceso distinguido."
+          }
+        }
       }
     }
   },

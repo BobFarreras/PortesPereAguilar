@@ -21,7 +21,25 @@
     "servicesList": {
       "portesCorredisses": {
         "title": "Portes Corredisses",
-        "description": "Automatismes fluids i disseny robust per a accessos residencials i industrials de màxim trànsit."
+        "description": "Automatismes fluids i disseny robust per a accessos residencials i industrials de màxim trànsit.",
+        "features": {
+          "automatitzacioFluida": {
+            "title": "Automatització Fluida",
+            "description": "Motor d'alta precisió amb control d'inèrcia per a una obertura i tancament suaus, sense sobresalts ni soroll."
+          },
+          "materialsAltaQualitat": {
+            "title": "Materials d'Alta Qualitat",
+            "description": "Perfils d'acer corten, inox o xapa galvanitzada tractats amb processos antiòxid per garantir anys de durabilitat."
+          },
+          "seguretatIntegrada": {
+            "title": "Seguretat Integrada",
+            "description": "Sensors fotocèl·lules de seguretat activa i sistema d'aturada d'emergència que protegeix usuaris i vehicles."
+          },
+          "dissenyPersonalitzable": {
+            "title": "Disseny Personalitzable",
+            "description": "Diferents acabats, colors i tipus de farciment: barrots, fulles sòlides, combinats o amb pantalla de privacitat."
+          }
+        }
       },
       "portesSeccionals": {
         "title": "Portes Seccionals",
@@ -47,19 +65,91 @@
       },
       "estructuresMetaliques": {
         "title": "Estructures Metàl·liques",
-        "description": "Enginyeria estructural a mida. Pèrgoles, cobertes i altells dissenyats amb precisió mil·limètrica."
+        "description": "Enginyeria estructural a mida. Pèrgoles, cobertes i altells dissenyats amb precisió mil·limètrica.",
+        "features": {
+          "enginyeriaAMida": {
+            "title": "Enginyeria a Mida",
+            "description": "Càlcul estructural personalitzat per a cada projecte: pèrgoles, cobertes, altells i suports amb garantia d'estabilitat."
+          },
+          "altaResistencia": {
+            "title": "Alta Resistència",
+            "description": "Estructures soldades amb acer estructural S275 o S355, amb tractaments superficials antiòxid i galvanització a calent."
+          },
+          "acabatsPersonalitzats": {
+            "title": "Acabats Personalitzats",
+            "description": "Escull entre acer corten, lacat al forn RAL, galvanització o inox per integrar l'estructura amb l'arquitectura del teu espai."
+          },
+          "muntatgeProfessional": {
+            "title": "Muntatge Professional",
+            "description": "Equip especialitzat en muntatge industrial amb gruixudes, soldadura certificada i assaig de càrrega abans de lliurament."
+          }
+        }
       },
       "serralleriaDisseny": {
         "title": "Serralleria de Disseny",
-        "description": "Reixes, baranes i tancaments perimetrals on la seguretat inquebrantable es troba amb l'estètica."
+        "description": "Reixes, baranes i tancaments perimetrals on la seguretat inquebrantable es troba amb l'estètica.",
+        "features": {
+          "seguretatMaxima": {
+            "title": "Seguretat Màxima",
+            "description": "Barrots d'acer de gruix superior, unions soldades d'alta resistència i accessos controlats amb panys d'alta seguretat."
+          },
+          "dissenyEstetic": {
+            "title": "Disseny Estètic",
+            "description": "Línies geomètriques, corbes orgàniques o dissenys trencadors: transformem la seguretat en una peça d'art arquitectònic."
+          },
+          "materialsRobustos": {
+            "title": "Materials Robutsos",
+            "description": "Acer corten, inoxidable AISI 304/316 o xapa galvanitzada amb tractaments antiòxid per resistir el pas del temps."
+          },
+          "mantenimentMinim": {
+            "title": "Manteniment Mínim",
+            "description": "Disseny modular i soldadura TIG professional que minimitza els punts de desgast i facilita futures reparacions."
+          }
+        }
       },
       "portesBasculants": {
         "title": "Portes Basculants",
-        "description": "Obertura clàssica i eficient per a garatges, combinant mecanismes de contrapesos precisos amb estètica personalitzada."
+        "description": "Obertura clàssica i eficient per a garatges, combinant mecanismes de contrapesos precisos amb estètica personalitzada.",
+        "features": {
+          "mecanismeContrapesos": {
+            "title": "Mecanisme de Contrapesos",
+            "description": "Sistema de braços articulats amb contrapesos calibrats individualment per a un esforç mínim d'obertura i tancament."
+          },
+          "oberturaEficient": {
+            "title": "Obertura Eficient",
+            "description": "Disseny que aprofita l'espai del sostre sense necessitat de rails ni guies laterals, ideal per a garatges amb amplada limitada."
+          },
+          "esteticaPersonalitzable": {
+            "title": "Estètica Personalitzable",
+            "description": "Lames amples o estretes, acer corten, fusta natural o xapa lacada: tanca el teu espai amb estil propi."
+          },
+          "durabilitatExtrema": {
+            "title": "Durabilitat Extrema",
+            "description": "Eixos d'acer temperat, rodaments de boles sellats i recobriments anticorrosius que garanteixen dècades de funcionament."
+          }
+        }
       },
       "portesPracticables": {
         "title": "Portes Practicables",
-        "description": "Elegància i funcionalitat en portes batents, ideals per a accessos de finques i vianants amb automatització d'alta gamma."
+        "description": "Elegància i funcionalitat en portes batents, ideals per a accessos de finques i vianants amb automatització d'alta gamma.",
+        "features": {
+          "automatitzacioInteligent": {
+            "title": "Automatització Intel·ligent",
+            "description": "Operadors electromecànics amb control d'obertura parcial per a peatons, còdig de pas i integració amb videoporter."
+          },
+          "eleganciaFunctional": {
+            "title": "Elegància Funcional",
+            "description": "Disseny simètric amb línies netes: barrots verticals, fulles llises o combinades per a una imatge cuidada de la finca."
+          },
+          "versatilitatAccessos": {
+            "title": "Versatilitat d'Accessos",
+            "description": "Una o dues fulles, amb o sense porta peatonal integrada, adaptables a qualsevol amplada i desnivell del terreny."
+          },
+          "acabatsPremium": {
+            "title": "Acabats Premium",
+            "description": "Acer corten patinat, inoxidable polit, xapa lacada al forn o fusta tècnica: materials nobles per a un accés distingit."
+          }
+        }
       }
     }
   },
