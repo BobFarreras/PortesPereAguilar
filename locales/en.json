@@ -161,6 +161,9 @@
   "productDetail": {
     "backToCatalog": "Back to catalog",
     "requestQuote": "Request a quote",
+    "heroBadge": "Artisan Manufacturing in La Bisbal",
+    "highlightsLabel": "Highlights",
+    "scrollToExplore": "Explore more",
     "featuresTitle": "Technical Features",
     "featuresSubtitle": "Discover the details that make the difference in every project.",
     "processTitle": "Our Process",

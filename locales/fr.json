@@ -161,6 +161,9 @@
   "productDetail": {
     "backToCatalog": "Retour au catalogue",
     "requestQuote": "Demander un devis",
+    "heroBadge": "Fabrication Artisanale à La Bisbal",
+    "highlightsLabel": "Points Forts",
+    "scrollToExplore": "Découvrir plus",
     "featuresTitle": "Caractéristiques Techniques",
     "featuresSubtitle": "Découvrez les détails qui font la différence dans chaque projet.",
     "processTitle": "Notre Processus",

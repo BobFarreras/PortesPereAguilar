@@ -161,6 +161,9 @@
   "productDetail": {
     "backToCatalog": "Tornar al catàleg",
     "requestQuote": "Demanar pressupost",
+    "heroBadge": "Fabricació Artesanal a La Bisbal",
+    "highlightsLabel": "Destacats",
+    "scrollToExplore": "Descobreix més",
     "featuresTitle": "Característiques Tècniques",
     "featuresSubtitle": "Descobreix els detalls que fan la diferència en cada projecte.",
     "processTitle": "El Nostre Procés",

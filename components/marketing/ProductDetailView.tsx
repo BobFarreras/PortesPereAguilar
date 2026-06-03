@@ -100,6 +100,14 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
             {tCommon('backToCatalog')}
           </Link>
 
+          {/* Badge Premium */}
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-red/10 border border-brand-red/20 text-brand-red text-xs font-bold uppercase tracking-wider mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5">
+              <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.83 3 3 0 00-5.305 0 3 3 0 00-3.83 3.75 3 3 0 000 5.305 3 3 0 003.75 3.83 3 3 0 005.305 0 3 3 0 003.83-3.75zm-2.546-4.46a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+            </svg>
+            {tCommon('heroBadge')}
+          </div>
+
           <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
             {t(`servicesList.${service.translationKey}.title`)}
           </h1>
@@ -115,12 +123,60 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
               {tCommon('requestQuote')}
             </MagicButton>
           </Link>
+
+          {/* Teaser de característiques (Highlights) */}
+          {service.features && service.features.length > 0 && (
+            <div className="mt-8 pt-8 border-t border-gray-200 dark:border-white/10">
+              <p className="text-xs font-bold text-gray-400 dark:text-brand-grey/60 uppercase tracking-widest mb-4">
+                {tCommon('highlightsLabel')}
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                {service.features.slice(0, 4).map((featureId, index) => (
+                  <button
+                    key={featureId}
+                    onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 dark:bg-white/[0.03] border border-gray-200 dark:border-white/5 hover:border-brand-red/30 hover:bg-brand-red/5 dark:hover:bg-brand-red/10 transition-all duration-300 text-left group"
+                  >
+                    <div className="shrink-0 w-8 h-8 rounded-lg bg-brand-red/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="scale-75">{FEATURE_ICONS[index % FEATURE_ICONS.length]}</div>
+                    </div>
+                    <span className="text-sm font-semibold text-gray-700 dark:text-brand-grey group-hover:text-brand-red transition-colors line-clamp-2">
+                      {t(`servicesList.${service.translationKey}.features.${featureId}.title`)}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </motion.div>
       </div>
 
+      {/* Scroll Indicator */}
+      {service.features && service.features.length > 0 && (
+        <motion.div
+          className="flex flex-col items-center mb-16 cursor-pointer"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          <span className="text-xs font-bold text-gray-400 dark:text-brand-grey/60 uppercase tracking-widest mb-3">
+            {tCommon('scrollToExplore')}
+          </span>
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-brand-red">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+            </svg>
+          </motion.div>
+        </motion.div>
+      )}
+
       {/* Secció: Característiques Tècniques */}
       {service.features && service.features.length > 0 && (
-        <section className="mb-24">
+        <section id="features" className="mb-24 scroll-mt-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -198,7 +254,7 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
       )}
 
       {/* Secció: El nostre procés */}
-      <section className="mb-24">
+      <section id="process" className="mb-24 scroll-mt-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

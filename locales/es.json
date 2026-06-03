@@ -161,6 +161,9 @@
   "productDetail": {
     "backToCatalog": "Volver al catálogo",
     "requestQuote": "Solicitar presupuesto",
+    "heroBadge": "Fabricación Artesanal en La Bisbal",
+    "highlightsLabel": "Destacados",
+    "scrollToExplore": "Descubre más",
     "featuresTitle": "Características Técnicas",
     "featuresSubtitle": "Descubre los detalles que marcan la diferencia en cada proyecto.",
     "processTitle": "Nuestro Proceso",
