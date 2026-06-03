@@ -30,7 +30,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <ThemeProvider attribute="class" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <NextIntlClientProvider messages={messages} locale={locale}>
         <LayoutGroupWrapper>
           <Navbar />

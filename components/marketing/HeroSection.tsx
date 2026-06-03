@@ -108,6 +108,7 @@ export default function HeroSection() {
         muted
         loop
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
         src="/videos/hero-youtube.mp4"
       />
