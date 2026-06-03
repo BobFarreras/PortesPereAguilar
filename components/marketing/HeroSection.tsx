@@ -4,25 +4,36 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
+const MUTE_STORAGE_KEY = 'hero-audio-muted';
+
 export default function HeroSection() {
   const t = useTranslations('hero');
   const sectionRef = useRef<HTMLDivElement>(null);
   const [showText, setShowText] = useState(false);
   const isFirstLoad = useRef(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isMuted, setIsMuted] = useState(false);
+  const audioEnabled = useRef(false);
+  const [isMuted, setIsMuted] = useState(() => {
+    if (typeof window === 'undefined') return true;
+    const stored = localStorage.getItem(MUTE_STORAGE_KEY);
+    return stored === null ? true : stored === 'true';
+  });
 
-  // Auto-play àudio + pausa al sortir del viewport
+  // Restaurar audioEnabled després del mount del client
+  useEffect(() => {
+    const stored = localStorage.getItem(MUTE_STORAGE_KEY);
+    if (stored === 'false') {
+      audioEnabled.current = true;
+    }
+  }, []);
+
+  // Crear àudio — sempre comença mutat (autoplay bloquejat pels navegadors)
   useEffect(() => {
     const audio = new Audio('/audio/litesaturation-motivational-corporate-medium1-110677.mp3');
     audio.loop = true;
     audio.volume = 0.3;
+    audio.muted = true;
     audioRef.current = audio;
-
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {});
-    }
 
     return () => {
       audio.pause();
@@ -41,8 +52,10 @@ export default function HeroSection() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Reproduir àudio
-          if (audioRef.current && audioRef.current.paused) {
+          // Reproduir àudio si l'usuari l'ha activat mai i està pausat
+          if (audioRef.current && audioRef.current.paused && audioEnabled.current) {
+            audioRef.current.muted = false;
+            setIsMuted(false);
             audioRef.current.play().catch(() => {});
           }
           if (isFirstLoad.current) {
@@ -83,11 +96,17 @@ export default function HeroSection() {
   const toggleAudio = useCallback(() => {
     if (!audioRef.current) return;
     if (isMuted) {
+      // Activar so → marcar com a habilitat (per scroll-back)
+      audioEnabled.current = true;
       audioRef.current.muted = false;
       setIsMuted(false);
+      localStorage.setItem(MUTE_STORAGE_KEY, 'false');
+      audioRef.current.play().catch(() => {});
     } else {
+      // Silenciar → mantenir audioEnabled perquè al tornar torni a sonar
       audioRef.current.muted = true;
       setIsMuted(true);
+      localStorage.setItem(MUTE_STORAGE_KEY, 'true');
     }
   }, [isMuted]);
 
