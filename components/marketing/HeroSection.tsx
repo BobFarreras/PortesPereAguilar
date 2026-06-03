@@ -10,8 +10,27 @@ export default function HeroSection() {
   const [showText, setShowText] = useState(false);
   const isFirstLoad = useRef(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isMuted, setIsMuted] = useState(false);
 
-  // IntersectionObserver + delay només al primer load
+  // Auto-play àudio + pausa al sortir del viewport
+  useEffect(() => {
+    const audio = new Audio('/audio/litesaturation-motivational-corporate-medium1-110677.mp3');
+    audio.loop = true;
+    audio.volume = 0.3;
+    audioRef.current = audio;
+
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {});
+    }
+
+    return () => {
+      audio.pause();
+      audioRef.current = null;
+    };
+  }, []);
+
+  // Pausa/resum àudio segons visibilitat del hero
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
@@ -22,8 +41,11 @@ export default function HeroSection() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          // Reproduir àudio
+          if (audioRef.current && audioRef.current.paused) {
+            audioRef.current.play().catch(() => {});
+          }
           if (isFirstLoad.current) {
-            // Primer cop: delay de 3s
             isFirstLoad.current = false;
             showTimer = setTimeout(() => {
               setShowText(true);
@@ -32,13 +54,16 @@ export default function HeroSection() {
               }, 11000);
             }, 3000);
           } else {
-            // Scroll back: instantani
             setShowText(true);
             hideTimer = setTimeout(() => {
               setShowText(false);
             }, 11000);
           }
         } else {
+          // Pausar àudio
+          if (audioRef.current && !audioRef.current.paused) {
+            audioRef.current.pause();
+          }
           clearTimeout(showTimer);
           clearTimeout(hideTimer);
           setShowText(false);
@@ -55,17 +80,16 @@ export default function HeroSection() {
     };
   }, []);
 
-  const startAudio = useCallback(() => {
-    if (audioRef.current) {
-      audioRef.current.play();
-      return;
+  const toggleAudio = useCallback(() => {
+    if (!audioRef.current) return;
+    if (isMuted) {
+      audioRef.current.muted = false;
+      setIsMuted(false);
+    } else {
+      audioRef.current.muted = true;
+      setIsMuted(true);
     }
-    const audio = new Audio('/audio/litesaturation-motivational-corporate-medium1-110677.mp3');
-    audio.loop = true;
-    audio.volume = 0.3;
-    audioRef.current = audio;
-    audio.play();
-  }, []);
+  }, [isMuted]);
 
   const lineVariants: Variants = {
     hidden: { scaleY: 0 },
@@ -226,18 +250,24 @@ export default function HeroSection() {
         </motion.div>
       </motion.div>
 
-      {/* Botó so ambiental */}
+      {/* Botó so ambiental — mute/unmute */}
       <motion.button
-        onClick={startAudio}
+        onClick={toggleAudio}
         className="absolute bottom-8 right-8 z-10 p-3 rounded-full bg-white/10 text-white backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
-        aria-label="Activar so ambiental"
+        aria-label={isMuted ? 'Activar so' : 'Mutear so'}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
-        </svg>
+        {isMuted ? (
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 9.75L19.5 12m0 0l2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+          </svg>
+        ) : (
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+          </svg>
+        )}
       </motion.button>
     </section>
   );

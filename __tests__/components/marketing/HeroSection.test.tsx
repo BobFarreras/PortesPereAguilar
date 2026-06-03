@@ -2,8 +2,29 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import HeroSection from '@/components/marketing/HeroSection';
 
-// Mockem IntersectionObserver per simular que la secció és visible
+// Mock Audio per jsdom
+const mockPlay = jest.fn().mockResolvedValue(undefined);
+const mockPause = jest.fn();
+const mockLoad = jest.fn();
+
+class MockAudio {
+  src = '';
+  volume = 1;
+  muted = false;
+  loop = false;
+  oncanplay: (() => void) | null = null;
+  play() { return mockPlay(); }
+  pause() { mockPause(); }
+  load() { mockLoad(); }
+}
+
+// Mock IntersectionObserver per simular que la secció és visible
 beforeEach(() => {
+  jest.clearAllMocks();
+
+  // Mock Audio constructor
+  (global as unknown as Record<string, unknown>).Audio = MockAudio;
+
   const mockIntersectionObserver = jest.fn();
   mockIntersectionObserver.mockReturnValue({
     observe: () => null,
