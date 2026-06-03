@@ -100,14 +100,6 @@ export default function ProductDetailView({ service }: ProductDetailViewProps) {
             {tCommon('backToCatalog')}
           </Link>
 
-          {/* Badge Premium */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-red/10 border border-brand-red/20 text-brand-red text-xs font-bold uppercase tracking-wider mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5">
-              <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.83 3 3 0 00-5.305 0 3 3 0 00-3.83 3.75 3 3 0 000 5.305 3 3 0 003.75 3.83 3 3 0 005.305 0 3 3 0 003.83-3.75zm-2.546-4.46a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-            </svg>
-            {tCommon('heroBadge')}
-          </div>
-
           <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
             {t(`servicesList.${service.translationKey}.title`)}
           </h1>

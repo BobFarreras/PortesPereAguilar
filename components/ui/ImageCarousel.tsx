@@ -10,30 +10,21 @@ interface ImageCarouselProps {
 }
 
 const variants = {
-  enter: (direction: number) => ({
-    x: direction > 0 ? 400 : -400,
+  enter: {
     opacity: 0,
-    scale: 0.95,
-  }),
+  },
   center: {
     zIndex: 1,
-    x: 0,
     opacity: 1,
-    scale: 1,
   },
-  exit: (direction: number) => ({
+  exit: {
     zIndex: 0,
-    x: direction < 0 ? 400 : -400,
     opacity: 0,
-    scale: 0.95,
-  }),
+  },
 };
 
-const swipeConfidenceThreshold = 10000;
-const swipePower = (offset: number, velocity: number) => Math.abs(offset) * velocity;
-
 export default function ImageCarousel({ images, altPrefix }: ImageCarouselProps) {
-  const [[page, direction], setPage] = useState([0, 0]);
+  const [page, setPage] = useState(0);
 
   // Si no hi ha array de galeria o està buit, utilitzem un fallback silenciós
   if (!images || images.length === 0) return null;
@@ -41,32 +32,19 @@ export default function ImageCarousel({ images, altPrefix }: ImageCarouselProps)
   const imageIndex = Math.abs(page % images.length);
 
   const paginate = (newDirection: number) => {
-    setPage([page + newDirection, newDirection]);
+    setPage(page + newDirection);
   };
 
   return (
     <div className="relative w-full h-[400px] md:h-[600px] flex items-center justify-center overflow-hidden rounded-2xl bg-brand-dark/50 border border-white/10 shadow-2xl group">
-      <AnimatePresence initial={false} custom={direction} mode="wait">
+      <AnimatePresence initial={false} mode="wait">
         <motion.div
-          key={page}
-          custom={direction}
+          key={imageIndex}
           variants={variants}
           initial="enter"
           animate="center"
           exit="exit"
-          transition={{
-            x: { type: 'spring', stiffness: 300, damping: 30 },
-            opacity: { duration: 0.25 },
-            scale: { duration: 0.25 },
-          }}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={1}
-          onDragEnd={(e, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
-            if (swipe < -swipeConfidenceThreshold) paginate(1);
-            else if (swipe > swipeConfidenceThreshold) paginate(-1);
-          }}
+          transition={{ opacity: { duration: 0.2 } }}
           className="absolute inset-0 w-full h-full"
         >
           <Image
@@ -108,7 +86,7 @@ export default function ImageCarousel({ images, altPrefix }: ImageCarouselProps)
             {images.map((_, i) => (
               <button
                 key={i}
-                onClick={() => setPage([i, i > imageIndex ? 1 : -1])}
+                onClick={() => setPage(i)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${i === imageIndex ? 'w-8 bg-brand-red' : 'bg-white/40 hover:bg-white'}`}
                 aria-label={`Anar a la imatge ${i + 1}`}
               />

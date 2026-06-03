@@ -46,8 +46,9 @@ export const SERVICES_DATA: ServiceCategory[] = [
     gallery: [
       '/images/Aplicacions/imgi_3_C60270E6-BBEE-4881-A091-FBB9D1B7DD75-A6ABBEBF-46DB-414F-A836-1728459E9F51.webp',
       '/images/Aplicacions/imgi_2_Trasllat-bola-Forum-a-Calonge-editada-2-5.webp',
-      '/images/Aplicacions/imgi_5_Porta-oberta-de-l\'altell-.2.webp',
+      '/images/Aplicacions/imgi_18_9D6B70CE-7ADF-497E-8384-9694A3D122E1-FBBC45BA-6498-40B3-B1D6-605BC8E183BB-1.webp',
       '/images/Aplicacions/imgi_6_03961359-6615-4882-B77C-20DD0BD34885-E6185BA5-E759-461B-8FD0-623CD1F18652-1.webp',
+      '/images/Aplicacions/imgi_5_Porta-oberta-de-l’altell-.2.webp',
       '/images/Aplicacions/imgi_7_18C98767-0F10-43F6-BAD8-1FC4BDAADC04-5D8C979C-CD73-4681-9C06-BDDD9D1106AB.webp',
     ],
     features: ['enginyeriaAMida', 'altaResistencia', 'acabatsPersonalitzats', 'muntatgeProfessional'],
