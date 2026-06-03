@@ -55,7 +55,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     <main className="min-h-screen bg-white dark:bg-brand-dark pt-32 pb-24 px-6 relative">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-red/5 blur-[120px] rounded-full pointer-events-none -z-10" />
       <div className="max-w-7xl mx-auto">
-        <ProductDetailView service={service} />
+        <ProductDetailView key={slug} service={service} />
       </div>
     </main>
   );
