@@ -12,47 +12,25 @@ export default function HeroSection() {
   const [showText, setShowText] = useState(false);
   const isFirstLoad = useRef(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const hasPlayedOnce = useRef(false);
   const [isMuted, setIsMuted] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    return localStorage.getItem(MUTE_STORAGE_KEY) === 'true';
+    if (typeof window === 'undefined') return true;
+    const stored = localStorage.getItem(MUTE_STORAGE_KEY);
+    return stored === null ? true : stored === 'true';
   });
 
-  // Crear àudio — el navegador requereix interacció d'usuari per reproduir
+  // Crear àudio — sempre comença mutat (autoplay bloquejat pels navegadors)
   useEffect(() => {
     const audio = new Audio('/audio/litesaturation-motivational-corporate-medium1-110677.mp3');
     audio.loop = true;
     audio.volume = 0.3;
-    audio.muted = isMuted;
+    audio.muted = true;
     audioRef.current = audio;
 
-    const tryPlay = () => {
-      if (audio.paused && !audio.muted) {
-        audio.play().then(() => {
-          hasPlayedOnce.current = true;
-        }).catch(() => {});
-      }
-    };
-
-    // Intentar reproduir immediatament (pot fallar si no hi ha user gesture)
-    tryPlay();
-
-    // Escoltar CQUALSEVOL interacció (click, touch, key) per reproduir
-    const onInteraction = () => {
-      if (!hasPlayedOnce.current) {
-        tryPlay();
-      }
-    };
-    document.addEventListener('pointerdown', onInteraction);
-    document.addEventListener('keydown', onInteraction);
-
     return () => {
-      document.removeEventListener('pointerdown', onInteraction);
-      document.removeEventListener('keydown', onInteraction);
       audio.pause();
       audioRef.current = null;
     };
-  }, [isMuted]);
+  }, []);
 
   // Pausa/resum àudio segons visibilitat del hero
   useEffect(() => {
@@ -65,8 +43,8 @@ export default function HeroSection() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Intentar reproduir àudio quan el hero és visible
-          if (audioRef.current && audioRef.current.paused && hasPlayedOnce.current) {
+          // Reproduir àudio si no està mutat i està pausat
+          if (audioRef.current && audioRef.current.paused && !audioRef.current.muted) {
             audioRef.current.play().catch(() => {});
           }
           if (isFirstLoad.current) {
@@ -111,9 +89,7 @@ export default function HeroSection() {
       setIsMuted(false);
       localStorage.setItem(MUTE_STORAGE_KEY, 'false');
       // El click compta com a user gesture → reproduir
-      audioRef.current.play().then(() => {
-        hasPlayedOnce.current = true;
-      }).catch(() => {});
+      audioRef.current.play().catch(() => {});
     } else {
       audioRef.current.muted = true;
       setIsMuted(true);
