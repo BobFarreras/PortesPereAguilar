@@ -94,7 +94,7 @@ export default function ImageCarousel({ images, altPrefix }: ImageCarouselProps)
       {images.length > 1 && (
         <>
           <button
-            className="absolute left-4 z-10 p-3 rounded-full bg-black/40 text-white backdrop-blur-md border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-brand-red hover:border-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-black/40 text-white backdrop-blur-md border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-brand-red hover:border-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red"
             onClick={() => paginate(-1)}
             aria-label="Anterior imatge"
           >
@@ -103,7 +103,7 @@ export default function ImageCarousel({ images, altPrefix }: ImageCarouselProps)
             </svg>
           </button>
           <button
-            className="absolute right-4 z-10 p-3 rounded-full bg-black/40 text-white backdrop-blur-md border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-brand-red hover:border-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-black/40 text-white backdrop-blur-md border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-brand-red hover:border-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red"
             onClick={() => paginate(1)}
             aria-label="Següent imatge"
           >
@@ -112,7 +112,7 @@ export default function ImageCarousel({ images, altPrefix }: ImageCarouselProps)
             </svg>
           </button>
 
-          <div className="absolute bottom-6 z-10 flex gap-2">
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2">
             {images.map((_, i) => (
               <button
                 key={i}

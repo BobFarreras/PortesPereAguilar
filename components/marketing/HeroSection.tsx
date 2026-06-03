@@ -4,54 +4,12 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
-function createAmbientPad(ctx: AudioContext, destination: AudioNode) {
-  const now = ctx.currentTime;
-  const masterGain = ctx.createGain();
-  masterGain.gain.setValueAtTime(0, now);
-  masterGain.gain.linearRampToValueAtTime(0.15, now + 3);
-  masterGain.connect(destination);
-
-  const notes = [130.81, 164.81, 196.00, 261.63]; // C3, E3, G3, C4
-
-  notes.forEach((freq) => {
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-    const filter = ctx.createBiquadFilter();
-
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(freq, now);
-
-    // LFO per vibrato suau
-    const lfo = ctx.createOscillator();
-    const lfoGain = ctx.createGain();
-    lfo.frequency.setValueAtTime(0.3 + Math.random() * 0.2, now);
-    lfoGain.gain.setValueAtTime(1.5, now);
-    lfo.connect(lfoGain);
-    lfoGain.connect(osc.frequency);
-    lfo.start(now);
-
-    filter.type = 'lowpass';
-    filter.frequency.setValueAtTime(400, now);
-    filter.Q.setValueAtTime(1, now);
-
-    gain.gain.setValueAtTime(0.08, now);
-
-    osc.connect(filter);
-    filter.connect(gain);
-    gain.connect(masterGain);
-    osc.start(now);
-  });
-
-  return masterGain;
-}
-
 export default function HeroSection() {
   const t = useTranslations('hero');
   const sectionRef = useRef<HTMLDivElement>(null);
   const [showText, setShowText] = useState(false);
   const isFirstLoad = useRef(true);
-  const audioCtxRef = useRef<AudioContext | null>(null);
-  const audioStarted = useRef(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // IntersectionObserver + delay només al primer load
   useEffect(() => {
@@ -98,11 +56,15 @@ export default function HeroSection() {
   }, []);
 
   const startAudio = useCallback(() => {
-    if (audioStarted.current) return;
-    audioStarted.current = true;
-    const ctx = new AudioContext();
-    audioCtxRef.current = ctx;
-    createAmbientPad(ctx, ctx.destination);
+    if (audioRef.current) {
+      audioRef.current.play();
+      return;
+    }
+    const audio = new Audio('/audio/litesaturation-motivational-corporate-medium1-110677.mp3');
+    audio.loop = true;
+    audio.volume = 0.3;
+    audioRef.current = audio;
+    audio.play();
   }, []);
 
   const lineVariants: Variants = {
