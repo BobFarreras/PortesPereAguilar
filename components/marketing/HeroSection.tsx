@@ -8,17 +8,38 @@ export default function HeroSection() {
   const t = useTranslations('hero');
   const sectionRef = useRef<HTMLDivElement>(null);
   const [showText, setShowText] = useState(false);
+  const isFirstLoad = useRef(true);
 
-  // Detecta quan la secció és visible (Intersection Observer)
+  // IntersectionObserver + delay només al primer load
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
 
+    let showTimer: NodeJS.Timeout;
+    let hideTimer: NodeJS.Timeout;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setShowText(true);
+          if (isFirstLoad.current) {
+            // Primer cop: delay de 3s
+            isFirstLoad.current = false;
+            showTimer = setTimeout(() => {
+              setShowText(true);
+              hideTimer = setTimeout(() => {
+                setShowText(false);
+              }, 11000);
+            }, 3000);
+          } else {
+            // Scroll back: instantani
+            setShowText(true);
+            hideTimer = setTimeout(() => {
+              setShowText(false);
+            }, 11000);
+          }
         } else {
+          clearTimeout(showTimer);
+          clearTimeout(hideTimer);
           setShowText(false);
         }
       },
@@ -26,19 +47,12 @@ export default function HeroSection() {
     );
 
     observer.observe(section);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
   }, []);
-
-  // Amaga el text després de 7 segons (quan és visible)
-  useEffect(() => {
-    if (!showText) return;
-
-    const timer = setTimeout(() => {
-      setShowText(false);
-    }, 8000);
-
-    return () => clearTimeout(timer);
-  }, [showText]);
 
   const lineVariants: Variants = {
     hidden: { scaleY: 0 },
@@ -113,8 +127,8 @@ export default function HeroSection() {
         src="/videos/hero-youtube.mp4"
       />
 
-      {/* Contingut — alineat a l'esquerra */}
-      <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24 max-w-7xl mx-auto">
+      {/* Contingut — alineat a l'esquerra, desplaçat */}
+      <div className="relative z-10 h-full flex flex-col justify-center pl-4 md:pl-8 lg:pl-12 max-w-7xl mx-auto">
         <AnimatePresence mode="wait">
           {showText && (
             <motion.div
