@@ -64,7 +64,7 @@
       },
       "estructuresMetaliques": {
         "title": "Estructuras Metálicas",
-        "description": "Ingeniería estructural a medida. Pérgolas, cubiertas y altillos diseñados con precisión milimétrica.",
+        "description": "Ingeniería estructural a medida. Pérgolas, cubiertas y altillos diseñados con precisión.",
         "features": {
           "enginyeriaAMida": {
             "title": "Ingeniería a Medida",
@@ -174,7 +174,7 @@
       },
       "enginyeria": {
         "title": "Ingeniería y Diseño",
-        "description": "Nuestro equipo de ingenieros calcula la estructura, elige los materiales y crea los planos con precisión milimétrica."
+        "description": "Nuestro equipo de ingenieros calcula la estructura, elige los materiales y crea los planos con precisión."
       },
       "fabricacio": {
         "title": "Fabricación Artesanal",

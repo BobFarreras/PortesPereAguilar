@@ -5,7 +5,7 @@
       "part1": "L'ingénierie dans",
       "part2": "chaque fermeture."
     },
-    "description": "Serrurerie et structures métalliques conçues avec une précision millimétrique. Protégez et sublimer votre espace avec des matériaux de première qualité.",
+    "description": "Serrurerie et structures métalliques conçues avec une précision. Protégez et sublimer votre espace avec des matériaux de première qualité.",
     "cta": "Demandez votre Devis"
   },
   "navbar": {
@@ -64,7 +64,7 @@
       },
       "estructuresMetaliques": {
         "title": "Structures Métalliques",
-        "description": "Ingénierie structurelle sur mesure. Pergolas, couvertures et mezzanines conçues avec une précision millimétrique.",
+        "description": "Ingénierie structurelle sur mesure. Pergolas, couvertures et mezzanines conçues avec une précision.",
         "features": {
           "enginyeriaAMida": {
             "title": "Ingénierie Sur Mesure",
@@ -174,7 +174,7 @@
       },
       "enginyeria": {
         "title": "Ingénierie & Design",
-        "description": "Notre équipe d'ingénieurs calcule la structure, choisit les matériaux et crée les plans avec une précision millimétrique."
+        "description": "Notre équipe d'ingénieurs calcule la structure, choisit les matériaux et crée les plans avec une précision."
       },
       "fabricacio": {
         "title": "Fabrication Artisanale",

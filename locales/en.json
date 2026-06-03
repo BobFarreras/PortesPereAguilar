@@ -5,7 +5,7 @@
       "part1": "Engineering in",
       "part2": "every closure."
     },
-    "description": "Metalwork and metal structures designed with millimetric precision. Protect and elevate your space with top-quality materials.",
+    "description": "Metalwork and metal structures designed with precision. Protect and elevate your space with top-quality materials.",
     "cta": "Request your Quote"
   },
   "navbar": {
@@ -64,7 +64,7 @@
       },
       "estructuresMetaliques": {
         "title": "Metal Structures",
-        "description": "Bespoke structural engineering. Pergolas, roofing and mezzanines designed with millimetric precision.",
+        "description": "Bespoke structural engineering. Pergolas, roofing and mezzanines designed with precision.",
         "features": {
           "enginyeriaAMida": {
             "title": "Tailored Engineering",
@@ -174,7 +174,7 @@
       },
       "enginyeria": {
         "title": "Engineering & Design",
-        "description": "Our engineering team calculates the structure, selects materials and creates blueprints with millimetric precision."
+        "description": "Our engineering team calculates the structure, selects materials and creates blueprints with precision."
       },
       "fabricacio": {
         "title": "Artisan Manufacturing",

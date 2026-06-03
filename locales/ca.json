@@ -64,7 +64,7 @@
       },
       "estructuresMetaliques": {
         "title": "Estructures Metàl·liques",
-        "description": "Enginyeria estructural a mida. Pèrgoles, cobertes i altells dissenyats amb precisió mil·limètrica.",
+        "description": "Enginyeria estructural a mida. Pèrgoles, cobertes i altells dissenyats amb precisió.",
         "features": {
           "enginyeriaAMida": {
             "title": "Enginyeria a Mida",
@@ -174,7 +174,7 @@
       },
       "enginyeria": {
         "title": "Enginyeria i Disseny",
-        "description": "El nostre equip d'enginyers calcula l'estructura, escull els materials i crea els plànols amb precisió mil·limètrica."
+        "description": "El nostre equip d'enginyers calcula l'estructura, escull els materials i crea els plànols amb precisió."
       },
       "fabricacio": {
         "title": "Fabricació Artesanal",
