@@ -35,7 +35,7 @@ export default function HeroSection() {
 
     const timer = setTimeout(() => {
       setShowText(false);
-    }, 7000);
+    }, 9000);
 
     return () => clearTimeout(timer);
   }, [showText]);
@@ -100,8 +100,10 @@ export default function HeroSection() {
     },
   };
 
-  // Estil de text-shadow per llegibilitat sobre el video
-  const textShadow = '0 2px 20px rgba(0,0,0,0.9), 0 4px 40px rgba(0,0,0,0.7), 0 0 80px rgba(0,0,0,0.5)';
+  // Estil de text-shadow modern i intens per llegibilitat sobre el video
+  const textShadowTitle = '0 0 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.8), 0 4px 8px rgba(0,0,0,0.9)';
+  const textShadowDesc = '0 0 8px rgba(0,0,0,0.95), 0 0 16px rgba(0,0,0,0.8), 0 0 32px rgba(0,0,0,0.6), 0 2px 4px rgba(0,0,0,0.9)';
+  const textShadowSub = '0 0 6px rgba(0,0,0,0.9), 0 0 12px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.8)';
 
   return (
     <section ref={sectionRef} className="relative h-screen w-full overflow-hidden bg-black">
@@ -139,7 +141,7 @@ export default function HeroSection() {
               {/* Subtítol */}
               <motion.p
                 className="text-sm md:text-base font-bold uppercase tracking-[0.35em] text-brand-red"
-                style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8)' }}
+                style={{ textShadow: textShadowSub }}
                 variants={subtitleVariants}
                 initial="hidden"
                 animate="visible"
@@ -151,7 +153,7 @@ export default function HeroSection() {
               {/* Títol */}
               <motion.h1
                 className="text-5xl md:text-7xl lg:text-8xl xl:text-[7rem] font-black text-white leading-[0.85] tracking-tight"
-                style={{ textShadow }}
+                style={{ textShadow: textShadowTitle }}
                 variants={titleVariants}
                 initial="hidden"
                 animate="visible"
@@ -165,7 +167,7 @@ export default function HeroSection() {
               {/* Descripció */}
               <motion.p
                 className="max-w-xl text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed font-medium"
-                style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8), 0 4px 30px rgba(0,0,0,0.6)' }}
+                style={{ textShadow: textShadowDesc }}
                 variants={descVariants}
                 initial="hidden"
                 animate="visible"
