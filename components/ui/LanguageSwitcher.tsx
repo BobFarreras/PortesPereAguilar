@@ -1,10 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { usePathname } from 'next/navigation';
-import { useTranslations, useLocale } from 'next-intl';
-
-const DEFAULT_LOCALE = 'ca';
+import { useState, useRef, useEffect } from 'react';
+import { useLocale } from 'next-intl';
 
 // --- Components SVG Flags (36x24, disseny consistent) ---
 
@@ -67,44 +64,59 @@ const LANGUAGE_CONFIG = {
 } as const;
 
 type SupportedLocale = keyof typeof LANGUAGE_CONFIG;
+const DEFAULT_LOCALE = 'ca';
+const LOCALES = Object.keys(LANGUAGE_CONFIG);
 
 // --- Component Principal ---
 
 export default function LanguageSwitcher() {
-  const pathname = usePathname();
   const currentLocale = useLocale() as SupportedLocale;
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const changeLanguage = (locale: string) => {
+  // Tancar al fer click fora
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const changeLanguage = (nextLocale: string) => {
     setIsOpen(false);
 
-    const pathSegments = pathname.split('/').filter(Boolean);
-    const currentLocalePrefix = Object.keys(LANGUAGE_CONFIG).find(l => l === pathSegments[0]);
-    const pathWithoutLocale = currentLocalePrefix
-      ? pathSegments.slice(1).join('/')
-      : pathSegments.join('/');
+    // Obtenir la ruta actual sense el prefix de locale
+    const currentPath = window.location.pathname;
 
+    // Treure el prefix de locale de la ruta actual
+    let pathWithoutLocale = currentPath;
+    for (const loc of LOCALES) {
+      if (currentPath === `/${loc}` || currentPath.startsWith(`/${loc}/`)) {
+        pathWithoutLocale = currentPath.slice(`/${loc}`.length) || '/';
+        break;
+      }
+    }
+
+    // Construir la nova ruta
     let newPath: string;
-    if (locale === DEFAULT_LOCALE) {
-      newPath = '/' + pathWithoutLocale;
+    if (nextLocale === DEFAULT_LOCALE) {
+      // Català no porta prefix
+      newPath = pathWithoutLocale === '/' ? '/' : pathWithoutLocale;
     } else {
-      newPath = '/' + locale + '/' + pathWithoutLocale;
+      newPath = `/${nextLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
     }
 
-    if (newPath.endsWith('/')) {
-      newPath = newPath.slice(0, -1);
-    }
-    if (newPath === '') {
-      newPath = '/';
-    }
-
-    window.location.assign(newPath);
+    // Navegar
+    window.location.href = newPath;
   };
 
   const CurrentFlag = LANGUAGE_CONFIG[currentLocale]?.Flag;
 
   return (
-    <div className="relative">
+    <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         aria-label="language"
